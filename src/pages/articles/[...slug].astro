@@ -16,7 +16,22 @@ const { Content } = await entry.render();
 ---
 
 <FrontmatterLayout frontmatter={entry.data}>
-  <main class="grid-auto-fit">
+  {
+    entry.data.bannerShow == true && (
+      <div class="hero">
+        <Image
+          src={entry.data.banner}
+          alt={entry.data.title}
+          class="image image--cover"
+        />
+        <div class="hero__content">
+          <h1>{entry.data.title}</h1>
+          <div>{entry.data.summary}</div>
+        </div>
+      </div>
+    )
+  }
+  <main class="prose | flow">
     <Content />
   </main>
 </FrontmatterLayout>

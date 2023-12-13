@@ -19,7 +19,11 @@ const { Content } = await entry.render();
   <div>
     <h1>{entry.data.title}</h1>
     <p>{entry.data.summary}</p>
-    <Image src={entry.data.banner} alt={`${entry.data.title} banner`} />
+    <Image
+      src={entry.data.banner}
+      alt={`${entry.data.title} banner`}
+      class="image image--cover"
+    />
   </div>
   <div class="flow">
     <nav>

@@ -27,6 +27,7 @@ const articleCollection = defineCollection({
       summary: z.string(),
       keywords: z.array(z.string()),
       banner: image(),
+      bannerShow: z.boolean(),
       publishDate: z.date(),
       featured: z.boolean(),
     }),

@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+.hero {
+    margin-bottom: 4rem;
+    display: grid;
+    place-items:center;
+    
+
+    > * {
+        grid-row: 1;
+        grid-column: 1;
+    }
+}
+
+.hero__content {
+    width: 80%;
+
+    h1 {
+        font-size: fs(150);
+        color: clr(neutral, 00);
+
+        @include mq(medium){
+            font-size: fs(180);
+        }
+    }
+
+    
+    div {
+        font-size: fs(120);
+    }
+
+}

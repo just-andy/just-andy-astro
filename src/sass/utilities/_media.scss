@@ -4,3 +4,18 @@ iframe {
   max-inline-size: 100%;
   block-size: auto;
 }
+
+.image {
+    block-size: auto;
+    aspect-ratio: 2/1;
+
+  &--contain{
+    @extend .image;
+    object-fit: contain;
+  }
+  &--cover {
+    @extend .image;
+    object-fit: cover;
+  object-position: top center;
+  }
+}
