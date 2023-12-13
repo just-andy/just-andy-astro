@@ -16,5 +16,5 @@ Moving my site to Astro from Next.js
 [] Fix grid
 [] Fix sections
 [] Adjust type flow
-[] Set up git
+[x] Set up git
 [] Move content
