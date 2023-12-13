@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+const allArticles = await getCollection("projects");
+---
+
+<Layout
+  title="Projects and Case Studies"
+  description="Previous projects and case studies"
+>
+  <main class="container">
+    <div class="grid-auto-fit">
+      {
+        allArticles.map((project) => (
+          <div class="product_card">
+            <Image
+              class="project_card--image"
+              src={project.data.thumbnail}
+              alt={`${project.data.title} summary`}
+            />
+            <h2 class="heading-4">
+              <a
+                href={`/projects/${project.slug}`}
+                title={project.data.strapline}
+              >
+                {project.data.title}
+              </a>
+            </h2>
+            <p>{project.data.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</Layout>

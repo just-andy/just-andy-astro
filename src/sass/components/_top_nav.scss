@@ -1,0 +1,132 @@
+@use "../abstracts/" as *;
+
+.navbar {
+  color: clr(neutral, 80);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  vertical-align: middle;
+  padding: size(3);
+  gap: size(5);
+  width: 100%;
+  padding: 2rem;
+
+  @include mq(large) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq(medium) {
+    justify-content: end;
+  }
+
+  @include mq(large) {
+    display: flex;
+  }
+}
+
+.logo {
+  display: none;
+  justify-content: center;
+  color: clr(primary, 100);
+  font-size: fs(120);
+  font-family: $ff-heading;
+
+  @include mq(large) {
+    display: inline-block;
+    font-size: fs(150);
+    line-height: 3rem;
+  }
+
+  &:hover {
+    color: clr(secondary, 100);
+  }
+}
+.svg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: middle;
+  overflow: hidden;
+  gap: size(1);
+  height: 100%;
+}
+
+.logo-icon {
+  display: block;
+  width: size(14);
+  height: size(14);
+ 
+  @include mq(large) {
+    display: inline-block;
+    width: size(9);
+    height: size(9);
+  }
+
+  &:hover {
+    fill: clr(secondary, 100);
+  }
+}
+
+.menu {
+  list-style: none;
+  font-size: fs(120);
+  font-family: $ff-heading;
+  justify-content: center;
+  margin: 0.5rem 0 1rem 0;
+
+
+
+  @include mq(large){
+    font-size: fs(130);
+    margin: 0 0 2rem 0;
+  }
+
+
+  & ul {
+    list-style: none;
+    grid-area: nav;
+    place-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+
+  
+    @include mq(medium){
+      gap: 2rem;
+    }
+
+    @include mq(large){
+      gap: 1rem;
+    }
+
+    & li a {
+      padding: 0.5rem 0.25rem 1rem 0.25rem;
+      text-transform: uppercase;
+      text-decoration: none;
+  
+      &:hover {
+        padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+        color: clr(secondary, 100);
+        border-bottom: 0.5rem solid clr(secondary, 100); 
+      }
+  
+      &.selected {
+        padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+        border-bottom: 0.5rem solid clr(primary, 100);
+        color: clr(primary, 100);
+  
+        &:hover {
+          background-color: clr(neutral, 30);
+        }
+      }
+    }
+  }
+}

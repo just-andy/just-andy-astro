@@ -1,0 +1,107 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+@use "breakpoints" as *;
+@use "typography" as *;
+@use "colors" as *;
+@use "functions" as *;
+
+// Media Queries
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}
+
+// Font Size & Line-Height Rhythm
+@mixin font-size($sizeValue: 12) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.0625 * $sizeValue) + rem;
+}
+
+@mixin line-height($heightValue: 20) {
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.0625 * $heightValue) + rem;
+}
+
+@mixin rhythm($sizeValue: 12, $heightValue: 20) {
+  @include font-size($sizeValue);
+  @include line-height($heightValue);
+}
+
+// headings Scale 
+@mixin headings-scale() {
+  @for $i from 1 through 6 {
+
+    $scale: calc($i * 10);
+
+    h#{$i}, .heading-#{$i} {
+      font-size: fs(calc(160 - $scale));
+      font-family: $ff-heading;
+      text-transform: capitalize;
+      color: clr(primary, 80);
+      line-height: 1.25em;
+
+      @if $i >= 4 {
+        font-family: $ff-base;
+        color: clr(primary, 60);
+        font-weight: 600;
+        line-height: 1em;
+      }
+
+      @include mq(large){
+        font-size: fs(calc(180 - $scale));
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// Heading Function
+@mixin headings($h1: 42, $decreaseBy: 8) {
+  @for $i from 1 through 6 {
+     h#{$i}, .heading-#{$i} {
+        // Variables
+        $num: calc($i - 1);
+        $font-size: ($h1+$decreaseBy) - calc( $num * $decreaseBy / 2);
+        $line-height: $font-size + $decreaseBy;
+        $tight-line-height: $line-height - calc($decreaseBy / 2);
+        $large-font-size: $font-size + $decreaseBy;
+        $large-line-height: $line-height + $decreaseBy;
+
+        //@debug "font-size: #{$font-size}";
+        //@debug "line-height: #{$line-height}";
+        // calculations
+        @extend %heading;
+        @include rhythm($font-size, $line-height);
+
+        @if $i >= 4 {
+          //@debug "greater than 4 font-size: #{$font-size}";
+          //@debug "greater than 4 line height: #{$tight-line-height}";
+          font-family: $ff-base;
+          font-weight: 700;
+        }
+      
+        // Breakpoints
+        @include mq(large){
+          //@debug "large font-size: #{$large-font-size}";
+          //@debug "large line-height: #{$large-line-height}";
+  
+          @include rhythm($large-font-size, $large-line-height);         
+        }
+     }
+  }
+}

@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.project_card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include mq(large) {
+    row-gap: 2rem;
+  }
+}
+
+.project_card--image {
+  border-radius: 1rem;
+}

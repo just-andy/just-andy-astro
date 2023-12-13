@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+@font-face {
+  font-family: "Cartridge";
+  src: url("/fonts/Cartridge-Regular.woff") format("woff"),
+    url("/fonts/Cartridge-Regular.woff2") format("woff2"),
+    url("/fonts/Cartridge-Regular.ttf") format("ttf"),
+    url("/fonts/Cartridge-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-size: fs(100);
+  font-weight: $fw-400;
+  font-family: $ff-sans;
+  color: clr(neutral, 80);
+  background-color: clr(neutral, 10);
+  text-align: left;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.sections p img {
+  display: block;
+  //max-width: 1920px;
+  // max-height: 400px;
+  width: auto;
+  height: auto;
+}

@@ -1,0 +1,13 @@
+---
+import FrontmatterLayout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<FrontmatterLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+  <main class="prose | flow">
+    <slot />
+  </main>
+</FrontmatterLayout>

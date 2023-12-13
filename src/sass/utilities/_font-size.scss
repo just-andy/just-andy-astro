@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+@each $font-size, $font-value in $font-sizes {
+  .fs-#{$font-size} {
+    font-size: $font-value;
+
+    @if $font-size > 120 {
+      line-height: $large-line-height;
+    }
+  }
+}

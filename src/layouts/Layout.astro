@@ -1,0 +1,44 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+import TopNav from "../components/TopNav.astro";
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+import { SEOMetadata } from "astro-seo-metadata";
+import "../sass/style.scss";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <ViewTransitions />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Andrew Cetnarskyj - Portfolio</title>
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <SEOMetadata
+      siteName={"Andrew Cetnarskyj Portfolio"}
+      title={"Andrew Cetnarskyj Portfolio"}
+      description={description}
+      image={"http://example.com/banner.jpg"}
+      favicon={"/favicon.svg"}
+      author="Andrew Cetnarskyj"
+      copyright="ISC"
+      astroSitemap={true}
+      canonicalUrl={Astro.url.toString()}
+      type={"website"}
+      astroGenerator={true}
+    />
+  </head>
+  <body>
+    <TopNav />
+    <slot />
+    <Footer />
+  </body>
+</html>

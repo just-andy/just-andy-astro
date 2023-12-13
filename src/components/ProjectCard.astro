@@ -1,0 +1,9 @@
+---
+const { url, title, image } = Astro.props;
+
+console.log(image.url);
+---
+
+<div class="project__card">
+  <h2><a href={url} title={title}>{title}</a></h2>
+</div>

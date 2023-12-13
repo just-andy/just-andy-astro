@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.intro {
+  font-size: display(10);
+  line-height: 1em;
+  font-family: $ff-heading;
+  @include mq(medium) {
+    font-size: display(30);
+  }
+}
+
+// Sections
+.sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+
+  @include mq(large) {
+    gap: 3em;
+  }
+}

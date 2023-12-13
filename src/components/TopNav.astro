@@ -1,0 +1,57 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+const pathSections = currentPath.split("/");
+const parent = pathSections[0];
+
+import { Image } from "astro:assets";
+import Logo from "../assets/andy-cetnarskyj-logo.svg";
+---
+
+<header class="navbar">
+  <figure class="svg-container cursor-pointer">
+    <Image alt="Just Andy Logo" src={Logo} class="logo-icon" />
+    {
+      currentPath === "" ? (
+        <h1 class="logo">Just Andy</h1>
+      ) : (
+        <div class="logo">Just Andy</div>
+      )
+    }
+  </figure>
+
+  <nav class="menu">
+    <ul>
+      <li>
+        <a class={currentPath === "" ? "selected" : ""} href="/" title="Home"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          class={currentPath === "projects/" || parent === "projects"
+            ? "selected"
+            : ""}
+          href="/projects/"
+          title="Andy's Projects">Projects</a
+        >
+      </li>
+      <li>
+        <a
+          class={currentPath === "articles" || parent === "articles"
+            ? "selected"
+            : ""}
+          href="/articles/"
+          title="Andy's Articles">Articles</a
+        >
+      </li>
+      <li>
+        <a
+          class={currentPath === "about" ? "selected" : ""}
+          href="/about"
+          title="About Andrew Cetnarskyj">About</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

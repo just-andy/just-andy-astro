@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  const articleDetails = await getCollection("articles");
+  return articleDetails.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<FrontmatterLayout frontmatter={entry.data}>
+  <main class="grid-auto-fit">
+    <Content />
+  </main>
+</FrontmatterLayout>

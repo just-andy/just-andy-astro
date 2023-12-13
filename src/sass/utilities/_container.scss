@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.container {
+  --max-width: #{$container-max-width};
+  --padding: size(16);
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+  
+  &--wide {
+    --max-width: $container-max-width-wide;
+  }
+  
+}
+

@@ -1,0 +1,38 @@
+{
+  "name": "ds-scss",
+  "type": "module",
+  "version": "0.0.1",
+  "browserslist": "> 0.5%, not dead, not op_mini all",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "eslintConfig": {
+      "extends": [
+        "wesbos"
+      ]
+    }
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.0.0",
+    "@astrojs/sitemap": "^3.0.3",
+    "astro": "^4.0.3",
+    "astro-embed": "^0.6.1",
+    "astro-feather-icons": "^1.0.2",
+    "astro-seo-metadata": "^0.6.0",
+    "eslint-config-wesbos": "^4.0.1",
+    "postcss-preset-env": "^9.3.0",
+    "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.13.2",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-astro": "^0.30.0",
+    "prettier": "3.1.0"
+  }
+}

@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  const projectDetails = await getCollection("projects");
+  return projectDetails.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<FrontmatterLayout frontmatter={entry.data}>
+  <div>
+    <h1>{entry.data.title}</h1>
+    <p>{entry.data.summary}</p>
+    <Image src={entry.data.banner} alt={`${entry.data.title} banner`} />
+  </div>
+  <div class="flow">
+    <nav>
+      <a href="/" title="Just Andy">Home</a> /
+      <a href="/projects" title="Just Andy Projects">Projects</a> /
+      {entry.data.title}
+    </nav>
+    <Content />
+  </div>
+</FrontmatterLayout>

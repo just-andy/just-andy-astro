@@ -1,0 +1,48 @@
+$sizes: (
+  0: 0,
+  px: 0.0625rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.5rem,
+  6: 2rem,
+  7: 2.25rem,
+  8: 2.5rem,
+  9: 3rem,
+  10: 3.5rem,
+  11: 4rem,
+  12: 4.5rem,
+  13: 5.5rem,
+  14: 6rem,
+  15: 7rem,
+  16: 7.5rem,
+  17: 5rem,
+  18: 8.5rem,
+  19: 9rem,
+  20: 10rem,
+);
+
+// Typography
+$large-line-height: 1.5;
+
+// Prose
+$prose-max-width: 48rem; //768px
+
+// Container
+$container-inline-padding: 1rem;
+$container-max-width: 60rem; //900px
+$container-max-width-wide: 64rem; //1024
+
+$card-body-padding: 1rem;
+
+// Spacing
+$section-spacer: 7rem;
+$grid-gap: 1.5rem;
+$section-padding: clamp(3rem, 10vh, 7rem);
+
+$hero-padding: clamp(15rem, 15vh, 20rem);
+$card-body-padding: 2.5rem;
+
+// Flex
+$flex-group-gap: 1rem;

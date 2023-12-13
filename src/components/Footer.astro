@@ -1,0 +1,77 @@
+---
+const today = new Date();
+import {
+  ArrowUp,
+  Linkedin,
+  Twitter,
+  GitHub,
+  Instagram,
+} from "astro-feather-icons";
+---
+
+<div class="top_button">
+  <button
+    onclick="topFunction()"
+    id="myBtn"
+    aria-label="Back to Top"
+    class="button button--neutral radius--circle"
+  >
+    <ArrowUp />
+  </button>
+</div>
+<footer class="footer">
+  <div class="footer_left">
+    &copy; {today.getFullYear()} Andrew Cetnarskyj &nbsp;
+    <a
+      href="https://astro.build/"
+      title="Astro"
+      rel="external nofollow noopener noreferrer"
+      target="_blank"
+    >
+      Astro
+    </a>
+     ,&nbsp;
+    <a
+      href="https://vercel.com/"
+      title="Vercel"
+      rel="external nofollow noopener noreferrer"
+    >
+      Vercel
+    </a>
+
+     &nbsp;and&nbsp;
+    <a href="/uses">also uses.</a>
+  </div>
+  <ul class="footer_right">
+    <li>
+      <a href="" rel="me noreferrer" target="_blank">
+        <Twitter />
+      </a>
+      <li>
+        <a href="" rel="me noreferrer" target="_blank">
+          <Linkedin />
+        </a>
+      </li>
+      <li>
+        <a href="" rel="me noreferrer" target="_blank">
+          <GitHub />
+        </a>
+      </li>
+      <li>
+        <a href="" rel="me noreferrer" target="_blank">
+          <Instagram />
+        </a>
+      </li>
+    </li>
+  </ul>
+</footer>
+
+<script is:inline>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>

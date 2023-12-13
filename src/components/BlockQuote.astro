@@ -1,0 +1,15 @@
+---
+interface Props {
+  caption: string;
+  slot: string;
+}
+
+const { caption } = Astro.props;
+---
+
+<div class="blockquote">
+  <div class="blockquote__inner">
+    <slot />
+    <figcaption>~ {caption}</figcaption>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+a {
+  color: clr(secondary, 80);
+  text-decoration: underline;
+
+  &:hover {
+    color: clr(primary, 100);
+  }
+
+  &:active {
+    color: clr(secondary, 100);
+  }
+}
+
+// Headings
+// Loops out headings/class
+// Probably not the best way
+@include headings-scale();
+
+
+// Display
+.display-1 {
+  font-size: display(10);
+}
+
+.display-2 {
+  font-size: display(20);
+}
+
+.display-3 {
+  font-size: display(30);
+}
