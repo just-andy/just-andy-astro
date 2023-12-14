@@ -7,7 +7,7 @@
   margin-inline: auto;
   
   &--wide {
-    --max-width: $container-max-width-wide;
+    --max-width: #{$container-max-width-wide};
   }
   
 }

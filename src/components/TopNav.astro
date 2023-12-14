@@ -13,9 +13,15 @@ import Logo from "../assets/andy-cetnarskyj-logo.svg";
     <Image alt="Just Andy Logo" src={Logo} class="logo-icon" />
     {
       currentPath === "" ? (
-        <h1 class="logo">Just Andy</h1>
+        <h1 class="logo">
+          <a href="/" title="Just Andy">
+            Just Andy
+          </a>
+        </h1>
       ) : (
-        <div class="logo">Just Andy</div>
+        <a href="/" title="Just Andy" class="logo">
+          Just Andy
+        </a>
       )
     }
   </figure>

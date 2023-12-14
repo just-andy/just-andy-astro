@@ -1,0 +1,19 @@
+---
+import Image from "astro:assets";
+
+export interface Props {
+  url: string;
+  title: string;
+  summary: string;
+}
+
+const { url, title, summary } = Astro.props;
+---
+
+<div class="hero">
+  <Image src={url} alt={title} class="image image--cover" />
+  <div class="hero__content">
+    <h1>{title}</h1>
+    <div>{summary}</div>
+  </div>
+</div>

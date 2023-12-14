@@ -38,6 +38,10 @@
   font-size: fs(120);
   font-family: $ff-heading;
 
+  > a {
+    text-decoration: none;
+  }
+
   @include mq(large) {
     display: inline-block;
     font-size: fs(150);
@@ -62,6 +66,7 @@
   display: block;
   width: size(14);
   height: size(14);
+
  
   @include mq(large) {
     display: inline-block;

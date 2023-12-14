@@ -12,31 +12,36 @@ const dateOptions: object = {
 ---
 
 <Layout title="Articles" description="All my articles">
-  <div class="grid-auto-fit">
-    {
-      allarticles.map((article) => (
-        <div class="product_card">
-          <Image
-            class="article_card--image"
-            src={article.data.banner}
-            alt={`${article.data.title} summary`}
-          />
-          <h2 class="heading-4">
-            <a href={article.slug} title={article.data.title}>
-              {article.data.title}
-            </a>
-          </h2>
-          <p>
-            {article.data.publishDate.toLocaleDateString("en-GB", dateOptions)}
-          </p>
-          <p>{article.data.description}</p>
-          <div class="flex gap-x-4">
-            {article.data.keywords.map((keyword) => (
-              <span>{keyword}</span>
-            ))}
+  <div class="container">
+    <div class="grid-auto-fit">
+      {
+        allarticles.map((article) => (
+          <div class="product_card">
+            <Image
+              class="article_card--image"
+              src={article.data.banner}
+              alt={`${article.data.title} summary`}
+            />
+            <h2 class="heading-4">
+              <a href={article.slug} title={article.data.title}>
+                {article.data.title}
+              </a>
+            </h2>
+            <p>
+              {article.data.publishDate.toLocaleDateString(
+                "en-GB",
+                dateOptions
+              )}
+            </p>
+            <p>{article.data.description}</p>
+            <div class="flex gap-x-4">
+              {article.data.keywords.map((keyword) => (
+                <span>{keyword}</span>
+              ))}
+            </div>
           </div>
-        </div>
-      ))
-    }
+        ))
+      }
+    </div>
   </div>
 </Layout>
