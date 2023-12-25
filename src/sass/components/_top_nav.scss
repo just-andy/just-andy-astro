@@ -31,16 +31,13 @@
   }
 }
 
-.logo {
+a.logo__text {
   display: none;
   justify-content: center;
   color: clr(primary, 100);
   font-size: fs(120);
   font-family: $ff-heading;
-
-  > a {
-    text-decoration: none;
-  }
+  text-decoration: none;
 
   @include mq(large) {
     display: inline-block;
@@ -52,7 +49,7 @@
     color: clr(secondary, 100);
   }
 }
-.svg-container {
+.svg__container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -60,9 +57,14 @@
   overflow: hidden;
   gap: size(1);
   height: 100%;
+
+  h1 {
+    color: red;
+    line-height: 1rem;
+  }
 }
 
-.logo-icon {
+.logo__icon {
   display: block;
   width: size(14);
   height: size(14);
@@ -86,8 +88,6 @@
   justify-content: center;
   margin: 0.5rem 0 1rem 0;
 
-
-
   @include mq(large){
     font-size: fs(130);
     margin: 0 0 2rem 0;
@@ -102,7 +102,6 @@
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.5rem;
-
   
     @include mq(medium){
       gap: 2rem;

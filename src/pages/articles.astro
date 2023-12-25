@@ -16,14 +16,14 @@ const dateOptions: object = {
     <div class="grid-auto-fit">
       {
         allarticles.map((article) => (
-          <div class="product_card">
+          <div class="card">
             <Image
               class="article_card--image"
               src={article.data.banner}
               alt={`${article.data.title} summary`}
             />
             <h2 class="heading-4">
-              <a href={article.slug} title={article.data.title}>
+              <a href={`/articles/${article.slug}`} title={article.data.title}>
                 {article.data.title}
               </a>
             </h2>

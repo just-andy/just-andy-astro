@@ -1,12 +1,11 @@
 @use "../abstracts/" as *;
 
 .intro {
-  font-size: display(10);
+  font-size: clamp(2.5rem, 1.25rem + 4.167vw, 5rem);
   line-height: 1em;
   font-family: $ff-heading;
-  @include mq(medium) {
-    font-size: display(30);
-  }
+  margin-bottom: 1em;
+
 }
 
 // Sections
@@ -18,5 +17,17 @@
 
   @include mq(large) {
     gap: 3em;
+  }
+}
+
+// Experience
+.experience {
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  h5 {
+    color: clr(neutral, 40);
+    margin-bottom: 0.25rem;
   }
 }

@@ -10,7 +10,7 @@
   border: 1px solid clr(neutral, 30);
   @include shadow(1);
 
-  &-title {
+  &__title {
     font-size: fs(110);
     font-weight: $fw-500;
     font-family: $ff-heading;

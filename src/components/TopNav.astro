@@ -9,17 +9,17 @@ import Logo from "../assets/andy-cetnarskyj-logo.svg";
 ---
 
 <header class="navbar">
-  <figure class="svg-container cursor-pointer">
-    <Image alt="Just Andy Logo" src={Logo} class="logo-icon" />
+  <figure class="svg__container cursor-pointer">
+    <Image alt="Just Andy Logo" src={Logo} class="logo__icon" />
     {
       currentPath === "" ? (
-        <h1 class="logo">
-          <a href="/" title="Just Andy">
+        <h1>
+          <a href="/" title="Just Andy" class="logo__text">
             Just Andy
           </a>
         </h1>
       ) : (
-        <a href="/" title="Just Andy" class="logo">
+        <a href="/" title="Just Andy" class="logo__text">
           Just Andy
         </a>
       )

@@ -10,7 +10,9 @@ const projectsCollection = defineCollection({
       description: z.string(),
       summary: z.string(),
       tags: z.array(z.string()),
-      thumbnail: image(),
+      thumbnail: image().refine((img) => img.width >= 500, {
+        message: "Cover image must be at least 500 pixels wide!",
+      }),
       banner: image(),
       order: z.number(),
       featured: z.boolean(),
@@ -26,7 +28,9 @@ const articleCollection = defineCollection({
       description: z.string(),
       summary: z.string(),
       keywords: z.array(z.string()),
-      banner: image(),
+      banner: image().refine((img) => img.width >= 1024, {
+        message: "Banner must be at least 1024px wide"
+      }),
       bannerShow: z.boolean(),
       publishDate: z.date(),
       featured: z.boolean(),

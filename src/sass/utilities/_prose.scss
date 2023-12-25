@@ -1,6 +1,9 @@
 @use "../abstracts/" as *;
 
 .prose {
+  max-width: $prose-max-width;
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;  
   
   font-size: fs(110);
   line-height: $large-line-height;
@@ -14,12 +17,6 @@
       margin-left: 2rem;
       padding-left: 0.25rem;
     }
-  }
-
-  p, h1,h2, h3, h4, h5, h6, ul, ol {
-    max-width: $prose-max-width;
-    width: min(100% - 2rem, 60rem);
-    margin-inline: auto;  
   }
 
 }

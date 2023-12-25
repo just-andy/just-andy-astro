@@ -16,12 +16,16 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<FrontmatterLayout frontmatter={entry.data}>
+<FrontmatterLayout
+  frontmatter={entry.data}
+  title={entry.data.title}
+  description={entry.data.summary}
+>
   {
     entry.data.bannerShow == true && (
       <Hero
         url={entry.data.banner}
-        alt={entry.data.title}
+        title={entry.data.title}
         summary={entry.data.summary}
       />
     )
