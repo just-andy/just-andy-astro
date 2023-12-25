@@ -31,3 +31,22 @@ body {
   width: auto;
   height: auto;
 }
+
+.error__wrapper {
+  height: 50vh;
+  margin: 5rem;
+  @include mq(large){
+    height: 100vh;
+  }
+}
+
+.error__message {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  text-align: left;
+  
+  & > p {
+    font-size: fs(130);
+  }
+}

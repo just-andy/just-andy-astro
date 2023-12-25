@@ -1,0 +1,20 @@
+---
+export interface Props {
+  section: string;
+  page: string;
+}
+
+const { section, page } = Astro.props;
+---
+
+<nav class="breadcrumbs">
+  <a href="/" title="Just Andy">Home</a> /
+  {
+    section == "projects" && (
+      <a href="/projects" title="Just Andy Projects">
+        Projects
+      </a>
+    )
+  } /
+  {page}
+</nav>

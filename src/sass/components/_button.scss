@@ -8,8 +8,10 @@
   border: 0;
   padding: 1.125em 2em;
   font-weight: $fw-300;
+  font-family: $ff-heading;
   transition: 275ms ease;
   border-radius: 0.25em;
+  text-transform: uppercase;
 
   &--primary {
     background-color: clr(secondary, 80);

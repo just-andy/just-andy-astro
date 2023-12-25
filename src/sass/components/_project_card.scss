@@ -1,15 +1,29 @@
 @use "../abstracts/" as *;
+@use "../utilities/shadows" as *;
 
-.project_card {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  @include mq(large) {
-    row-gap: 2rem;
-  }
+.project-card {
+  display: grid;
+  grid-row: auto;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  overflow:hidden;
+ @include shadow(1);
+  background-color: #fff;
 }
 
-.project_card--image {
-  border-radius: 1rem;
+.project-card__image {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.project-card__summary {
+  padding: 0.5rem 1rem 1rem 1rem;
+  display: grid;
+  grid-row: auto;
+  line-height: 1.25em;
+  gap:1rem;
+
+  @include mq(large){
+    padding: 0 1rem 1rem 1rem;
+
+  }
 }

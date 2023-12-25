@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.grid__two-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap, $grid-gap);
+
+    @include mq (medium) {
+        grid-template-columns: 1fr 1fr;
+    }
+}

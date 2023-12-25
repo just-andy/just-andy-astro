@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
 import { Image } from "astro:assets";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 
 export async function getStaticPaths() {
   const projectDetails = await getCollection("projects");
@@ -25,12 +26,8 @@ const { Content } = await entry.render();
       class="image image--cover"
     />
   </div>
-  <div class="flow">
-    <nav>
-      <a href="/" title="Just Andy">Home</a> /
-      <a href="/projects" title="Just Andy Projects">Projects</a> /
-      {entry.data.title}
-    </nav>
+  <div class="flow prose">
+    <Breadcrumbs section="projects" page={entry.data.title} />
     <Content />
   </div>
 </FrontmatterLayout>

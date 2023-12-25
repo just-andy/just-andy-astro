@@ -18,3 +18,4 @@ Moving my site to Astro from Next.js
 [] Adjust type flow
 [x] Set up git
 [] Move content
+[] Fix heading scale
