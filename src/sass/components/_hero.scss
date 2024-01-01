@@ -4,7 +4,6 @@
     margin-bottom: 4rem;
     display: grid;
     place-items:center;
-    
 
     > * {
         grid-row: 1;
@@ -13,12 +12,13 @@
 }
 
 .hero__content {
-    width: 80%;
-    background-color: clr(neutral, 100);
+    //max-width: $prose-max-width;
+    width: min(100% - 2rem, 60rem);
+    display: grid;
+    gap: 0.5rem;
 
     h1 {
         font-size: fs(150);
-        color: clr(neutral, 00);
 
         @include mq(medium){
             font-size: fs(180);
@@ -26,7 +26,12 @@
     }
     
     div {
-        font-size: fs(120);
+        font-size: fs(140);
+    }
+
+    h1, div {
+        color: clr(neutral, 00);
+
     }
 
 }

@@ -2,7 +2,8 @@
 import { getCollection } from "astro:content";
 import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
 import { Image } from "astro:assets";
-import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Hero from "../../components/Hero.astro";
+import { Breadcrumbs, BreadcrumbsItem } from "accessible-astro-components";
 
 export async function getStaticPaths() {
   const projectDetails = await getCollection("projects");
@@ -17,17 +18,17 @@ const { Content } = await entry.render();
 ---
 
 <FrontmatterLayout frontmatter={entry.data}>
-  <div>
-    <h1>{entry.data.title}</h1>
-    <p>{entry.data.summary}</p>
-    <Image
-      src={entry.data.banner}
-      alt={`${entry.data.title} banner`}
-      class="image image--cover"
-    />
-  </div>
-  <div class="flow prose">
-    <Breadcrumbs section="projects" page={entry.data.title} />
+  <Hero
+    url={entry.data.banner}
+    title={entry.data.title}
+    summary={entry.data.summary}
+  />
+  <div class="flow prose" id="main-content">
+    <Breadcrumbs>
+      <BreadcrumbsItem href="/" label="Home" />
+      <BreadcrumbsItem href="/projects" label="Projects" />
+      <BreadcrumbsItem currentPage={true} label={entry.data.title} />
+    </Breadcrumbs>
     <Content />
   </div>
 </FrontmatterLayout>

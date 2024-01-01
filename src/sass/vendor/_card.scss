@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+body .card {
+    border-radius: 0.5rem;
+    padding: 0;
+  }
+
+  .card__content {
+    display: flex;
+    gap: 1rem;
+
+    &:last-child {
+      padding-top: 0;
+    }
+
+    small {
+      text-decoration: underline;
+      color: clr(primary, 80);
+    }
+  }
+
+  // set your own image height
+  .card__image {
+    height: 20rem;
+  }

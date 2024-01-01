@@ -13,12 +13,12 @@ const dateOptions: object = {
 
 <Layout title="Articles" description="All my articles">
   <div class="container">
-    <div class="grid-auto-fit">
+    <div class="grid-auto-fit" id="main-content">
       {
         allarticles.map((article) => (
-          <div class="card">
+          <div class="article-card">
             <Image
-              class="article_card--image"
+              class="article-card--image"
               src={article.data.banner}
               alt={`${article.data.title} summary`}
             />
@@ -34,7 +34,7 @@ const dateOptions: object = {
               )}
             </p>
             <p>{article.data.description}</p>
-            <div class="flex gap-x-4">
+            <div>
               {article.data.keywords.map((keyword) => (
                 <span>{keyword}</span>
               ))}
