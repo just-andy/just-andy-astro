@@ -13,7 +13,9 @@ const projectsCollection = defineCollection({
       thumbnail: image().refine((img) => img.width >= 500, {
         message: "Cover image must be at least 500 pixels wide!",
       }),
-      banner: image(),
+      banner: image().refine((img) => img.width >= 1024, {
+        message: "Banner must be at least 1024px wide"
+      }),
       order: z.number(),
       featured: z.boolean(),
       private: z.boolean(),

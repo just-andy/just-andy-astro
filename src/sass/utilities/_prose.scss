@@ -1,13 +1,12 @@
 @use "../abstracts/" as *;
 
 .prose {
-  max-width: $prose-max-width;
-  width: min(100% - 2rem, 60rem);
-  margin-inline: auto;  
+  //max-width: $prose-max-width;
+  //width: min(100% - 2rem, 60rem);
+  //margin-inline: auto;  
   
   font-size: fs(110);
   line-height: $large-line-height;
-  margin: 0 auto;
 
   & ul {
     margin-left: 0.5rem;
@@ -17,6 +16,11 @@
       margin-left: 2rem;
       padding-left: 0.25rem;
     }
+  }
+
+  p:has(img){
+   // width: 100%;
+    border:1px solid red;
   }
 
 }

@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
 import Hero from "../../components/Hero.astro";
-import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { Breadcrumbs, BreadcrumbsItem } from "accessible-astro-components";
 
 export async function getStaticPaths() {
   const articleDetails = await getCollection("articles");
@@ -30,8 +30,13 @@ const { Content } = await entry.render();
       />
     )
   }
-  <Breadcrumbs section="projects" page={entry.data.title} />
-  <main class="prose | flow">
+  <Breadcrumbs>
+    <BreadcrumbsItem href="/" label="Home" />
+    <BreadcrumbsItem href="/articles" label="Articles" />
+    <BreadcrumbsItem currentPage={true} label={entry.data.title} />
+  </Breadcrumbs>
+
+  <main class="prose | flow" id="main-content">
     <Content />
   </main>
 </FrontmatterLayout>
