@@ -23,12 +23,14 @@ const { Content } = await entry.render();
     title={entry.data.title}
     summary={entry.data.summary}
   />
-  <div class="flow prose" id="main-content">
+  <div id="main-content">
     <Breadcrumbs>
       <BreadcrumbsItem href="/" label="Home" />
       <BreadcrumbsItem href="/projects" label="Projects" />
       <BreadcrumbsItem currentPage={true} label={entry.data.title} />
     </Breadcrumbs>
-    <Content />
+    <div class="prose">
+      <Content />
+    </div>
   </div>
 </FrontmatterLayout>

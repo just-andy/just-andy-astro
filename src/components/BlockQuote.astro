@@ -7,9 +7,9 @@ interface Props {
 const { caption } = Astro.props;
 ---
 
-<div class="blockquote">
+<blockquote class="blockquote">
   <div class="blockquote__inner">
     <slot />
-    <figcaption>~ {caption}</figcaption>
+    <cite>~ {caption}</cite>
   </div>
-</div>
+</blockquote>

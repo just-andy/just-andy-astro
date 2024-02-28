@@ -1,0 +1,5 @@
+@use "variables" as *;
+
+%container-width {
+    width: min(100% - 2rem, var(--max-width));
+}

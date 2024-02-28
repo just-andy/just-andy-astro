@@ -1,11 +1,11 @@
 @use "../abstracts/" as *;
 
 .hero {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     display: grid;
-    place-items:center;
+    place-items: center;
 
-    > * {
+    >* {
         grid-row: 1;
         grid-column: 1;
     }
@@ -13,23 +13,25 @@
 
 .hero__content {
     //max-width: $prose-max-width;
-    width: min(100% - 2rem, 60rem);
+    //width: min(100% - 2rem, 60rem);
+    @extend %container-width;
     display: grid;
     gap: 0.5rem;
 
     h1 {
         font-size: fs(150);
 
-        @include mq(medium){
+        @include mq(medium) {
             font-size: fs(180);
         }
     }
-    
+
     div {
         font-size: fs(140);
     }
 
-    h1, div {
+    h1,
+    div {
         color: clr(neutral, 00);
 
     }

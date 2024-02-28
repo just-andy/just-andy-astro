@@ -28,13 +28,23 @@ body {
 
 *:focus {
   outline: none;
-  }
-  input:focus {
+}
+
+input:focus {
   outline: $focus-style;
-  }
-  input[type=submit]:focus{
+}
+
+input[type=submit]:focus {
   outline: $focus-style;
-  }
-  a:focus {
+}
+
+a:focus {
   outline: $focus-style;
-  }
+}
+
+// Custom
+.container--button {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+}
