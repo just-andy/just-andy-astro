@@ -1,26 +1,35 @@
 @use "../abstracts/" as *;
 
 .prose {
-  //max-width: $prose-max-width;
-  //width: min(100% - 2rem, 60rem);
-  //margin-inline: auto;  
-  
   font-size: fs(110);
   line-height: $large-line-height;
 
-  & ul {
-    margin-left: 0.5rem;
-
-    & li {
-      list-style:disc;
-      margin-left: 2rem;
-      padding-left: 0.25rem;
-    }
+  p,
+  ul,
+  ol,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  figure {
+    max-width: $prose-max-width;
+    @extend %container-width;
+    margin-inline: auto;
   }
 
-  p:has(img){
-   // width: 100%;
-    border:1px solid red;
+  // List Styles
+  & li {
+    list-style: disc;
+    margin-left: 2rem;
+    padding-left: 0.25rem;
+  }
+
+  // Flow
+  >*:where(:not(:first-child)) {
+    margin-bottom: var(--flow-top-spacer, 1.5rem);
   }
 
 }
