@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-//import ProjectCard from "../components/ProjectCard.astro";
-import { Card } from "accessible-astro-components";
+import ProjectCard from "../components/ProjectCard.astro";
+
 const allArticles = await getCollection("projects");
 ---
 
@@ -14,14 +14,13 @@ const allArticles = await getCollection("projects");
     <div class="grid__two-column" id="main-content">
       {
         allArticles.map((project) => (
-          <Card
-            url={`/projects/${project.slug}`}
-            img={project.data.thumbnail.src}
+          <ProjectCard
+            thumbnail={project.data.thumbnail}
             title={project.data.title}
-            footer="Read More"
-          >
-            {project.data.description}
-          </Card>
+            description={project.data.description}
+            strapline={project.data.strapline}
+            slug={project.slug}
+          />
         ))
       }
     </div>

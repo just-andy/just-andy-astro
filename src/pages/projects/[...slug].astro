@@ -15,6 +15,11 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const tags = entry.data.tags;
+
+const projectTags = tags.map((tag, index) => {
+  return index + 1 !== tags.length ? `${tag}, ` : tag;
+});
 ---
 
 <FrontmatterLayout frontmatter={entry.data}>
@@ -22,6 +27,7 @@ const { Content } = await entry.render();
     url={entry.data.banner}
     title={entry.data.title}
     summary={entry.data.summary}
+    tags={projectTags}
   />
   <div id="main-content">
     <Breadcrumbs>

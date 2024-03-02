@@ -4,7 +4,12 @@ const { title, thumbnail, description, strapline, slug } = Astro.props;
 ---
 
 <div class="project-card">
-  <Image class="project-card__image" src={thumbnail} alt={`${title} summary`} />
+  <Image
+    class="project-card__image"
+    src={thumbnail}
+    alt={`${title} summary`}
+    loading="eager"
+  />
   <div class="project-card__summary">
     <h2 class="heading-4">
       <a href={`/projects/${slug}`} title={strapline}>

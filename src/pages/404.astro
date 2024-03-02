@@ -6,14 +6,18 @@ import Layout from "../layouts/Layout.astro";
   title="Oops we can't find the page"
   description="It looks like we can't find what you were looking for"
 >
-  <main class="error__wrapper" id="main-content">
-    <div class="error__message container">
+  <main class="container" id="main-content">
+    <div class="error">
       <h1>Page not found</h1>
       <p>
         Oh no it looks like this page has gone awol or something broke in the
         matrix.
       </p>
-      <a href="/" class="button button--primary" title="Return to homepage">
+      <a
+        href="/"
+        class="button button--primary error--bottom"
+        title="Return to homepage"
+      >
         Go home
       </a>
     </div>
