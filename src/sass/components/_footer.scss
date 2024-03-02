@@ -17,9 +17,7 @@
   padding: size(6);
   justify-content: center;
   background-color: clr(neutral, 00);
-  border-top-width: 2px;
-  border-style: solid;
-  border-color: clr(neutral, 30);
+  border-top: 2px solid clr(neutral, 30);
   gap: size(4);
 
   @include mq(large) {

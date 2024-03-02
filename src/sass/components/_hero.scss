@@ -12,11 +12,10 @@
 }
 
 .hero__content {
-    //max-width: $prose-max-width;
-    //width: min(100% - 2rem, 60rem);
     @extend %container-width;
     display: grid;
     gap: 0.5rem;
+    padding-inline: 1rem;
 
     h1 {
         font-size: fs(150);
@@ -33,7 +32,6 @@
     h1,
     div {
         color: clr(neutral, 00);
-
     }
 
 }

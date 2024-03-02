@@ -1,10 +1,11 @@
 .blockquote {
     &__inner {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-}
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+
     figcaption {
         text-align: right;
         padding-bottom: 1rem;
