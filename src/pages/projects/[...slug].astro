@@ -1,20 +1,18 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
-import { Image } from "astro:assets";
-import Hero from "../../components/Hero.astro";
 import { Breadcrumbs, BreadcrumbsItem } from "accessible-astro-components";
 
 export async function getStaticPaths() {
   const projectDetails = await getCollection("projects");
   return projectDetails.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const tags = entry.data.tags;
 
 const projectTags = tags.map((tag, index) => {
@@ -23,12 +21,6 @@ const projectTags = tags.map((tag, index) => {
 ---
 
 <FrontmatterLayout frontmatter={entry.data}>
-  <Hero
-    url={entry.data.banner}
-    title={entry.data.title}
-    summary={entry.data.summary}
-    tags={projectTags}
-  />
   <div id="main-content">
     <Breadcrumbs>
       <BreadcrumbsItem href="/" label="Home" />

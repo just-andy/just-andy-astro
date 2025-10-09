@@ -1,41 +1,38 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
 import Hero from "../../components/Hero.astro";
 import { Breadcrumbs, BreadcrumbsItem } from "accessible-astro-components";
 
 export async function getStaticPaths() {
-  const articleDetails = await getCollection("articles");
-  return articleDetails.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
+  const articles = await getCollection("articles");
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
   }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { article } = Astro.props;
+const { Content } = await render(article);
 ---
 
 <FrontmatterLayout
-  frontmatter={entry.data}
-  title={entry.data.title}
-  description={entry.data.summary}
+  frontmatter={article.data}
+  title={article.data.title}
+  description={article.data.summary}
 >
-  {
-    entry.data.bannerShow == true && (
-      <Hero
-        url={entry.data.banner}
-        title={entry.data.title}
-        summary={entry.data.summary}
-      />
-    )
-  }
+  <Hero
+    url={article.data.banner}
+    tags={article.data.keywords}
+    summary={article.data.summary}
+    title={article.data.title}
+  />
+
   <Breadcrumbs>
     <BreadcrumbsItem href="/" label="Home" />
     <BreadcrumbsItem href="/articles" label="Articles" />
-    <BreadcrumbsItem currentPage={true} label={entry.data.title} />
+    <BreadcrumbsItem currentPage={true} label={article.data.title} />
   </Breadcrumbs>
-
   <main class="prose | flow" id="main-content">
     <Content />
   </main>
