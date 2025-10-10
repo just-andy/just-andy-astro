@@ -1,8 +1,10 @@
 // Import utilities from `astro:content`
 import { z, defineCollection } from "astro:content";
+// Import loaders
+import { glob } from 'astro/loaders';
 // Define a `type` and `schema` for each collection
 const projectsCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/projects" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -10,12 +12,8 @@ const projectsCollection = defineCollection({
       description: z.string(),
       summary: z.string(),
       tags: z.array(z.string()),
-      thumbnail: image().refine((img) => img.width >= 500, {
-        message: "Cover image must be at least 500 pixels wide!",
-      }),
-      banner: image().refine((img) => img.width >= 1024, {
-        message: "Banner must be at least 1024px wide"
-      }),
+      thumbnail: image().optional(),
+      banner: image().optional(),
       order: z.number(),
       featured: z.boolean(),
       private: z.boolean(),
@@ -23,18 +21,16 @@ const projectsCollection = defineCollection({
 });
 
 const articleCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/articles" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
       description: z.string(),
       summary: z.string(),
       keywords: z.array(z.string()),
-      banner: image().refine((img) => img.width >= 1024, {
-        message: "Banner must be at least 1024px wide"
-      }),
+      banner: image().optional(),
       bannerShow: z.boolean(),
-      publishDate: z.date(),
+      publishDate: z.coerce.date(),
       featured: z.boolean(),
     }),
 });

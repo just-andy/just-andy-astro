@@ -1,0 +1,10 @@
+.logo__wrapper {
+    height: 3rem;
+    color: clr(primary, 100);
+    /* Controls SVG height */
+}
+
+.logo__wrapper svg {
+    height: 100%;
+    width: auto;
+}
