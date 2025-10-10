@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-
-const allArticles = await getCollection("articles");
+import ProjectCard from "../components/ProjectCard.astro";
+const allArticles = await getCollection("projects");
 ---
 
 <Layout
@@ -13,15 +13,17 @@ const allArticles = await getCollection("articles");
     <h2 class="intro">I WORK WITH DESIGN SYSTEMS AND TINKER WITH CODE...</h2>
 
     <div class="grid__two-column" id="main-content">
-      <ul>
-        {
-          allArticles.map((article) => (
-            <li>
-              <a href={`/articles/${article.id}`}>{article.data.title}</a>
-            </li>
-          ))
-        }
-      </ul>
+      {
+        allArticles.map((project) => (
+          <ProjectCard
+            thumbnail={project.data.thumbnail}
+            title={project.data.title}
+            description={project.data.description}
+            strapline={project.data.strapline}
+            slug={project.id}
+          />
+        ))
+      }
     </div>
   </main>
 </Layout>

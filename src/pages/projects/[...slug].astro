@@ -12,8 +12,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
 const tags = entry.data.tags;
+const { Content } = await render(entry);
 
 const projectTags = tags.map((tag, index) => {
   return index + 1 !== tags.length ? `${tag}, ` : tag;
@@ -29,6 +29,7 @@ const projectTags = tags.map((tag, index) => {
     </Breadcrumbs>
     <div class="prose">
       <Content />
+      <p><strong>Tags:</strong> {projectTags}</p>
     </div>
   </div>
 </FrontmatterLayout>
