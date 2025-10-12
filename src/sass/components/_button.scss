@@ -12,10 +12,15 @@
   transition: 275ms ease;
   border-radius: 9999px;
   text-transform: uppercase;
+  background-color: clr(secondary, 80);
+
 
   &--primary {
     background-color: clr(secondary, 80);
     color: clr(neutral, 0);
+    box-shadow:
+      0 0 0 5px #fff,
+      0 0 0 10px clr(secondary, 80);
   }
 
   &--neutral {
@@ -35,6 +40,9 @@
   &:is(:hover, :focus) {
     background-color: clr(primary, 100);
     color: clr(neutral, 10);
+    box-shadow:
+      0 0 0 5px #fff,
+      0 0 0 10px clr(primary, 100);
   }
 
   &:focus {

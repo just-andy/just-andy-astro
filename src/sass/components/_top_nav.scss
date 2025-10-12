@@ -31,6 +31,21 @@
   }
 }
 
+// Logo
+.logo__wrapper {
+  height: 8rem;
+  color: clr(primary, 100);
+
+  @include mq(large) {
+    height: 3rem;
+  }
+}
+
+.logo__wrapper svg {
+  height: 100%;
+  width: auto;
+}
+
 a.logo__text {
   display: none;
   justify-content: center;
@@ -49,6 +64,7 @@ a.logo__text {
     color: clr(secondary, 100);
   }
 }
+
 .svg__container {
   display: flex;
   flex-direction: row;
@@ -69,7 +85,7 @@ a.logo__text {
   width: size(14);
   height: size(14);
 
- 
+
   @include mq(large) {
     display: inline-block;
     width: size(9);
@@ -88,7 +104,7 @@ a.logo__text {
   justify-content: center;
   margin: 0.5rem 0 1rem 0;
 
-  @include mq(large){
+  @include mq(large) {
     font-size: fs(130);
     margin: 0 0 2rem 0;
   }
@@ -102,12 +118,12 @@ a.logo__text {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.5rem;
-  
-    @include mq(medium){
+
+    @include mq(medium) {
       gap: 2rem;
     }
 
-    @include mq(large){
+    @include mq(large) {
       gap: 1rem;
     }
 
@@ -115,18 +131,18 @@ a.logo__text {
       padding: 0.5rem 0.25rem 1rem 0.25rem;
       text-transform: uppercase;
       text-decoration: none;
-  
+
       &:hover {
         padding: 0.5rem 0.25rem 0.5rem 0.25rem;
         color: clr(secondary, 100);
-        border-bottom: 0.5rem solid clr(secondary, 100); 
+        border-bottom: 0.5rem solid clr(secondary, 100);
       }
-  
+
       &.selected {
         padding: 0.5rem 0.25rem 0.5rem 0.25rem;
         border-bottom: 0.5rem solid clr(primary, 100);
         color: clr(primary, 100);
-  
+
         &:hover {
           background-color: clr(neutral, 30);
         }

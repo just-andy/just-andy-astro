@@ -1,13 +1,13 @@
 ---
+import Skip from "./Skip.astro";
+
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 const pathSections = currentPath.split("/");
 const parent = pathSections[0];
-
-import { Image } from "astro:assets";
-import Logo from "../assets/andy-cetnarskyj-logo.svg";
 ---
 
+<Skip />
 <header class="navbar">
   <figure class="svg__container cursor-pointer">
     <div class="logo__wrapper">
