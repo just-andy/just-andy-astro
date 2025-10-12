@@ -1,15 +1,19 @@
 @use "../abstracts/" as *;
 
 a {
-  color: clr(secondary, 80);
+  color: $text-link;
   text-decoration: underline;
 
   &:hover {
-    color: clr(primary, 100);
+    color: $text-link-hover;
   }
 
   &:active {
-    color: clr(secondary, 100);
+    color: $text-link-active;
+  }
+
+  &:visited {
+    color: $text-link-visited;
   }
 }
 

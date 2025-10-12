@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use "../abstracts/" as *;
 
-$shadow-color: clr(neutral, 70);
+$shadow-color: $bg-base;
 
 @mixin shadow($depth) {
   @if $depth < 1 {

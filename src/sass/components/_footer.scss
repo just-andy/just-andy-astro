@@ -16,8 +16,8 @@
   flex-direction: column-reverse;
   padding: size(6);
   justify-content: center;
-  background-color: clr(neutral, 00);
-  border-top: 2px solid clr(neutral, 30);
+  background-color: $bg-light;
+  border-top: 2px solid $border-base;
   gap: size(4);
 
   @include mq(large) {

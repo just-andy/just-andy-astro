@@ -5,9 +5,9 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   padding: 1rem;
-  background-color: clr(neutral, 00);
+  background-color: $bg-card;
   border-radius: var(--global-radius);
-  border: 1px solid clr(neutral, 30);
+  border: 1px solid $border-card;
   @include shadow(1);
 
   &__title {

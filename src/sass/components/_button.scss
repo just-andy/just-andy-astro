@@ -12,40 +12,40 @@
   transition: 275ms ease;
   border-radius: 9999px;
   text-transform: uppercase;
-  background-color: clr(secondary, 80);
+  background-color: $bg-primary;
 
 
   &--primary {
-    background-color: clr(secondary, 80);
-    color: clr(neutral, 0);
+    background-color: $bg-primary;
+    color: $text-primary;
     box-shadow:
       0 0 0 5px #fff,
-      0 0 0 10px clr(secondary, 80);
+      0 0 0 10px $border-primary;
   }
 
   &--neutral {
     padding: 1.125rem;
-    background-color: clr(neutral, 30);
-    color: clr(primary, 50);
+    background-color: transparent;
+    color: $text-primary;
   }
 
   &--outline {
     --outline-size: 1px;
     background: transparent;
-    outline: var(--outline-size) solid clr(secondary, 80);
+    outline: var(--outline-size) solid $border-primary;
     outline-offset: calc(var(--outline-size) * -1);
-    color: clr(secondary, 80);
+    color: $text-primary;
   }
 
   &:is(:hover, :focus) {
-    background-color: clr(primary, 100);
-    color: clr(neutral, 10);
+    background-color: $bg-primary-hover;
+    color: $text-primary-hover;
     box-shadow:
       0 0 0 5px #fff,
-      0 0 0 10px clr(primary, 100);
+      0 0 0 10px $border-primary-hover;
   }
 
   &:focus {
-    outline: 0.125rem dashed clr(secondary, 80);
+    outline: 0.25rem dashed $border-focus;
   }
 }

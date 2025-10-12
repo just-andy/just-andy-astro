@@ -60,12 +60,12 @@
       font-size: fs(calc(160 - $scale));
       font-family: $ff-heading;
       text-transform: capitalize;
-      color: clr(primary, 80);
+      color: $text-heading;
       line-height: 1.25em;
 
       @if $i >=4 {
         font-family: $ff-base;
-        color: clr(primary, 60);
+        color: $text-heading;
         font-weight: 600;
         line-height: 1em;
       }

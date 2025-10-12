@@ -2,11 +2,11 @@
 
 .lead {
   font-size: fs(110);
-  color: clr(neutral, 90);
+  color: $text-subheading;
   text-transform: uppercase;
   font-weight: $fw-700;
 
-  & + p {
+  &+p {
     margin-top: 0;
   }
 }

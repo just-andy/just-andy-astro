@@ -1,54 +1,92 @@
 $colors: (
-  neutral: (
-    100: #091024,
-    90: #22283a,
-    80: #3c4253,
-    70: #656a76,
-    60: #8f939c,
-    50: #a8aab1,
-    40: #c2c4c8,
-    30: #d9dbdd,
-    20: #f1f3f7,
-    10: #f7f8fa,
-    00: #ffffff,
+  text: (base: hsl(12, 6.5%, 15.1%),
+    heading: hsl(12, 6.5%, 15.1%),
+    subheading: #222,
+    focus: hsl(18, 6%, 100%),
+    card:#333,
+    link: (default: #000,
+      hover: hsl(142, 71.8%, 29.2%),
+      active: hsl(144, 61.2%, 20.2%),
+      visited: hsl(142, 76.2%, 36.3%),
+    ),
+    selected: (default: #000,
+      hover: hsl(142, 71.8%, 29.2%),
+      active: hsl(144, 61.2%, 20.2%),
+      visited: hsl(142, 76.2%, 36.3%),
+    ),
+    primary:(default: hsl(12, 66.5%, 45.7%),
+      hover: hsl(14, 66.5%, 45.7%),
+      active: hsl(30, 66.5%, 45.7%)),
+    invert: (default:hsl(60, 9.1%, 97.8%),
+      heading:hsl(55%, 10%, 96%)),
   ),
-  primary: (
-    00: #918e8d,
-    10: #777372,
-    20: #443f3d,
-    30: #443f3d,
-    40: #3c3635,
-    50: #2b2523,
-    60: #26211f,
-    70: #211c1b,
-    80: #1c1816,
-    90: #161312,
-    100: #090807,
+  border: (base: hsl(20, 5.9%, 90%),
+    card: #ebebeb,
+    focus: hsl(18, 6%, 100%),
+    primary:(default: hsl(12, 66.5%, 45.7%),
+      hover: hsl(14, 66.5%, 45.7%),
+      active: hsl(30, 66.5%, 45.7%)),
+    selected: (default: #000,
+      hover: hsl(142, 71.8%, 29.2%),
+      active: hsl(144, 61.2%, 20.2%),
+      visited: hsl(142, 76.2%, 36.3%),
+    ),
   ),
-  secondary: (
-    00: #ffbfad,
-    10: #ffab95,
-    20: #ff987c,
-    30: #ff8564,
-    40: #ff714b,
-    50: #161312,
-    60: #eb562f,
-    70: #e0532d,
-    80: #d64f2b,
-    90: #c24727,
-    100: #aa3d22,
-  ),
-  tertiary: (
-    00: #fce0af,
-    10: #fbd797,
-    20: #fbd797,
-    30: #fac466,
-    40: #f9bb4e,
-    50: #f8b236,
-    60: #e4a432,
-    70: #da9d30,
-    80: #d0962d,
-    90: #bc8729,
-    100: #a37524,
-  ),
+  bg:(base: hsl(60, 4.8%, 95.9%),
+    light: #fff,
+    invert: hsl(12, 66.5%, 45.7%),
+    card: #fff,
+    primary:(default: hsl(12, 66.5%, 45.7%),
+      hover: hsl(14, 66.5%, 45.7%),
+      active: hsl(30, 66.5%, 45.7%)),
+    selected: (default: #000,
+      hover: hsl(142, 71.8%, 29.2%),
+      active: hsl(144, 61.2%, 20.2%),
+      visited: hsl(142, 76.2%, 36.3%),
+    ),
+  )
 );
+
+
+// text
+$text-base: var(--text-base);
+$text-heading: var(--text-heading);
+$text-subheading: var(--sub-heading);
+$text-focus: var(--text-focus);
+$text-card: var(--text-card);
+$text-link: var(--text-link);
+$text-link-hover: var(--text-link-hover);
+$text-link-active: var(--text-link-active);
+$text-link-visited: var(--text-link-visited);
+$text-selected: var(--text-selected);
+$text-selected-hover: var(--text-selected-hover);
+$text-selected-active: var(--text-selected-active);
+$text-selected-visited: var(--text-link-visited);
+$text-invert: var(--text-invert);
+$text-invert-heading: var(--text-invert-heading);
+$text-primary: var(--text-primary);
+$text-primary-hover: var(--text-primary-hover);
+$text-primary-active: var(--text-primary-active);
+// border
+$border-base: var(--border-base);
+$border-card: var(--border-card);
+$border-focus: var(--border-focus);
+$border-primary: var(--border-primary);
+$border-primary-hover: var(--border-primary-hover);
+$border-primary-active: var(--border-primary-active);
+$border-selected: var(--border-selected);
+$border-selected-hover: var(--border-selected-hover);
+$border-selected-active: var(--border-selected-active);
+$border-selected-visited: var(--border-selected-visited);
+// surface
+$bg-base: var(--bg-base);
+$bg-light: var(--bg-light);
+$bg-invert: var(--bg-invert);
+$bg-card: var(--bg-card);
+$bg-primary: var(--bg-primary);
+$bg-primary-hover: var(--bg-primary-hover);
+$bg-primary-active: var(--bg-primary-active);
+$bg-selected: var(--bg-selected);
+$bg-selected-hover: var(--bg-selected-hover);
+$bg-selected-active: var(--bg-selected-active);
+$bg-selected-visited: var(--bg-selected-visited);

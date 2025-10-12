@@ -15,8 +15,8 @@ body {
   font-size: fs(100);
   font-weight: $fw-400;
   font-family: $ff-sans;
-  color: clr(neutral, 80);
-  background-color: clr(neutral, 10);
+  color: $text-base;
+  background-color: $bg-base;
   text-align: left;
 }
 
