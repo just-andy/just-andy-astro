@@ -3,7 +3,10 @@ layout: "../layouts/FrontmatterLayout.astro"
 title: About Andy Cetnarskyj
 description: Learn a bit more about me and my career history
 ---
- <main class="prose | flow"  id="main-content">
+
+import Profile from "../assets/profile-photo.jpeg";
+import {Image} from "astro:assets";
+
 
 # About
 
@@ -15,7 +18,7 @@ description: Learn a bit more about me and my career history
 - [Check out my Linked In](https://www.linkedin.com/in/andrewcetnarskyj/ "Andrew Cetnarskyj Linked In") for full career history
 
 <div class="container--button">
-<a href="/Andrew-Cetnarskyj-Feb23-m.pdf" target="_blank" rel="noreferrer" class="button button--primary">Download CV</a>
+<a href="/Andrew-Cetnarskyj-Oct2025.pdf" target="_blank" rel="noreferrer" class="button button--primary">Download CV</a>
 </div>
 
 ## The Backstory
@@ -32,7 +35,7 @@ Returning to Edinburgh I was fortunate enough to be focus on building out the de
 
 Our design system teams successfully delivered and governed the Hydrocarbon design system that was used by all of the feature teams.
 
-<>![Profile image](https://www.just-andy.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile-photo.26f8c3de.jpg&w=3840&q=75)</>
+<Image src={Profile} alt="Head shot" />
 
 ## Second Design System
 Moving to [Phoenix Group](https://thephoenixgroup.com) I took on the challenge of migrating their brand guidelines and multiple products into a multi-brand and cross platform design system.
@@ -57,5 +60,3 @@ Senior Product Designer, Design Systems, Jul 2019 - Jan 2022
 - Street Parking Product Designer,April 2020 - Present
 - Crush, Sep 2008 - Oct 2011
 - 1st Class Media, Aug 2006 - Aug 2008
-
-</main>

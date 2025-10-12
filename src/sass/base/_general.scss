@@ -25,10 +25,10 @@ body {
 }
 
 
-
+/*
 *:focus {
   outline: none;
-}
+}*/
 
 input:focus {
   outline: $focus-style;
