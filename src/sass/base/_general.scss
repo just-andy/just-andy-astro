@@ -12,7 +12,7 @@
 }
 
 body {
-  font-size: fs(100);
+  font-size: $fs-base;
   font-weight: $fw-400;
   font-family: $ff-sans;
   color: $text-base;
@@ -23,12 +23,6 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
-
-
-/*
-*:focus {
-  outline: none;
-}*/
 
 input:focus {
   outline: $focus-style;

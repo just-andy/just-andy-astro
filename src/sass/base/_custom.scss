@@ -2,10 +2,13 @@
 
 .intro {
   font-size: clamp(2.5rem, 1.25rem + 4.167vw, 5rem);
-  line-height: 1em;
+  line-height: 0.875em;
   font-family: $ff-heading;
-  margin-bottom: 1em;
+  margin: 0.5rem 0 3rem 0;
 
+  @include mq(large) {
+    margin: 2rem 0 4rem 0;
+  }
 }
 
 // Sections

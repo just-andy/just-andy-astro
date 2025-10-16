@@ -18,15 +18,15 @@
     padding-inline: 1rem;
 
     h1 {
-        font-size: fs(150);
+        font-size: $fs-3xl;
 
         @include mq(medium) {
-            font-size: fs(180);
+            font-size: $fs-4xl;
         }
     }
 
     div {
-        font-size: fs(140);
+        font-size: $fs-3xl;
     }
 
     h1,

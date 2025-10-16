@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .lead {
-  font-size: fs(110);
+  font-size: $fs-lg;
   color: $text-subheading;
   text-transform: uppercase;
   font-weight: $fw-700;

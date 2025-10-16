@@ -33,7 +33,7 @@
 
 // Logo
 .logo__wrapper {
-  height: 8rem;
+  height: 6rem;
   color: $text-heading;
 
   @include mq(large) {
@@ -49,14 +49,14 @@
 a.logo__text {
   display: none;
   justify-content: center;
-  color: $text-link;
-  font-size: fs(120);
+  color: $text-base;
+  font-size: $fs-xl;
   font-family: $ff-heading;
   text-decoration: none;
 
   @include mq(large) {
     display: inline-block;
-    font-size: fs(150);
+    font-size: $fs-2xl;
     line-height: 3rem;
   }
 
@@ -75,15 +75,15 @@ a.logo__text {
   height: 100%;
 
   h1 {
-    color: red;
+    color: $primary-500;
     line-height: 1rem;
   }
 }
 
 .logo__icon {
   display: block;
-  width: size(14);
-  height: size(14);
+  width: size(10);
+  height: size(10);
 
 
   @include mq(large) {
@@ -99,14 +99,15 @@ a.logo__text {
 
 .menu {
   list-style: none;
-  font-size: fs(120);
+  font-size: $fs-xl;
   font-family: $ff-heading;
   justify-content: center;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.25rem 0 0.5rem 0;
 
-  @include mq(large) {
-    font-size: fs(130);
-    margin: 0 0 2rem 0;
+
+
+  @include mq(medium) {
+    font-size: $fs-2xl;
   }
 
 
@@ -117,7 +118,7 @@ a.logo__text {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.5rem;
+    gap: 0.25rem;
 
     @include mq(medium) {
       gap: 2rem;
@@ -128,19 +129,20 @@ a.logo__text {
     }
 
     & li a {
-      padding: 0.5rem 0.25rem 1rem 0.25rem;
+      padding: 0.5rem 0.75rem 1rem 0.75rem;
       text-transform: uppercase;
       text-decoration: none;
+      border-radius: $radius;
 
       &:hover {
-        padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
         color: $text-link-hover;
-        border-bottom: 0.5rem solid $text-link-hover;
+        border: 0.25rem solid $text-link-hover;
       }
 
       &.selected {
-        padding: 0.5rem 0.25rem 0.5rem 0.25rem;
-        border-bottom: 0.5rem solid $border-selected;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        border: 0.25rem solid $border-selected;
         color: $text-selected;
 
         &:hover {

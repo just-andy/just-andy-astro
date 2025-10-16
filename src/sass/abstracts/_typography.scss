@@ -1,31 +1,64 @@
 $ff-sans: "Arial", sans-serif;
-$ff-serif: "Times", serif;
 $ff-heading: "Cartridge", sans-serif;
 
 $ff-base: $ff-sans;
 $ff-accent: $ff-heading;
 
-$display-sizes: (
-  10: clamp(5rem, calc(3.333rem + 4.167vw), 6rem), // 80px - 96px
-  20: clamp(4.5rem, calc(3.667rem + 2.083vw), 5rem), // 72px - 80px
-  30: clamp(4rem, calc(3.167rem + 2.083vw), 4.5rem), // 64px - 72px
-);
-
-$font-sizes: (
-  90:  clamp(0.875rem, 0.667rem + 0.521vw, 1rem), // 14px - 16px
-  100: clamp(1rem, 0.792rem + 0.521vw, 1.125rem), // 16px - 18px
-  110: clamp(1.188rem, 1.083rem + 0.26vw, 1.25rem), // 18px - 20px
-  120: clamp(1.25rem, 0.833rem + 1.042vw, 1.5rem), // 20px - 24px
-  130: clamp(1.5rem, 1.083rem + 1.042vw, 1.75rem),// 24px - 28px
-  140: clamp(1.75rem, 1.333rem + 1.042vw, 2rem),// 28px - 32px
-  150: clamp(2rem, 1.583rem + 1.042vw, 2.25rem), // 32px - 36px
-  160: clamp(2.25rem, 1.833rem + 1.042vw, 2.5rem),// 36px - 40px
-  170: clamp(2.75rem, 2.333rem + 1.042vw, 3rem),// 44px - 48px
-  180: clamp(3rem, 2.167rem + 2.083vw, 3.5rem), // 48px - 56px
-  190: clamp(3.5rem, 2.667rem + 2.083vw, 4rem)// 56px - 64px
-);
-
+// Font Weight
 $fw-300: 300;
 $fw-400: 400;
 $fw-500: 500;
 $fw-700: 700;
+$fw-heading: $fw-500;
+
+$display-sizes: (
+  sm: clamp(5rem, calc(3.333rem + 4.167vw), 6rem),
+  // 80px - 96px
+  md: clamp(4.5rem, calc(3.667rem + 2.083vw), 5rem),
+  // 72px - 80px
+  lg: clamp(4rem, calc(3.167rem + 2.083vw), 4.5rem),
+  // 64px - 72px
+);
+
+$font-sizes: (
+  xs: clamp(0.875rem, 0.667rem + 0.521vw, 1rem),
+  // 14px - 16px
+  sm: clamp(1rem, 0.792rem + 0.521vw, 1.125rem),
+  // 16px - 18px
+  base: clamp(1.188rem, 1.083rem + 0.26vw, 1.25rem),
+  // 16px - 18px
+  md: clamp(1.188rem, 1.083rem + 0.26vw, 1.25rem),
+  // 18px - 20px
+  lg: clamp(1.25rem, 0.833rem + 1.042vw, 1.5rem),
+  // 20px - 24px
+  2xl: clamp(1.5rem, 1.083rem + 1.042vw, 1.75rem),
+  // 24px - 28px
+  3xl: clamp(1.75rem, 1.333rem + 1.042vw, 2rem),
+  // 28px - 32px
+  4xl: clamp(2rem, 1.583rem + 1.042vw, 2.25rem),
+  // 32px - 36px
+  5xl: clamp(2.25rem, 1.833rem + 1.042vw, 2.5rem),
+  // 36px - 40px
+  6xl: clamp(2.75rem, 2.333rem + 1.042vw, 3rem),
+  // 44px - 48px
+  7xl: clamp(3rem, 2.167rem + 2.083vw, 3.5rem),
+  // 48px - 56px
+  8xl: clamp(3.5rem, 2.667rem + 2.083vw, 4rem) // 56px - 64px
+);
+
+$fs-xs: var(--fs-xs);
+$fs-sm: var(--fs-sm);
+$fs-base: var(--fs-base);
+$fs-md: var(--fs-md);
+$fs-lg: var(--fs-lg);
+$fs-xl: var(--fs-xl);
+$fs-2xl: var(--fs-2xl);
+$fs-3xl: var(--fs-3xl);
+$fs-4xl: var(--fs-4xl);
+$fs-5xl: var(--fs-5xl);
+$fs-6xl: var(--fs-6xl);
+$fs-7xl: var(--fs-7xl);
+$fs-8xl: var(--fs-8xl);
+$fs-display-sm: var(--fs-display-sm);
+$fs-display-md: var(--fs-display-md);
+$fs-display-lg: var(--fs-display-lg);

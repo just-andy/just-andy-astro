@@ -20,18 +20,58 @@ a {
 // Headings
 // Loops out headings/class
 // Probably not the best way
-@include headings-scale();
 
+h1 {
+  font-size: $fs-8xl;
+  color: $text-heading;
+  font-family: $ff-heading;
+  font-weight: $fw-heading;
+}
+
+h2 {
+  font-size: $fs-3xl;
+  color: $text-heading;
+  font-family: $ff-heading;
+  font-weight: $fw-heading;
+}
+
+h3 {
+  font-size: $fs-2xl;
+  color: $text-heading;
+  font-family: $ff-heading;
+  font-weight: $fw-heading;
+}
+
+h4 {
+  font-size: $fs-xl;
+  color: $text-heading;
+  font-family: $ff-heading;
+  font-weight: $fw-heading;
+}
+
+h5 {
+  font-size: $fs-2xl;
+  color: $text-heading;
+  font-family: $ff-sans;
+  font-weight: $fw-heading;
+}
+
+h6 {
+  font-size: $fs-xl;
+  color: $text-heading;
+  font-family: $ff-sans;
+  font-weight: $fw-heading;
+}
 
 // Display
 .display-1 {
-  font-size: display(10);
+  font-size: $fs-display-sm;
 }
 
 .display-2 {
-  font-size: display(20);
+  font-size: $fs-display-md;
 }
 
 .display-3 {
-  font-size: display(30);
+  font-size: $fs-display-lg;
 }

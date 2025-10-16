@@ -12,16 +12,6 @@
   @else {
     @error '$colors does not have that color!';
   }
-}*/
-
-@function fs($font-size) {
-  @if map.has-key($font-sizes, $font-size) {
-    @return map.get($font-sizes, $font-size);
-  }
-
-  @else {
-    @error '$font-sizes does not have that size!';
-  }
 }
 
 @function display($display-size) {
@@ -31,6 +21,17 @@
 
   @else {
     @error '$display-sizes does not have that size!';
+  }
+}
+  */
+
+@function fs($font-size) {
+  @if map.has-key($font-sizes, $font-size) {
+    @return map.get($font-sizes, $font-size);
+  }
+
+  @else {
+    @error '$font-sizes does not have that size!';
   }
 }
 
