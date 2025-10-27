@@ -132,18 +132,34 @@ a.logo__text {
       padding: 0.5rem 0.75rem 1rem 0.75rem;
       text-transform: uppercase;
       text-decoration: none;
-      border-radius: $radius;
+      border-radius: none;
+
+      @include mq(medium) {
+        border-radius: $radius;
+      }
+
 
       &:hover {
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        padding: 0.5rem 0.75rem 1rem 0.75rem;
         color: $text-link-hover;
-        border: 0.25rem solid $text-link-hover;
+        border-bottom: 0.25rem solid $text-link-hover;
+        border-radius: none;
+
+        @include mq(medium) {
+          padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+          border: 0.25rem solid $text-link-hover;
+        }
       }
 
       &.selected {
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-        border: 0.25rem solid $border-selected;
+        padding: 0.5rem 0.75rem 1rem 0.75rem;
+        border-bottom: 0.25rem solid $border-selected;
         color: $text-selected;
+
+        @include mq(medium) {
+          padding: 0.5rem 0.75rem;
+          border: 0.25rem solid $border-selected;
+        }
 
         &:hover {
           background-color: $bg-selected-hover;

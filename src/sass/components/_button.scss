@@ -25,7 +25,7 @@
 
   &--tertiary {
     padding: 1.125rem;
-    background-color: transparent;
+    background-color: $bg-tertiary;
     color: $text-tertiary;
   }
 
@@ -46,6 +46,7 @@
   }
 
   &:focus {
+    outline-offset: 0.75rem;
     outline: 0.25rem dashed $border-focus;
   }
 }
