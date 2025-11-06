@@ -6,4 +6,8 @@
     margin-inline: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    & ol li {
+        margin-left: 0;
+    }
 }

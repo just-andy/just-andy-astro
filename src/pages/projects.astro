@@ -10,7 +10,7 @@ const allArticles = await getCollection("projects");
   title="Projects and Case Studies"
   description="Previous projects and case studies"
 >
-  <main id="main-content" class="container">
+  <main id="main-content" class="container" role="main">
     <div class="grid__two-column" id="main-content">
       {
         allArticles.map((project) => (

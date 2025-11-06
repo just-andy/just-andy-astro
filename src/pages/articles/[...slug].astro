@@ -33,7 +33,7 @@ const { Content } = await render(article);
     <BreadcrumbsItem href="/articles" label="Articles" />
     <BreadcrumbsItem currentPage={true} label={article.data.title} />
   </Breadcrumbs>
-  <main class="prose | flow" id="main-content">
+  <main class="prose | flow" id="main-content" role="main">
     <Content />
   </main>
 </FrontmatterLayout>
