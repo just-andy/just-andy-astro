@@ -1,5 +1,9 @@
-
 @use "colors" as *;
 
-$focus-color: clr(primary, 80);
-$focus-style: 0.25rem solid clr(secondary, 80);
+//Radius
+$radius: 0.5rem;
+$radius-card: 0.25rem;
+
+// Focus
+$focus-color: $text-focus;
+$focus-style: 0.25rem dashed $border-focus;

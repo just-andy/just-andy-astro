@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .navbar {
-  color: clr(neutral, 80);
+  color: $bg-light;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,8 +33,8 @@
 
 // Logo
 .logo__wrapper {
-  height: 8rem;
-  color: clr(primary, 100);
+  height: 6rem;
+  color: $text-heading;
 
   @include mq(large) {
     height: 3rem;
@@ -46,22 +46,43 @@
   width: auto;
 }
 
-a.logo__text {
+.logo__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: size(1);
+  text-decoration: none;
+  color: $text-base;
+
+  &:focus,
+  &:focus-visible {
+    outline: $focus-style;
+    outline-offset: 0.25rem;
+    border-radius: $radius;
+  }
+}
+
+h1 .logo__link {
+
+  &:focus,
+  &:focus-visible {
+    outline: $focus-style;
+    outline-offset: 0.25rem;
+    border-radius: $radius;
+  }
+}
+
+.logo__text {
   display: none;
   justify-content: center;
-  color: clr(primary, 100);
-  font-size: fs(120);
+  color: $text-base;
+  font-size: $fs-xl;
   font-family: $ff-heading;
-  text-decoration: none;
 
   @include mq(large) {
     display: inline-block;
-    font-size: fs(150);
+    font-size: $fs-4xl;
     line-height: 3rem;
-  }
-
-  &:hover {
-    color: clr(secondary, 100);
   }
 }
 
@@ -74,16 +95,22 @@ a.logo__text {
   gap: size(1);
   height: 100%;
 
+  &:focus-within {
+    outline: $focus-style;
+    outline-offset: 0.25rem;
+    border-radius: $radius;
+  }
+
   h1 {
-    color: red;
+    color: $primary-500;
     line-height: 1rem;
   }
 }
 
 .logo__icon {
   display: block;
-  width: size(14);
-  height: size(14);
+  width: size(12);
+  height: size(12);
 
 
   @include mq(large) {
@@ -91,22 +118,17 @@ a.logo__text {
     width: size(9);
     height: size(9);
   }
-
-  &:hover {
-    fill: clr(secondary, 100);
-  }
 }
 
 .menu {
   list-style: none;
-  font-size: fs(120);
+  font-size: $fs-xl;
   font-family: $ff-heading;
   justify-content: center;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.5rem 0;
 
-  @include mq(large) {
-    font-size: fs(130);
-    margin: 0 0 2rem 0;
+  @include mq(medium) {
+    font-size: $fs-2xl;
   }
 
 
@@ -117,7 +139,7 @@ a.logo__text {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.5rem;
+    gap: 0.25rem;
 
     @include mq(medium) {
       gap: 2rem;
@@ -128,23 +150,58 @@ a.logo__text {
     }
 
     & li a {
-      padding: 0.5rem 0.25rem 1rem 0.25rem;
+      padding: 0.5rem 1rem 1rem 1rem;
       text-transform: uppercase;
       text-decoration: none;
+      transition: 275ms ease;
+      color: $text-tertiary;
+
+
+      @include mq(medium) {
+        padding: 0.5rem 1rem;
+        border-radius: $radius;
+      }
+
 
       &:hover {
-        padding: 0.5rem 0.25rem 0.5rem 0.25rem;
-        color: clr(secondary, 100);
-        border-bottom: 0.5rem solid clr(secondary, 100);
+        padding: 0.5rem 1rem 0.75rem 1rem;
+        color: $neutral-900;
+        border-bottom: 0.25rem solid $border-tertiary-hover;
+        border-radius: none;
+
+        @include mq(medium) {
+          padding: 0.5rem 1rem;
+          background-color: $bg-tertiary-hover;
+          color: $text-tertiary-hover;
+          box-shadow:
+            0 0 0 5px $bg-base,
+            0 0 0 10px $border-tertiary-hover;
+        }
       }
 
       &.selected {
-        padding: 0.5rem 0.25rem 0.5rem 0.25rem;
-        border-bottom: 0.5rem solid clr(primary, 100);
-        color: clr(primary, 100);
+        padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+        border-bottom: 0.25rem solid $border-selected;
+        color: $neutral-900;
+
+        @include mq(medium) {
+          padding: 0.5rem 1rem;
+          background-color: $bg-selected;
+          color: $text-selected;
+          border-bottom: none;
+        }
 
         &:hover {
-          background-color: clr(neutral, 30);
+          background-color: $bg-selected-hover;
+
+          @include mq(medium) {
+            background-color: $neutral-900;
+            color: $neutral-000;
+            border-bottom: none;
+            box-shadow:
+              0 0 0 5px $bg-base,
+              0 0 0 10px $border-selected-hover;
+          }
         }
       }
     }

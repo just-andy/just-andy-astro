@@ -2,11 +2,30 @@
 
 @each $color, $shade-map in $colors {
   @each $shade, $value in $shade-map {
-    .clr-#{"" + $color}-#{$shade} {
-      color: $value;
+    @if $color =="text" {
+      .text-#{$color}-#{$shade} {
+        color: $value;
+      }
     }
-    .bg-#{"" + $color}-#{$shade} {
-      background-color: $value;
+
+    @else if $color =="bg" {
+      .bg-#{$color}-#{$shade} {
+        background-color: $value;
+      }
+    }
+
+    @else if $color =="border" {
+      .border-#{$color}-#{$shade} {
+        border-color: $value;
+      }
+    }
+
+    @else {
+
+      // Default case for any other color types
+      .#{$color}-#{$shade} {
+        color: $value;
+      }
     }
   }
 }

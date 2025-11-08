@@ -10,42 +10,63 @@
   font-weight: $fw-300;
   font-family: $ff-heading;
   transition: 275ms ease;
-  border-radius: 9999px;
+  border-radius: $radius;
   text-transform: uppercase;
-  background-color: clr(secondary, 80);
+  background-color: $bg-primary;
 
 
   &--primary {
-    background-color: clr(secondary, 80);
-    color: clr(neutral, 0);
-    box-shadow:
-      0 0 0 5px #fff,
-      0 0 0 10px clr(secondary, 80);
+    background-color: $bg-primary;
+    color: $text-primary;
+
+    &:is(:hover, :focus) {
+      background-color: $bg-primary-hover;
+      color: $text-primary-hover;
+      box-shadow:
+        0 0 0 5px #fff,
+        0 0 0 10px $border-primary-hover;
+    }
   }
 
-  &--neutral {
-    padding: 1.125rem;
-    background-color: clr(neutral, 30);
-    color: clr(primary, 50);
-  }
-
-  &--outline {
-    --outline-size: 1px;
+  &--secondary {
+    --outline-size: 5px;
     background: transparent;
-    outline: var(--outline-size) solid clr(secondary, 80);
+    outline: var(--outline-size) solid $border-secondary;
     outline-offset: calc(var(--outline-size) * -1);
-    color: clr(secondary, 80);
+    color: $text-secondary;
+
+    &:is(:hover, :focus) {
+      background-color: $bg-secondary-hover;
+      outline-color: $border-secondary-hover;
+      color: $text-secondary-hover;
+      box-shadow:
+        0 0 0 5px $bg-base,
+        0 0 0 10px $border-secondary-hover;
+    }
   }
 
-  &:is(:hover, :focus) {
-    background-color: clr(primary, 100);
-    color: clr(neutral, 10);
-    box-shadow:
-      0 0 0 5px #fff,
-      0 0 0 10px clr(primary, 100);
+  &--tertiary {
+    //padding: 1.125rem;
+    background-color: $bg-tertiary;
+    color: $text-tertiary;
+
+    &:is(:hover, :focus) {
+      background-color: $bg-tertiary-hover;
+      color: $text-tertiary-hover;
+      box-shadow:
+        0 0 0 5px $bg-base,
+        0 0 0 10px $border-tertiary-hover;
+    }
   }
+
 
   &:focus {
-    outline: 0.125rem dashed clr(secondary, 80);
+    outline-offset: 0.75rem;
+    outline: 0.25rem dashed $border-focus;
+  }
+
+  &--circle {
+    padding: 1.5rem;
+    border-radius: 9999px;
   }
 }

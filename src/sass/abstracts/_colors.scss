@@ -1,54 +1,165 @@
+// Primitives
+$primary-000: hsla(13deg, 70%, 97%, 1);
+$primary-100: hsla(13deg, 75%, 92%, 1);
+$primary-200: hsla(13deg, 76%, 82%, 1);
+$primary-300: hsla(13deg, 77%, 72%, 1);
+$primary-400: hsla(13deg, 77%, 62%, 1);
+$primary-500: hsla(13deg, 77%, 53%, 1);
+$primary-600: hsla(13deg, 77%, 45%, 1);
+$primary-700: hsla(13deg, 75%, 37%, 1);
+$primary-800: hsla(13deg, 70%, 28%, 1);
+$primary-900: hsla(13deg, 65%, 20%, 1);
+
+$neutral-000: hsla(24deg, 8%, 96%, 1);
+$neutral-000: hsla(24deg, 8%, 96%, 1);
+$neutral-100: hsla(24deg, 8%, 88%, 1);
+$neutral-200: hsla(24deg, 9%, 72%, 1);
+$neutral-300: hsla(24deg, 9%, 56%, 1);
+$neutral-400: hsla(24deg, 10%, 33%, 1);
+$neutral-500: hsla(24deg, 10%, 10%, 1);
+$neutral-600: hsla(24deg, 10%, 8%, 1);
+$neutral-700: hsla(24deg, 10%, 6%, 1);
+$neutral-800: hsla(24deg, 10%, 4%, 1);
+$neutral-900: hsla(24deg, 10%, 2%, 1);
+
+$green-000: hsla(150deg, 60%, 96%, 1);
+$green-100: hsla(150deg, 62%, 90%, 1);
+$green-200: hsla(150deg, 63%, 80%, 1);
+$green-300: hsla(150deg, 64%, 70%, 1);
+$green-400: hsla(150deg, 65%, 57%, 1);
+$green-500: hsla(150deg, 65%, 45%, 1);
+$green-600: hsla(150deg, 65%, 37%, 1);
+$green-700: hsla(150deg, 63%, 30%, 1);
+$green-800: hsla(150deg, 60%, 22%, 1);
+$green-900: hsla(150deg, 55%, 15%, 1);
+
+
+
+// Loop
 $colors: (
-  neutral: (
-    100: #091024,
-    90: #22283a,
-    80: #3c4253,
-    70: #656a76,
-    60: #8f939c,
-    50: #a8aab1,
-    40: #c2c4c8,
-    30: #d9dbdd,
-    20: #f1f3f7,
-    10: #f7f8fa,
-    00: #ffffff,
+  text: (base: $neutral-900,
+    heading: $neutral-800,
+    subheading: $neutral-600,
+    focus: $green-100,
+    card:$neutral-900,
+    link: (default: $primary-500,
+      hover: $primary-600,
+      active: $primary-700,
+      visited: $primary-500 ),
+    selected: (default: $neutral-000,
+      hover: $neutral-600,
+      active: $neutral-800,
+      visited: $neutral-800,
+    ),
+    primary:(default: $neutral-000,
+      hover: $neutral-000,
+      active: $neutral-000),
+    secondary:(default: $primary-500,
+      hover: $neutral-000,
+      active: $neutral-000),
+    tertiary:(default: $primary-500,
+      hover: $neutral-000,
+      active: $neutral-100),
+    invert: (default:hsla(60, 9.1%, 97.8%, 1),
+      heading:hsla(60, 4.8%, 95.9%, 1)),
   ),
-  primary: (
-    00: #918e8d,
-    10: #777372,
-    20: #443f3d,
-    30: #443f3d,
-    40: #3c3635,
-    50: #2b2523,
-    60: #26211f,
-    70: #211c1b,
-    80: #1c1816,
-    90: #161312,
-    100: #090807,
+  border: (base: $neutral-200,
+    card: $neutral-000,
+    focus: $green-500,
+    primary:(default: hsla(13, 74%, 53%, 1),
+      hover: hsla(12, 67%, 46%, 1),
+      active: hsla(12, 66.5%, 45.7%, 1)),
+    secondary:(default:$primary-500,
+      hover: $neutral-900,
+      active: $neutral-900),
+    tertiary:(default: $neutral-800,
+      hover: $neutral-800,
+      active: $neutral-800),
+    selected: (default: $neutral-900,
+      hover: $neutral-900,
+      active: $neutral-900,
+      visited: $neutral-900,
+    ),
   ),
-  secondary: (
-    00: #ffbfad,
-    10: #ffab95,
-    20: #ff987c,
-    30: #ff8564,
-    40: #ff714b,
-    50: #161312,
-    60: #eb562f,
-    70: #e0532d,
-    80: #d64f2b,
-    90: #c24727,
-    100: #aa3d22,
-  ),
-  tertiary: (
-    00: #fce0af,
-    10: #fbd797,
-    20: #fbd797,
-    30: #fac466,
-    40: #f9bb4e,
-    50: #f8b236,
-    60: #e4a432,
-    70: #da9d30,
-    80: #d0962d,
-    90: #bc8729,
-    100: #a37524,
-  ),
+  bg:(base: hsl(60, 4.8%, 95.9%),
+    light: $neutral-000,
+    invert: $primary-500,
+    card: hsla(0, 0%, 100%, 1),
+    primary:(default: hsla(13, 74%, 53%, 1),
+      hover: hsla(12, 67%, 46%, 1),
+      active: hsla(12, 66.5%, 45.7%, 1)),
+    secondary:(default: transparent,
+      hover: $neutral-900,
+      active: $neutral-900 ),
+    tertiary:(default: transparent,
+      hover: $neutral-900,
+      active: $neutral-800),
+    selected: (default: $neutral-900,
+      hover: $neutral-100,
+      active: hsl(144, 61.2%, 20.2%),
+      visited: hsl(142, 76.2%, 36.3%),
+    ),
+  )
 );
+
+
+// text
+$text-base: var(--text-base);
+$text-heading: var(--text-heading);
+$text-subheading: var(--sub-heading);
+$text-focus: var(--text-focus);
+$text-card: var(--text-card);
+$text-link: var(--text-link);
+$text-link-hover: var(--text-link-hover);
+$text-link-active: var(--text-link-active);
+$text-link-visited: var(--text-link-visited);
+$text-selected: var(--text-selected);
+$text-selected-hover: var(--text-selected-hover);
+$text-selected-active: var(--text-selected-active);
+$text-selected-visited: var(--text-link-visited);
+$text-invert: var(--text-invert);
+$text-invert-heading: var(--text-invert-heading);
+$text-primary: var(--text-primary);
+$text-primary-hover: var(--text-primary-hover);
+$text-primary-active: var(--text-primary-active);
+$text-secondary: var(--text-secondary);
+$text-secondary-hover: var(--text-secondary-hover);
+$text-secondary-active: var(--text-secondary-active);
+$text-tertiary: var(--text-tertiary);
+$text-tertiary-hover: var(--text-tertiary-hover);
+$text-tertiary-active: var(--text-tertiary-active);
+// border
+$border-base: var(--border-base);
+$border-card: var(--border-card);
+$border-focus: var(--border-focus);
+$border-primary: var(--border-primary);
+$border-primary-hover: var(--border-primary-hover);
+$border-primary-active: var(--border-primary-active);
+$border-secondary: var(--border-secondary);
+$border-secondary-hover: var(--border-secondary-hover);
+$border-secondary-active: var(--border-secondary-active);
+$border-tertiary: var(--border-tertiary);
+$border-tertiary-hover: var(--border-tertiary-hover);
+$border-tertiary-active: var(--border-tertiary-active);
+$border-selected: var(--border-selected);
+$border-selected-hover: var(--border-selected-hover);
+$border-selected-active: var(--border-selected-active);
+$border-selected-visited: var(--border-selected-visited);
+// surface
+$bg-base: var(--bg-base);
+$bg-light: var(--bg-light);
+$bg-invert: var(--bg-invert);
+$bg-card: var(--bg-card);
+$bg-primary: var(--bg-primary);
+$bg-primary-hover: var(--bg-primary-hover);
+$bg-primary-active: var(--bg-primary-active);
+$bg-secondary: var(--bg-secondary);
+$bg-secondary-hover: var(--bg-secondary-hover);
+$bg-secondary-active: var(--bg-secondary-active);
+$bg-tertiary: var(--bg-tertiary);
+$bg-tertiary-hover: var(--bg-tertiary-hover);
+$bg-tertiary-active: var(--bg-tertiary-active);
+$bg-selected: var(--bg-selected);
+$bg-selected-hover: var(--bg-selected-hover);
+$bg-selected-active: var(--bg-selected-active);
+$bg-selected-visited: var(--bg-selected-visited);

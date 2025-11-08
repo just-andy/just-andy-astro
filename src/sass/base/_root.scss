@@ -1,9 +1,47 @@
+@use "sass:meta";
 @use "../abstracts/" as *;
 
+
 :root {
-    @each $color, $shade-map in $colors {
-        @each $shade, $value in $shade-map {
-            --#{$color}-#{$shade}: #{$value};
+
+    // Colours
+    @each $color, $property in $colors {
+        @each $token, $value in $property {
+            @if meta.type-of($value)=='map' {
+
+                // If the value is nested (like 'link'), loop through it
+                @each $state, $state-value in $value {
+                    @if $state =='default' {
+                        --#{$color}-#{$token}: #{$state-value};
+                    }
+
+                    @else {
+                        --#{$color}-#{$token}-#{$state}: #{$state-value};
+                    }
+                }
+            }
+
+            @else {
+                // If it's a simple value, output it directly
+                --#{$color}-#{$token}: #{$value};
+            }
         }
+
+        // Typography
+        @each $scale, $size in $font-sizes {
+            --fs-#{$scale}: #{$size};
+        }
+
+        @each $scale, $size in $display-sizes {
+            --fs-display-#{$scale}: #{$size};
+        }
+
     }
+
+    // Single values
+    --radius: #{$radius};
+    --radius-card: #{$radius-card};
+    --ff-heading:#{$ff-heading};
+    --ff-base:#{$ff-base};
+    --ff-accent:#{$ff-accent};
 }

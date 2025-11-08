@@ -15,9 +15,10 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.6",
     "@astrojs/sitemap": "^3.6.0",
+    "@iconify-json/mdi": "^1.2.3",
     "astro": "^5.14.1",
     "astro-embed": "^0.9.1",
-    "astro-feather-icons": "^1.0.2",
+    "astro-icon": "^1.1.5",
     "astro-seo-metadata": "^0.6.0",
     "postcss-preset-env": "^10.4.0",
     "sass": "^1.93.2",

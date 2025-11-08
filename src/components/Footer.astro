@@ -1,12 +1,7 @@
 ---
+import { Icon } from "astro-icon/components";
+
 const today = new Date();
-import {
-  ArrowUp,
-  Linkedin,
-  Twitter,
-  GitHub,
-  Instagram,
-} from "astro-feather-icons";
 ---
 
 <div class="top_button">
@@ -14,9 +9,9 @@ import {
     onclick="topFunction()"
     id="myBtn"
     aria-label="Back to Top"
-    class="button button--neutral radius--circle"
+    class="button button--tertiary button--circle"
   >
-    <ArrowUp />
+    <Icon name="mdi:arrow-up" />
   </button>
 </div>
 <footer class="footer">
@@ -42,24 +37,16 @@ import {
     &nbsp;and&nbsp;
     <a href="/uses">also uses.</a>
   </div>
-  <ul class="footer_right">
-    <li>
-      <a
-        href="https://twitter.com/justandydesign1"
-        rel="me noreferrer"
-        target="_blank"
-        title="Just Andy Twitter account"
-      >
-        <Twitter />
-      </a>
+  <nav aria-label="Social Media">
+    <ul class="footer_right">
       <li>
         <a
-          href="https://www.linkedin.com/in/andrewcetnarskyj/"
+          href="https://twitter.com/justandydesign1"
           rel="me noreferrer"
           target="_blank"
-          title="Just Andy Linked In profile"
+          aria-label="Visit Just Andy on Twitter (opens in new tab)"
         >
-          <Linkedin />
+          <Icon name="mdi:twitter" aria-hidden="true" />
         </a>
       </li>
       <li>
@@ -67,9 +54,19 @@ import {
           href="https://www.linkedin.com/in/andrewcetnarskyj/"
           rel="me noreferrer"
           target="_blank"
-          title="Just Andy Github profile"
+          aria-label="Visit Just Andy on LinkedIn (opens in new tab)"
         >
-          <GitHub />
+          <Icon name="mdi:linkedin" aria-hidden="true" />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/andrewcetnarskyj/"
+          rel="me noreferrer"
+          target="_blank"
+          aria-label="Visit Just Andy on GitHub (opens in new tab)"
+        >
+          <Icon name="mdi:github" aria-hidden="true" />
         </a>
       </li>
       <li>
@@ -77,13 +74,13 @@ import {
           href="https://www.instagram.com/just_andy_c/"
           rel="me noreferrer"
           target="_blank"
-          title="Andrew Cetnrskyj Instagram profile"
+          aria-label="Visit Just Andy on Instagram (opens in new tab)"
         >
-          <Instagram />
+          <Icon name="mdi:instagram" aria-hidden="true" />
         </a>
       </li>
-    </li>
-  </ul>
+    </ul>
+  </nav>
 </footer>
 
 <script is:inline>

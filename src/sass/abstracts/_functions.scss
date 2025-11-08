@@ -3,6 +3,7 @@
 @use "typography" as *;
 @use "sizes" as *;
 
+/*
 @function clr($color, $shade) {
   @if map.has-key($colors, $color, $shade) {
     @return map.get($colors, $color, $shade);
@@ -13,16 +14,6 @@
   }
 }
 
-@function fs($font-size) {
-  @if map.has-key($font-sizes, $font-size) {
-    @return map.get($font-sizes, $font-size);
-  }
-
-  @else {
-    @error '$font-sizes does not have that size!';
-  }
-}
-
 @function display($display-size) {
   @if map.has-key($display-sizes, $display-size) {
     @return map.get($display-sizes, $display-size);
@@ -30,6 +21,17 @@
 
   @else {
     @error '$display-sizes does not have that size!';
+  }
+}
+  */
+
+@function fs($font-size) {
+  @if map.has-key($font-sizes, $font-size) {
+    @return map.get($font-sizes, $font-size);
+  }
+
+  @else {
+    @error '$font-sizes does not have that size!';
   }
 }
 
