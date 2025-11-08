@@ -46,17 +46,20 @@ $colors: (
       hover: $primary-600,
       active: $primary-700,
       visited: $primary-500 ),
-    selected: (default: $neutral-800,
+    selected: (default: $neutral-000,
       hover: $neutral-600,
       active: $neutral-800,
       visited: $neutral-800,
     ),
-    primary:(default: hsla(60, 9.1%, 97.8%, 1),
-      hover: hsla(60, 9.1%, 97.8%, 1),
-      active: hsla(60, 9.1%, 97.8%, 1)),
+    primary:(default: $neutral-000,
+      hover: $neutral-000,
+      active: $neutral-000),
+    secondary:(default: $primary-500,
+      hover: $neutral-000,
+      active: $neutral-000),
     tertiary:(default: $primary-500,
-      hover: hsla(60, 9.1%, 97.8%, 1),
-      active: hsla(60, 9.1%, 97.8%, 1)),
+      hover: $neutral-000,
+      active: $neutral-100),
     invert: (default:hsla(60, 9.1%, 97.8%, 1),
       heading:hsla(60, 4.8%, 95.9%, 1)),
   ),
@@ -66,10 +69,16 @@ $colors: (
     primary:(default: hsla(13, 74%, 53%, 1),
       hover: hsla(12, 67%, 46%, 1),
       active: hsla(12, 66.5%, 45.7%, 1)),
-    selected: (default: #000,
-      hover: hsl(142, 71.8%, 29.2%),
-      active: hsl(144, 61.2%, 20.2%),
-      visited: hsl(142, 76.2%, 36.3%),
+    secondary:(default:$primary-500,
+      hover: $neutral-900,
+      active: $neutral-900),
+    tertiary:(default: $neutral-800,
+      hover: $neutral-800,
+      active: $neutral-800),
+    selected: (default: $neutral-900,
+      hover: $neutral-900,
+      active: $neutral-900,
+      visited: $neutral-900,
     ),
   ),
   bg:(base: hsl(60, 4.8%, 95.9%),
@@ -79,10 +88,13 @@ $colors: (
     primary:(default: hsla(13, 74%, 53%, 1),
       hover: hsla(12, 67%, 46%, 1),
       active: hsla(12, 66.5%, 45.7%, 1)),
-    tertiary:(default: hsl(60, 4.8%, 90%),
-      hover: hsla(60, 9.1%, 97.8%, 1),
-      active: hsla(60, 9.1%, 97.8%, 1)),
-    selected: (default: transparent,
+    secondary:(default: transparent,
+      hover: $neutral-900,
+      active: $neutral-900 ),
+    tertiary:(default: transparent,
+      hover: $neutral-900,
+      active: $neutral-800),
+    selected: (default: $neutral-900,
       hover: $neutral-100,
       active: hsl(144, 61.2%, 20.2%),
       visited: hsl(142, 76.2%, 36.3%),
@@ -110,6 +122,9 @@ $text-invert-heading: var(--text-invert-heading);
 $text-primary: var(--text-primary);
 $text-primary-hover: var(--text-primary-hover);
 $text-primary-active: var(--text-primary-active);
+$text-secondary: var(--text-secondary);
+$text-secondary-hover: var(--text-secondary-hover);
+$text-secondary-active: var(--text-secondary-active);
 $text-tertiary: var(--text-tertiary);
 $text-tertiary-hover: var(--text-tertiary-hover);
 $text-tertiary-active: var(--text-tertiary-active);
@@ -120,6 +135,9 @@ $border-focus: var(--border-focus);
 $border-primary: var(--border-primary);
 $border-primary-hover: var(--border-primary-hover);
 $border-primary-active: var(--border-primary-active);
+$border-secondary: var(--border-secondary);
+$border-secondary-hover: var(--border-secondary-hover);
+$border-secondary-active: var(--border-secondary-active);
 $border-tertiary: var(--border-tertiary);
 $border-tertiary-hover: var(--border-tertiary-hover);
 $border-tertiary-active: var(--border-tertiary-active);
@@ -135,6 +153,9 @@ $bg-card: var(--bg-card);
 $bg-primary: var(--bg-primary);
 $bg-primary-hover: var(--bg-primary-hover);
 $bg-primary-active: var(--bg-primary-active);
+$bg-secondary: var(--bg-secondary);
+$bg-secondary-hover: var(--bg-secondary-hover);
+$bg-secondary-active: var(--bg-secondary-active);
 $bg-tertiary: var(--bg-tertiary);
 $bg-tertiary-hover: var(--bg-tertiary-hover);
 $bg-tertiary-active: var(--bg-tertiary-active);

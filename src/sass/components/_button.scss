@@ -18,35 +18,55 @@
   &--primary {
     background-color: $bg-primary;
     color: $text-primary;
-    box-shadow:
-      0 0 0 5px #fff,
-      0 0 0 10px $border-primary;
+
+    &:is(:hover, :focus) {
+      background-color: $bg-primary-hover;
+      color: $text-primary-hover;
+      box-shadow:
+        0 0 0 5px #fff,
+        0 0 0 10px $border-primary-hover;
+    }
+  }
+
+  &--secondary {
+    --outline-size: 5px;
+    background: transparent;
+    outline: var(--outline-size) solid $border-secondary;
+    outline-offset: calc(var(--outline-size) * -1);
+    color: $text-secondary;
+
+    &:is(:hover, :focus) {
+      background-color: $bg-secondary-hover;
+      outline-color: $border-secondary-hover;
+      color: $text-secondary-hover;
+      box-shadow:
+        0 0 0 5px $bg-base,
+        0 0 0 10px $border-secondary-hover;
+    }
   }
 
   &--tertiary {
-    padding: 1.125rem;
+    //padding: 1.125rem;
     background-color: $bg-tertiary;
     color: $text-tertiary;
+
+    &:is(:hover, :focus) {
+      background-color: $bg-tertiary-hover;
+      color: $text-tertiary-hover;
+      box-shadow:
+        0 0 0 5px $bg-base,
+        0 0 0 10px $border-tertiary-hover;
+    }
   }
 
-  &--outline {
-    --outline-size: 1px;
-    background: transparent;
-    outline: var(--outline-size) solid $border-primary;
-    outline-offset: calc(var(--outline-size) * -1);
-    color: $text-primary;
-  }
-
-  &:is(:hover, :focus) {
-    background-color: $bg-primary-hover;
-    color: $text-primary-hover;
-    box-shadow:
-      0 0 0 5px #fff,
-      0 0 0 10px $border-primary-hover;
-  }
 
   &:focus {
     outline-offset: 0.75rem;
     outline: 0.25rem dashed $border-focus;
+  }
+
+  &--circle {
+    padding: 1.5rem;
+    border-radius: 9999px;
   }
 }

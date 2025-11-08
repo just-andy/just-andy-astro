@@ -63,6 +63,7 @@
 }
 
 h1 .logo__link {
+
   &:focus,
   &:focus-visible {
     outline: $focus-style;
@@ -152,6 +153,8 @@ h1 .logo__link {
       padding: 0.5rem 1rem 1rem 1rem;
       text-transform: uppercase;
       text-decoration: none;
+      transition: 275ms ease;
+      color: $text-tertiary;
 
 
       @include mq(medium) {
@@ -162,28 +165,43 @@ h1 .logo__link {
 
       &:hover {
         padding: 0.5rem 1rem 0.75rem 1rem;
-        color: $text-link-hover;
-        border-bottom: 0.25rem solid $text-link-hover;
+        color: $neutral-900;
+        border-bottom: 0.25rem solid $border-tertiary-hover;
         border-radius: none;
 
         @include mq(medium) {
-          padding: 0.5rem 0.75rem;
-          border: 0.25rem solid $text-link-hover;
+          padding: 0.5rem 1rem;
+          background-color: $bg-tertiary-hover;
+          color: $text-tertiary-hover;
+          box-shadow:
+            0 0 0 5px $bg-base,
+            0 0 0 10px $border-tertiary-hover;
         }
       }
 
       &.selected {
         padding: 0.5rem 0.75rem 0.75rem 0.75rem;
         border-bottom: 0.25rem solid $border-selected;
-        color: $text-selected;
+        color: $neutral-900;
 
         @include mq(medium) {
-          padding: 0.5rem 0.75rem;
-          border: 0.25rem solid $border-selected;
+          padding: 0.5rem 1rem;
+          background-color: $bg-selected;
+          color: $text-selected;
+          border-bottom: none;
         }
 
         &:hover {
           background-color: $bg-selected-hover;
+
+          @include mq(medium) {
+            background-color: $neutral-900;
+            color: $neutral-000;
+            border-bottom: none;
+            box-shadow:
+              0 0 0 5px $bg-base,
+              0 0 0 10px $border-selected-hover;
+          }
         }
       }
     }

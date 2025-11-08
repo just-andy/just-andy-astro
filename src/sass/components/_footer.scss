@@ -67,6 +67,10 @@
   & a {
     display: inline-block;
 
+    &:hover {
+      color: $text-tertiary;
+    }
+
     &:focus {
       outline: $focus-style;
       outline-offset: 0.25rem;
