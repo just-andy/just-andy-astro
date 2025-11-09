@@ -34,15 +34,19 @@ $container-inline-padding: 1rem;
 $container-max-width: 60rem; //900px
 $container-max-width-wide: 64rem; //1024
 
-$card-body-padding: 1rem;
+
 
 // Spacing
 $section-spacer: 7rem;
-$grid-gap: 1.5rem;
-$section-padding: clamp(3rem, 10vh, 7rem);
 
-$hero-padding: clamp(15rem, 15vh, 20rem);
-$card-body-padding: 2.5rem;
+// Gaps
+$gap-grid: 1.5rem;
+$gap-card: 1rem;
+
+// Padding
+$padding-section: clamp(3rem, 10vh, 7rem);
+$padding-card-body: 1rem;
+$padding-hero: clamp(15rem, 15vh, 20rem);
 
 // Flex
 $flex-group-gap: 1rem;

@@ -4,26 +4,28 @@
 .project-card {
   display: grid;
   grid-row: auto;
-  gap: 0.5rem;
-  border-radius: 1rem;
-  overflow:hidden;
- @include shadow(1);
-  background-color: #fff;
-}
+  gap: $gap-card;
+  border-radius: $radius-card;
+  overflow: hidden;
+  background-color: $bg-base;
 
-.project-card__image {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
+  &__image {
+    border-radius: $radius-card;
+  }
 
-.project-card__summary {
-  padding: 0.5rem 1rem 1rem 1rem;
-  display: grid;
-  grid-row: auto;
-  line-height: 1.25em;
-  gap:1rem;
+  &__title {
+    font-size: $fs-4xl;
+  }
 
-  @include mq(large){
-    padding: 0 1rem 1rem 1rem;
+  &__summary {
+    padding: $padding-card-body;
+    display: grid;
+    grid-row: auto;
+    line-height: 1.25em;
+    gap: 1rem;
 
+    @include mq(large) {
+      padding: 0 1rem 1rem 1rem;
+    }
   }
 }

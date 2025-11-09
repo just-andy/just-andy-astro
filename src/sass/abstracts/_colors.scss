@@ -1,3 +1,6 @@
+$white :hsla(0, 0%, 100%, 1);
+$black: hsla(0, 0%, 0%, 1);
+
 // Primitives
 $primary-000: hsla(13deg, 70%, 97%, 1);
 $primary-100: hsla(13deg, 75%, 92%, 1);
@@ -47,7 +50,7 @@ $colors: (
       active: $primary-700,
       visited: $primary-500 ),
     selected: (default: $neutral-000,
-      hover: $neutral-600,
+      hover: $neutral-800,
       active: $neutral-800,
       visited: $neutral-800,
     ),
@@ -82,7 +85,7 @@ $colors: (
     ),
   ),
   bg:(base: hsl(60, 4.8%, 95.9%),
-    light: $neutral-000,
+    light: $white,
     invert: $primary-500,
     card: hsla(0, 0%, 100%, 1),
     primary:(default: hsla(13, 74%, 53%, 1),
@@ -163,3 +166,6 @@ $bg-selected: var(--bg-selected);
 $bg-selected-hover: var(--bg-selected-hover);
 $bg-selected-active: var(--bg-selected-active);
 $bg-selected-visited: var(--bg-selected-visited);
+
+// components
+$bg-card: $bg-base;

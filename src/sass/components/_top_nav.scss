@@ -128,7 +128,7 @@ h1 .logo__link {
   margin: 0.5rem 0;
 
   @include mq(medium) {
-    font-size: $fs-2xl;
+    font-size: $fs-xl;
   }
 
 
@@ -150,10 +150,10 @@ h1 .logo__link {
     }
 
     & li a {
-      padding: 0.5rem 1rem 1rem 1rem;
+      padding: 0.5rem 0.25rem 1rem 0.25rem;
       text-transform: uppercase;
       text-decoration: none;
-      transition: 275ms ease;
+      transition: $transitions;
       color: $text-tertiary;
 
 
@@ -164,7 +164,7 @@ h1 .logo__link {
 
 
       &:hover {
-        padding: 0.5rem 1rem 0.75rem 1rem;
+        padding: 0.5rem 0.25rem 0.75rem 0.25rem;
         color: $neutral-900;
         border-bottom: 0.25rem solid $border-tertiary-hover;
         border-radius: none;
@@ -180,7 +180,7 @@ h1 .logo__link {
       }
 
       &.selected {
-        padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+        padding: 0.5rem 0.25rem 0.75rem 0.25rem;
         border-bottom: 0.25rem solid $border-selected;
         color: $neutral-900;
 
