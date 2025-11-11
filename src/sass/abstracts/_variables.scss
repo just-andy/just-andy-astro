@@ -1,9 +1,13 @@
 @use "colors" as *;
 
+//Transitions
+$transitions: 275ms ease;
+
 //Radius
 $radius: 0.5rem;
-$radius-card: 0.25rem;
+$radius-card: 1rem;
 
 // Focus
 $focus-color: $text-focus;
 $focus-style: 0.25rem dashed $border-focus;
+$box-focus-shadow: 10px 10px 5px $border-focus inset, 10px 10px 5px #fafafa, 10px 10px 5px #000000;

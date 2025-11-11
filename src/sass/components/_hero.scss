@@ -11,27 +11,39 @@
     }
 }
 
-.hero__content {
-    @extend %container-width;
-    display: grid;
-    gap: 0.5rem;
-    padding-inline: 1rem;
+.hero {
+    &__content {
+        @extend %container-width;
+        display: grid;
+        gap: 0.5rem;
+        padding-inline: 1rem;
+        text-align: left;
+        color: $text-invert-heading;
+    }
 
-    h1 {
-        font-size: $fs-3xl;
+    &__title {
+        font-size: $fs-6xl;
+        color: $text-invert-heading;
+        margin-inline: 0;
+
+        @include mq(medium) {
+            font-size: $fs-8xl;
+        }
+    }
+
+    &__summary {
+        font-size: $fs-2xl;
 
         @include mq(medium) {
             font-size: $fs-4xl;
         }
     }
 
-    div {
-        font-size: $fs-3xl;
-    }
+    &__tags {
+        font-size: $fs-md;
 
-    h1,
-    div {
-        color: $text-invert-heading;
+        @include mq(medium) {
+            font-size: $fs-xl;
+        }
     }
-
 }

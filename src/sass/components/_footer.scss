@@ -66,9 +66,10 @@
 
   & a {
     display: inline-block;
+    color: $text-footer;
 
     &:hover {
-      color: $text-tertiary;
+      color: $text-footer-hover;
     }
 
     &:focus {

@@ -3,19 +3,23 @@ import { Image } from "astro:assets";
 const { title, thumbnail, description, strapline, slug } = Astro.props;
 ---
 
-<div class="project-card">
-  <Image
-    class="project-card__image"
-    src={thumbnail}
-    alt={`${title} summary`}
-    loading="eager"
-  />
-  <div class="project-card__summary">
-    <h2 class="heading-4">
-      <a href={`/projects/${slug}`} title={strapline}>
-        {title}
-      </a>
-    </h2>
-    <p>{description}</p>
-  </div>
-</div>
+<li class="project-card">
+  <a
+    href={`/projects/${slug}`}
+    class="project-card__link"
+    aria-label={strapline}
+  >
+    <div class="project__media">
+      <Image
+        class="project-card__image"
+        src={thumbnail}
+        alt={`${title} summary`}
+        loading="eager"
+      />
+    </div>
+    <div class="project-card__summary">
+      <h2 class="project-card__title">{title}</h2>
+      <p>{description}</p>
+    </div>
+  </a>
+</li>

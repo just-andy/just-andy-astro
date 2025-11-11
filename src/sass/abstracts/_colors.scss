@@ -1,40 +1,4 @@
-// Primitives
-$primary-000: hsla(13deg, 70%, 97%, 1);
-$primary-100: hsla(13deg, 75%, 92%, 1);
-$primary-200: hsla(13deg, 76%, 82%, 1);
-$primary-300: hsla(13deg, 77%, 72%, 1);
-$primary-400: hsla(13deg, 77%, 62%, 1);
-$primary-500: hsla(13deg, 77%, 53%, 1);
-$primary-600: hsla(13deg, 77%, 45%, 1);
-$primary-700: hsla(13deg, 75%, 37%, 1);
-$primary-800: hsla(13deg, 70%, 28%, 1);
-$primary-900: hsla(13deg, 65%, 20%, 1);
-
-$neutral-000: hsla(24deg, 8%, 96%, 1);
-$neutral-000: hsla(24deg, 8%, 96%, 1);
-$neutral-100: hsla(24deg, 8%, 88%, 1);
-$neutral-200: hsla(24deg, 9%, 72%, 1);
-$neutral-300: hsla(24deg, 9%, 56%, 1);
-$neutral-400: hsla(24deg, 10%, 33%, 1);
-$neutral-500: hsla(24deg, 10%, 10%, 1);
-$neutral-600: hsla(24deg, 10%, 8%, 1);
-$neutral-700: hsla(24deg, 10%, 6%, 1);
-$neutral-800: hsla(24deg, 10%, 4%, 1);
-$neutral-900: hsla(24deg, 10%, 2%, 1);
-
-$green-000: hsla(150deg, 60%, 96%, 1);
-$green-100: hsla(150deg, 62%, 90%, 1);
-$green-200: hsla(150deg, 63%, 80%, 1);
-$green-300: hsla(150deg, 64%, 70%, 1);
-$green-400: hsla(150deg, 65%, 57%, 1);
-$green-500: hsla(150deg, 65%, 45%, 1);
-$green-600: hsla(150deg, 65%, 37%, 1);
-$green-700: hsla(150deg, 63%, 30%, 1);
-$green-800: hsla(150deg, 60%, 22%, 1);
-$green-900: hsla(150deg, 55%, 15%, 1);
-
-
-
+@use "primitives" as *;
 // Loop
 $colors: (
   text: (base: $neutral-900,
@@ -47,10 +11,11 @@ $colors: (
       active: $primary-700,
       visited: $primary-500 ),
     selected: (default: $neutral-000,
-      hover: $neutral-600,
+      hover: $neutral-800,
       active: $neutral-800,
       visited: $neutral-800,
-    ),
+    ), footer: (default: $primary-500,
+      hover: $neutral-800),
     primary:(default: $neutral-000,
       hover: $neutral-000,
       active: $neutral-000),
@@ -64,6 +29,8 @@ $colors: (
       heading:hsla(60, 4.8%, 95.9%, 1)),
   ),
   border: (base: $neutral-200,
+    base-light: $white,
+    base-dark: $neutral-400,
     card: $neutral-000,
     focus: $green-500,
     primary:(default: hsla(13, 74%, 53%, 1),
@@ -82,7 +49,7 @@ $colors: (
     ),
   ),
   bg:(base: hsl(60, 4.8%, 95.9%),
-    light: $neutral-000,
+    light: $white,
     invert: $primary-500,
     card: hsla(0, 0%, 100%, 1),
     primary:(default: hsla(13, 74%, 53%, 1),
@@ -128,8 +95,13 @@ $text-secondary-active: var(--text-secondary-active);
 $text-tertiary: var(--text-tertiary);
 $text-tertiary-hover: var(--text-tertiary-hover);
 $text-tertiary-active: var(--text-tertiary-active);
+$text-footer: var(--text-footer);
+$text-footer-hover: var(--text-footer-hover);
+
 // border
 $border-base: var(--border-base);
+$border-base-light: var(--border-base-light);
+$border-base-dark: var(--border-base-dark);
 $border-card: var(--border-card);
 $border-focus: var(--border-focus);
 $border-primary: var(--border-primary);
@@ -145,6 +117,7 @@ $border-selected: var(--border-selected);
 $border-selected-hover: var(--border-selected-hover);
 $border-selected-active: var(--border-selected-active);
 $border-selected-visited: var(--border-selected-visited);
+
 // surface
 $bg-base: var(--bg-base);
 $bg-light: var(--bg-light);
@@ -163,3 +136,6 @@ $bg-selected: var(--bg-selected);
 $bg-selected-hover: var(--bg-selected-hover);
 $bg-selected-active: var(--bg-selected-active);
 $bg-selected-visited: var(--bg-selected-visited);
+
+// components
+$bg-card: $bg-base;

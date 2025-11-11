@@ -2,28 +2,83 @@
 @use "../utilities/shadows" as *;
 
 .project-card {
-  display: grid;
-  grid-row: auto;
-  gap: 0.5rem;
-  border-radius: 1rem;
-  overflow:hidden;
- @include shadow(1);
-  background-color: #fff;
-}
+  border-radius: $radius-card;
+  overflow: hidden;
+  background-color: $bg-base;
+  position: relative;
 
-.project-card__image {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
+  &:focus-within {
+    outline: 0.25rem solid $border-focus;
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.25rem $border-focus;
+  }
 
-.project-card__summary {
-  padding: 0.5rem 1rem 1rem 1rem;
-  display: grid;
-  grid-row: auto;
-  line-height: 1.25em;
-  gap:1rem;
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
 
-  @include mq(large){
-    padding: 0 1rem 1rem 1rem;
+    &:hover {
+      box-shadow: 0 0 0 0.25rem $border-focus;
+
+      h2 {
+        color: $text-link-hover;
+      }
+
+      p {
+        color: $text-base;
+      }
+    }
+
+    &:focus {
+      outline: 0.25rem dashed $border-focus;
+      outline-offset: 0.125rem;
+      box-shadow: 0 0 0 0.25rem #fff,
+        0 0 0 0.5rem $border-focus;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    border-radius: $radius-card;
+  }
+
+  &__title {
+    font-size: $fs-4xl;
+  }
+
+  &__summary {
+    padding: $padding-card-body;
+    flex-grow: 1;
+    line-height: 1.25em;
+
+    @include mq(large) {
+      padding-top: 0;
+    }
+
+    &>*+* {
+      margin-top: 0.75rem;
+    }
+
+
+    &:nth-last-child(2) {
+      margin-bottom: 0.75rem;
+    }
+
+    &:last-child {
+      margin-top: auto;
+    }
+
+    small {
+      font-size: $fs-sm;
+    }
 
   }
 }
