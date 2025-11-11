@@ -14,7 +14,7 @@ const allArticles = await getCollection("projects");
       I WORK WITH DESIGN SYSTEMS AND EXPERIMENT WITH CODE...
     </h2>
 
-    <div class="grid__two-column" id="main-content">
+    <ul class="grid__two-column" id="main-content">
       {
         allArticles.map((project) => (
           <ProjectCard
@@ -26,6 +26,6 @@ const allArticles = await getCollection("projects");
           />
         ))
       }
-    </div>
+    </ul>
   </main>
 </Layout>
