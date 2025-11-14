@@ -29,8 +29,8 @@ $colors: (
       heading:hsla(60, 4.8%, 95.9%, 1)),
   ),
   border: (base: $neutral-200,
-    base-light: $white,
-    base-dark: $neutral-400,
+    light: $white,
+    invert: $neutral-400,
     card: $neutral-000,
     focus: $green-500,
     primary:(default: hsla(13, 74%, 53%, 1),
@@ -77,6 +77,8 @@ $text-subheading: var(--sub-heading);
 $text-focus: var(--text-focus);
 $text-card: var(--text-card);
 $text-link: var(--text-link);
+$text-invert: var(--text-invert);
+$text-invert-heading: var(--text-invert-heading);
 $text-link-hover: var(--text-link-hover);
 $text-link-active: var(--text-link-active);
 $text-link-visited: var(--text-link-visited);
@@ -84,8 +86,6 @@ $text-selected: var(--text-selected);
 $text-selected-hover: var(--text-selected-hover);
 $text-selected-active: var(--text-selected-active);
 $text-selected-visited: var(--text-link-visited);
-$text-invert: var(--text-invert);
-$text-invert-heading: var(--text-invert-heading);
 $text-primary: var(--text-primary);
 $text-primary-hover: var(--text-primary-hover);
 $text-primary-active: var(--text-primary-active);
@@ -100,8 +100,8 @@ $text-footer-hover: var(--text-footer-hover);
 
 // border
 $border-base: var(--border-base);
-$border-base-light: var(--border-base-light);
-$border-base-dark: var(--border-base-dark);
+$border-light: var(--border-base-light);
+$border-invert: var(--border-base-dark);
 $border-card: var(--border-card);
 $border-focus: var(--border-focus);
 $border-primary: var(--border-primary);
@@ -136,6 +136,3 @@ $bg-selected: var(--bg-selected);
 $bg-selected-hover: var(--bg-selected-hover);
 $bg-selected-active: var(--bg-selected-active);
 $bg-selected-visited: var(--bg-selected-visited);
-
-// components
-$bg-card: $bg-base;

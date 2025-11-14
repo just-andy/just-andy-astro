@@ -2,7 +2,7 @@
 
 .prose {
   font-size: $fs-xl;
-  line-height: $large-line-height;
+  line-height: $loose-line-height;
 
   p,
   ul,
@@ -41,8 +41,8 @@
 
   // Prose Image
   &__image {
-    padding: 2rem 0;
-    margin: 2rem 0;
+    padding-block: 2rem;
+    margin-block: 2rem;
     background-color: $bg-light;
     border-top: 2px solid $border-base;
     border-bottom: 2px solid $border-base;

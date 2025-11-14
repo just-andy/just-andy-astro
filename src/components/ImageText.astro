@@ -1,0 +1,14 @@
+---
+const {} = Astro.props;
+---
+
+<section class="section section--light">
+  <div class="image-text container">
+    <div class="image-text__image">
+      <slot name="image" />
+    </div>
+    <div class="image-text__content">
+      <slot />
+    </div>
+  </div>
+</section>

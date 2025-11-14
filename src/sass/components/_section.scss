@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.section {
+    margin-block: 2rem;
+    width: 100%;
+
+    &--light {
+        background-color: $bg-light;
+    }
+
+    &--invert {
+        background-color: $bg-invert;
+    }
+}
+
+.section-spacer {
+    margin-block: $padding-section;
+}

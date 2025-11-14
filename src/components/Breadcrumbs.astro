@@ -7,14 +7,20 @@ export interface Props {
 const { section, page } = Astro.props;
 ---
 
-<nav class="breadcrumbs">
-  <a href="/" title="Just Andy">Home</a> /
-  {
-    section == "projects" && (
-      <a href="/projects" title="Just Andy Projects">
-        Projects
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li>
+      <a href="/" title="Just Andy Homepage">Home</a>
+      <span aria-hidden="true">/</span>
+    </li>
+    <li>
+      <a href={`/${section}`} title={`Just Andy ${section}`}>
+        {section}
       </a>
-    )
-  } /
-  {page}
+      <span aria-hidden="true">/</span>
+    </li>
+    <li aria-current="page">
+      {page}
+    </li>
+  </ol>
 </nav>

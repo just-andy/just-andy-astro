@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+.stat-counter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+
+    @include mq(medium) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    &__number {
+        margin-block: 1rem;
+        text-align: center;
+        font-family: $ff-heading;
+        color: $text-heading;
+        font-size: $fs-6xl;
+
+        @include mq(large) {
+            font-size: $fs-8xl;
+        }
+
+    }
+
+    &__label {
+        margin-block: 1rem;
+        text-align: center;
+
+        @include mq(large) {
+            font-size: $fs-3xl;
+        }
+    }
+}
