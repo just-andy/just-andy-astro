@@ -5,8 +5,8 @@ $ff-base: $ff-sans;
 $ff-accent: $ff-heading;
 
 // Line Height
-$tight-line-height: 1;
-$loose-line-height: 1.5;
+$lh-tight: 1;
+$lh-loose: 1.5;
 
 // Font Weight
 $fw-300: 300;
@@ -14,6 +14,7 @@ $fw-400: 400;
 $fw-500: 500;
 $fw-700: 700;
 $fw-heading: $fw-500;
+$fw-subheading: $fw-400;
 
 $display-sizes: (
   sm: clamp(5rem, calc(3.333rem + 4.167vw), 6rem),

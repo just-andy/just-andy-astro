@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+
+// Experience
+.experience {
+    h2 {
+        margin-bottom: $size-2;
+    }
+
+    h5 {
+        color: $text-invert-heading;
+        margin-bottom: $size-1;
+    }
+}

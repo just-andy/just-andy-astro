@@ -51,7 +51,7 @@ $size-20: var(--size-20);
 $prose-max-width: 48rem; //768px
 
 // Container
-$container-inline-padding: $size-1;
+$container-inline-padding: $size-4;
 $container-max-width: 60rem; //900px
 $container-max-width-wide: 64rem; //1024
 
@@ -61,8 +61,8 @@ $container-max-width-wide: 64rem; //1024
 $section-spacer: $size-15;
 
 // Gaps
-$gap-grid: $size-3;
-$gap-card: $size-1;
+$gap-grid: $size-8;
+$gap-card: $size-6;
 
 // Padding
 $padding-section: clamp(3rem, 10vh, 7rem);

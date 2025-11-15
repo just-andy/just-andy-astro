@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+// Article page
+.article__header {
+    display: flex;
+    flex-direction: column;
+    gap: $size-2;
+
+    h1 {
+        font-size: $fs-display-lg;
+        line-height: $lh-tight;
+    }
+
+    &--subheading {
+        font-size: $fs-3xl;
+        font-family: $ff-base;
+        font-weight: $fw-subheading;
+        line-height: $lh-tight;
+        color: $text-subtle;
+    }
+
+    &--time {
+        font-family: $ff-base;
+        font-size: $fs-lg;
+    }
+}

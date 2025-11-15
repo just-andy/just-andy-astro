@@ -1,7 +1,9 @@
 @use "primitives" as *;
 // Loop
 $colors: (
-  text: (base: $neutral-900,
+  text: (base: $neutral-800,
+    subtle: $neutral-500,
+    bold: $neutral-900,
     heading: $neutral-800,
     subheading: $neutral-600,
     focus: $green-100,
@@ -51,10 +53,10 @@ $colors: (
   bg:(base: hsl(60, 4.8%, 95.9%),
     light: $white,
     invert: $primary-500,
-    card: hsla(0, 0%, 100%, 1),
-    primary:(default: hsla(13, 74%, 53%, 1),
-      hover: hsla(12, 67%, 46%, 1),
-      active: hsla(12, 66.5%, 45.7%, 1)),
+    card: $white,
+    primary:(default: $primary-500,
+      hover: $primary-800,
+      active: $primary-400),
     secondary:(default: transparent,
       hover: $neutral-900,
       active: $neutral-900 ),
@@ -72,6 +74,8 @@ $colors: (
 
 // text
 $text-base: var(--text-base);
+$text-subtle: var(--text-subtle);
+$text-bold: var(--text-bold);
 $text-heading: var(--text-heading);
 $text-subheading: var(--sub-heading);
 $text-focus: var(--text-focus);

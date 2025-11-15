@@ -10,7 +10,7 @@
     }
 
     &__number {
-        margin-block: 1rem;
+        margin-block: $size-1;
         text-align: center;
         font-family: $ff-heading;
         color: $text-heading;
@@ -23,8 +23,10 @@
     }
 
     &__label {
-        margin-block: 1rem;
+        margin-block: $size-1;
         text-align: center;
+        color: $text-subtle;
+        font-size: $fs-xl;
 
         @include mq(large) {
             font-size: $fs-3xl;

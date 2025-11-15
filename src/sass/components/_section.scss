@@ -1,11 +1,12 @@
 @use "../abstracts" as *;
 
 .section {
-    margin-block: 2rem;
+    margin-block: $size-6;
     width: 100%;
 
     &--light {
         background-color: $bg-light;
+        border-top: 2px solid $border-light;
     }
 
     &--invert {

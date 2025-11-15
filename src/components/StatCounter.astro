@@ -1,4 +1,13 @@
 ---
+interface Stat {
+  number: string | number;
+  label: string;
+}
+
+export interface Props {
+  stats: Stat[];
+}
+
 const { stats } = Astro.props;
 ---
 

@@ -3,11 +3,11 @@
 .top_button {
   display: flex;
   justify-content: center;
-  margin-block: size(3);
-  padding: size(6);
+  margin-block: $size-3;
+  padding: $size-6;
 
   @include mq(medium) {
-    margin-block: size(4);
+    margin-block: $size-4;
   }
 }
 
@@ -18,11 +18,11 @@
 .footer {
   display: flex;
   flex-direction: column-reverse;
-  padding: size(6);
+  padding: $size-6;
   justify-content: center;
   background-color: $bg-light;
   border-top: 2px solid $border-base;
-  gap: size(4);
+  gap: $size-4;
 
   @include mq(large) {
     flex-direction: row;
@@ -49,9 +49,9 @@
   display: flex;
   justify-content: center;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  gap: size(4);
+  margin: $size-0;
+  padding: $size-0;
+  gap: $size-4;
   line-height: 1;
 
   @include mq(large) {
@@ -60,7 +60,7 @@
 
   & li {
     @include mq(medium) {
-      gap: size(3);
+      gap: $size-3;
     }
   }
 
@@ -74,7 +74,7 @@
 
     &:focus {
       outline: $focus-style;
-      outline-offset: 0.25rem;
+      outline-offset: $size-1;
     }
   }
 }

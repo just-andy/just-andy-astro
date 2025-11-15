@@ -15,7 +15,7 @@ const { section, page } = Astro.props;
     </li>
     <li>
       <a href={`/${section}`} title={`Just Andy ${section}`}>
-        {section}
+        {section.trim()}
       </a>
       <span aria-hidden="true">/</span>
     </li>

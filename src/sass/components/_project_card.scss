@@ -16,7 +16,7 @@
   &__link {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: $gap-card;
     text-decoration: none;
     color: inherit;
     height: 100%;
@@ -44,6 +44,7 @@
   &__summary {
     display: flex;
     flex-direction: column;
+    gap: $size-2;
   }
 
   &__image {
