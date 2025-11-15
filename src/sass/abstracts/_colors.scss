@@ -5,7 +5,7 @@ $colors: (
     subtle: $neutral-500,
     bold: $neutral-900,
     heading: $neutral-800,
-    subheading: $neutral-600,
+    subheading: $primary-900,
     focus: $green-100,
     card:$neutral-900,
     link: (default: $primary-500,
@@ -16,8 +16,7 @@ $colors: (
       hover: $neutral-800,
       active: $neutral-800,
       visited: $neutral-800,
-    ), footer: (default: $primary-500,
-      hover: $neutral-800),
+    ),
     primary:(default: $neutral-000,
       hover: $neutral-000,
       active: $neutral-000),
@@ -29,15 +28,23 @@ $colors: (
       active: $neutral-100),
     invert: (default:hsla(60, 9.1%, 97.8%, 1),
       heading:hsla(60, 4.8%, 95.9%, 1)),
+    footer: (default: $primary-500,
+      link: $neutral-800,
+      active: $neutral-800 )),
+  menu__narrow: (default: $primary-500,
+    hover: $neutral-900,
+  ),
+  menu__wide: (default: $primary-500,
+    hover: $neutral-500,
   ),
   border: (base: $neutral-200,
     light: $white,
     invert: $neutral-400,
     card: $neutral-000,
     focus: $green-500,
-    primary:(default: hsla(13, 74%, 53%, 1),
-      hover: hsla(12, 67%, 46%, 1),
-      active: hsla(12, 66.5%, 45.7%, 1)),
+    primary:(default: $primary-500,
+      hover: $primary-800,
+      active: $primary-400),
     secondary:(default:$primary-500,
       hover: $neutral-900,
       active: $neutral-900),
@@ -68,6 +75,11 @@ $colors: (
       active: hsl(144, 61.2%, 20.2%),
       visited: hsl(142, 76.2%, 36.3%),
     ),
+    menu__narrow:(default: transparent,
+      hover: transparent,
+    ),
+    menu__wide:(default: transparent,
+      hover: $neutral-900 ),
   )
 );
 
@@ -77,7 +89,7 @@ $text-base: var(--text-base);
 $text-subtle: var(--text-subtle);
 $text-bold: var(--text-bold);
 $text-heading: var(--text-heading);
-$text-subheading: var(--sub-heading);
+$text-subheading: var(--text-subheading);
 $text-focus: var(--text-focus);
 $text-card: var(--text-card);
 $text-link: var(--text-link);
@@ -101,6 +113,8 @@ $text-tertiary-hover: var(--text-tertiary-hover);
 $text-tertiary-active: var(--text-tertiary-active);
 $text-footer: var(--text-footer);
 $text-footer-hover: var(--text-footer-hover);
+$text-footer-active: var(--text-footer-active);
+
 
 // border
 $border-base: var(--border-base);
@@ -140,3 +154,15 @@ $bg-selected: var(--bg-selected);
 $bg-selected-hover: var(--bg-selected-hover);
 $bg-selected-active: var(--bg-selected-active);
 $bg-selected-visited: var(--bg-selected-visited);
+
+// Menu
+$text-menu__narrow: var(--text-menu__narrow);
+$text-menu__narrow-hover: var(--text-menu__narrow-hover);
+$bg-menu__narrow: var(--bg-menu__narrow);
+$bg-menu__narrow-hover: var(--bg-menu__narrow-hover);
+
+
+$text-menu__wide: var(--text-menu__wide);
+$text-menu__wide-hover: var(--text-menu__wide-hover);
+$bg-menu__wide: var(--bg-menu__wide);
+$bg-menu__wide-hover: var(--bg-menu__wide-hover);

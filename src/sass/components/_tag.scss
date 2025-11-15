@@ -2,9 +2,9 @@
 
 .tags {
     background-color: $neutral-100;
-    counter-reset: $neutral-500;
-    font-size: $fs-sm;
-    padding: 0.25rem;
+    display: inline;
+    font-size: $fs-xs ;
+    padding: $size-2;
     border-radius: $radius;
-    display: inline-block;
+    font-family: $ff-mono;
 }

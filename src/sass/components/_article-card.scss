@@ -3,7 +3,7 @@
 .article-card {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: $size-6;
+  gap: $size-5;
   padding: $size-4;
   border-radius: $radius-card;
 
@@ -18,7 +18,8 @@
   }
 
   &__time {
-    font-size: $fs-md;
+    font-size: $fs-sm;
+    color: $text-subtle;
   }
 
   &__footer {

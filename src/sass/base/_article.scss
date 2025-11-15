@@ -5,9 +5,10 @@
     display: flex;
     flex-direction: column;
     gap: $size-2;
+    margin-bottom: $size-10;
 
     h1 {
-        font-size: $fs-display-lg;
+        font-size: $fs-display-sm;
         line-height: $lh-tight;
     }
 
@@ -22,5 +23,6 @@
     &--time {
         font-family: $ff-base;
         font-size: $fs-lg;
+        color: $text-subtle;
     }
 }

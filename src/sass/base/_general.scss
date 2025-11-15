@@ -36,6 +36,12 @@ a:focus {
   outline: $focus-style;
 }
 
+// Code
+.astro-code {
+  font-size: $fs-lg;
+  padding: $size-4;
+}
+
 // Custom
 .container--button {
   display: flex;
@@ -45,7 +51,8 @@ a:focus {
 
 // Unordered List
 
-.prose ul li {
+.prose ul li,
+.retro ul li {
   list-style-type: none;
   background-image: url("/src/assets/invader.gif");
   background-repeat: no-repeat;

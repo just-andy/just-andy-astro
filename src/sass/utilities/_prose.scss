@@ -14,7 +14,9 @@
   h5,
   h6,
   blockquote,
-  figure {
+  figure,
+  footer,
+  img {
     max-width: $prose-max-width;
     @extend %container-width;
     padding-inline: 1rem;

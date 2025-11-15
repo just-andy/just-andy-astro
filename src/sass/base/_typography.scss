@@ -30,49 +30,58 @@ h1 {
 }
 
 h2 {
-  font-size: $fs-6xl;
-  color: $text-heading;
-  font-family: $ff-heading;
-  font-weight: $fw-heading;
-}
-
-h3 {
   font-size: $fs-5xl;
   color: $text-heading;
   font-family: $ff-heading;
   font-weight: $fw-heading;
+  margin-bottom: $size-5;
+}
+
+h3 {
+  font-size: $fs-4xl;
+  color: $text-subheading;
+  font-family: $ff-heading;
+  font-weight: $fw-heading;
+  margin-bottom: $size-4;
 }
 
 h4 {
-  font-size: $fs-4xl;
-  color: $text-heading;
+  font-size: $fs-3xl;
+  color: $text-subheading;
   font-family: $ff-heading;
   font-weight: $fw-heading;
+  margin-bottom: $size-4;
 }
 
 h5 {
-  font-size: $fs-3xl;
-  color: $text-heading;
+  font-size: $fs-2xl;
+  color: $text-subheading;
   font-family: $ff-sans;
   font-weight: $fw-heading;
+  margin-bottom: $size-4;
 }
 
 h6 {
   font-size: $fs-xl;
-  color: $text-heading;
+  color: $text-subheading;
   font-family: $ff-sans;
   font-weight: $fw-heading;
+  margin-bottom: $size-4;
+
 }
 
 // Display
 .display-1 {
   font-size: $fs-display-sm;
+  color: $text-heading;
 }
 
 .display-2 {
   font-size: $fs-display-md;
+  color: $text-heading;
 }
 
 .display-3 {
   font-size: $fs-display-lg;
+  color: $text-heading;
 }

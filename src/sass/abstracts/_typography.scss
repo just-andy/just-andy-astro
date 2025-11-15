@@ -1,5 +1,6 @@
 $ff-sans: "Arial", sans-serif;
 $ff-heading: "Cartridge", sans-serif;
+$ff-mono: monospace, monospace;
 
 $ff-base: $ff-sans;
 $ff-accent: $ff-heading;
@@ -17,11 +18,11 @@ $fw-heading: $fw-500;
 $fw-subheading: $fw-400;
 
 $display-sizes: (
-  sm: clamp(5rem, calc(3.333rem + 4.167vw), 6rem),
+  lg: clamp(5rem, calc(3.333rem + 4.167vw), 6rem),
   // 80px - 96px
   md: clamp(4.5rem, calc(3.667rem + 2.083vw), 5rem),
   // 72px - 80px
-  lg: clamp(4rem, calc(3.167rem + 2.083vw), 4.5rem),
+  sm: clamp(4rem, calc(3.167rem + 2.083vw), 4.5rem),
   // 64px - 72px
 );
 

@@ -22,6 +22,7 @@
   justify-content: center;
   background-color: $bg-light;
   border-top: 2px solid $border-base;
+  font-size: $fs-md;
   gap: $size-4;
 
   @include mq(large) {
@@ -30,7 +31,7 @@
   }
 }
 
-.footer_left {
+.footer__left {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -45,7 +46,7 @@
   }
 }
 
-.footer_right {
+.footer__right {
   display: flex;
   justify-content: center;
   list-style-type: none;

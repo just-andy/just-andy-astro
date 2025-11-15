@@ -44,7 +44,9 @@ const dateOptions: object = {
     <Content />
 
     <footer class="article__footer">
-      <span>{article.data.keywords.join(", ")}</span>
+      <div class="tags">
+        {article.data.keywords.join(", ")}
+      </div>
     </footer>
   </main>
 </FrontmatterLayout>

@@ -14,13 +14,9 @@ const { section, page } = Astro.props;
       <span aria-hidden="true">/</span>
     </li>
     <li>
-      <a href={`/${section}`} title={`Just Andy ${section}`}>
-        {section.trim()}
-      </a>
+      <a href={`/${section}`} title={`Just Andy ${section}`}>{section.trim()}</a>
       <span aria-hidden="true">/</span>
     </li>
-    <li aria-current="page">
-      {page}
-    </li>
+    {section === "projects" && <li aria-current="page">{page}</li>}
   </ol>
 </nav>
