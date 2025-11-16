@@ -23,30 +23,51 @@ $sizes: (
   20: 10rem,
 );
 
-// Typography
-$large-line-height: 1.5;
+//Variables
+$size-0: var(--size-0);
+$size-px: var(--size-px);
+$size-1: var(--size-1);
+$size-2: var(--size-2);
+$size-3: var(--size-3);
+$size-4: var(--size-4);
+$size-5: var(--size-5);
+$size-6: var(--size-6);
+$size-7: var(--size-7);
+$size-8: var(--size-8);
+$size-9: var(--size-9);
+$size-10: var(--size-10);
+$size-11: var(--size-11);
+$size-12: var(--size-12);
+$size-13: var(--size-13);
+$size-14: var(--size-14);
+$size-15: var(--size-15);
+$size-16: var(--size-16);
+$size-17: var(--size-17);
+$size-18: var(--size-18);
+$size-19: var(--size-19);
+$size-20: var(--size-20);
 
 // Prose
 $prose-max-width: 48rem; //768px
 
 // Container
-$container-inline-padding: 1rem;
+$container-inline-padding: $size-4;
 $container-max-width: 60rem; //900px
 $container-max-width-wide: 64rem; //1024
 
 
 
 // Spacing
-$section-spacer: 7rem;
+$section-spacer: $size-15;
 
 // Gaps
-$gap-grid: 1.5rem;
-$gap-card: 1rem;
+$gap-grid: $size-8;
+$gap-card: $size-6;
 
 // Padding
 $padding-section: clamp(3rem, 10vh, 7rem);
-$padding-card-body: 1rem;
+$padding-card-body: $size-1;
 $padding-hero: clamp(15rem, 15vh, 20rem);
 
 // Flex
-$flex-group-gap: 1rem;
+$flex-group-gap: $size-1;

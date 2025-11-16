@@ -1,0 +1,29 @@
+---
+interface Stat {
+  number: string | number;
+  label: string;
+}
+
+export interface Props {
+  stats: Stat[];
+}
+
+const { stats } = Astro.props;
+---
+
+<div>
+  <div class="section-spacer">
+    <div class="container mx-auto">
+      <div class="stat-counter">
+        {
+          stats.map((stat) => (
+            <div>
+              <div class="stat-counter__number">{stat.number}</div>
+              <div class="stat-counter__label">{stat.label}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

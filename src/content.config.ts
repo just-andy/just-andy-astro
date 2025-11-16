@@ -28,8 +28,6 @@ const articleCollection = defineCollection({
       description: z.string(),
       summary: z.string(),
       keywords: z.array(z.string()),
-      banner: image().optional(),
-      bannerShow: z.boolean(),
       publishDate: z.coerce.date(),
       featured: z.boolean(),
     }),

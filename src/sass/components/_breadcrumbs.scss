@@ -1,11 +1,21 @@
 @use "../abstracts/" as *;
 
 .breadcrumbs {
+    font-size: $fs-md;
     max-width: $prose-max-width;
     width: min(100% - 2rem, 60rem);
     margin-inline: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-block: $size-4;
+    text-transform: capitalize;
+
+    & ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $size-2;
+    }
 
     & ol li {
         margin-left: 0;

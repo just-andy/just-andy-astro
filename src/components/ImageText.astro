@@ -1,0 +1,24 @@
+---
+export interface Props {
+  section: string;
+}
+export interface Slots {
+  /** Main content area */
+  default: any;
+  /** Image slot */
+  image: any;
+}
+
+const { section } = Astro.props;
+---
+
+<section class=`section ${section}`>
+  <div class="image-text container">
+    <div class="image-text__image">
+      <slot name="image" />
+    </div>
+    <div class="image-text__content">
+      <slot />
+    </div>
+  </div>
+</section>

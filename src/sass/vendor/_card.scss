@@ -1,21 +1,16 @@
 @use "../abstracts/" as *;
 
 body .card {
-  border-radius: 0.5rem;
+  border-radius: $size-2;
   padding: 0;
 }
 
 .card__content {
   display: flex;
-  gap: 1rem;
+  gap: $size-1;
 
   &:last-child {
     padding-top: 0;
-  }
-
-  small {
-    text-decoration: underline;
-    color: $text-card;
   }
 }
 

@@ -13,34 +13,29 @@ const dateOptions: object = {
 
 <Layout title="Articles" description="All my articles">
   <main id="main-content" class="container" role="main">
-    <div class="grid-auto-fit" id="main-content">
+    <div class="grid__one-column" id="main-content">
       {
         allarticles.map((article) => (
-          <div class="article-card">
-            <Image
-              class="article-card--image"
-              loading="eager"
-              src={article.data.banner}
-              alt={`${article.data.title} summary`}
-            />
-            <h2 class="heading-4">
-              <a href={`/articles/${article.id}`} title={article.data.title}>
-                {article.data.title}
-              </a>
-            </h2>
-            <p>
-              {article.data.publishDate.toLocaleDateString(
-                "en-GB",
-                dateOptions
-              )}
-            </p>
+          <article class="article-card">
+            <header>
+              <div class="article-card__time">
+                {article.data.publishDate.toLocaleDateString(
+                  "en-GB",
+                  dateOptions
+                )}
+              </div>
+              <h2 class="heading-4">
+                <a href={`/articles/${article.id}`} title={article.data.title}>
+                  {article.data.title}
+                </a>
+              </h2>
+            </header>
+
             <p>{article.data.description}</p>
-            <div>
-              {article.data.keywords.map((keyword) => (
-                <span>{keyword}</span>
-              ))}
-            </div>
-          </div>
+            <footer class="article-card__footer">
+              <div class="tags">{article.data.keywords.join(", ")}</div>
+            </footer>
+          </article>
         ))
       }
     </div>

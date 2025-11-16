@@ -36,6 +36,11 @@
             --fs-display-#{$scale}: #{$size};
         }
 
+        // Space
+        @each $scale, $size in $sizes {
+            --size-#{$scale}: #{$size}
+        }
+
     }
 
     // Single values

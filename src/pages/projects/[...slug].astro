@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
-import { Breadcrumbs, BreadcrumbsItem } from "accessible-astro-components";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Hero from "../../components/Hero.astro";
 
 export async function getStaticPaths() {
@@ -29,14 +29,10 @@ const projectTags = tags.map((tag, index) => {
       tags={entry.data.tags}
       summary={entry.data.summary}
     />
-    <Breadcrumbs>
-      <BreadcrumbsItem href="/" label="Home" />
-      <BreadcrumbsItem href="/projects" label="Projects" />
-      <BreadcrumbsItem currentPage={true} label={entry.data.title} />
-    </Breadcrumbs>
+    <Breadcrumbs section="projects" page={entry.data.title} />
     <div class="prose">
       <Content />
-      <p class="tags"><strong>Tags:</strong> {projectTags}</p>
+      <div class="tags">{projectTags}</div>
     </div>
   </div>
 </FrontmatterLayout>

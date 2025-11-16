@@ -1,17 +1,29 @@
 @use "../abstracts/" as *;
-@use "../utilities/shadows" as *;
 
 .article-card {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 2rem;
-  padding: 1rem;
-  background-color: $bg-base;
+  gap: $size-5;
+  padding: $size-4;
   border-radius: $radius-card;
+
+  header {
+    gap: $size-2;
+  }
 
   &__title {
     font-size: $fs-lg;
     font-weight: $fw-500;
     font-family: $ff-heading;
+  }
+
+  &__time {
+    font-size: $fs-sm;
+    color: $text-subtle;
+  }
+
+  &__footer {
+    font-size: $fs-md;
+    color: $text-subtle;
   }
 }

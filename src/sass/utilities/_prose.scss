@@ -2,7 +2,7 @@
 
 .prose {
   font-size: $fs-xl;
-  line-height: $large-line-height;
+  line-height: $lh-loose;
 
   p,
   ul,
@@ -14,7 +14,9 @@
   h5,
   h6,
   blockquote,
-  figure {
+  figure,
+  footer,
+  img {
     max-width: $prose-max-width;
     @extend %container-width;
     padding-inline: 1rem;
@@ -41,8 +43,8 @@
 
   // Prose Image
   &__image {
-    padding: 2rem 0;
-    margin: 2rem 0;
+    padding-block: 2rem;
+    margin-block: 2rem;
     background-color: $bg-light;
     border-top: 2px solid $border-base;
     border-bottom: 2px solid $border-base;

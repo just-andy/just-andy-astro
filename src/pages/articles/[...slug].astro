@@ -2,7 +2,7 @@
 import { getCollection, render } from "astro:content";
 import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
 import Hero from "../../components/Hero.astro";
-import { Breadcrumbs, BreadcrumbsItem } from "accessible-astro-components";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 
 export async function getStaticPaths() {
   const articles = await getCollection("articles");
@@ -14,6 +14,12 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
+
+const dateOptions: object = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 ---
 
 <FrontmatterLayout
@@ -21,19 +27,26 @@ const { Content } = await render(article);
   title={article.data.title}
   description={article.data.summary}
 >
-  <Hero
-    url={article.data.banner}
-    tags={article.data.keywords}
-    summary={article.data.summary}
-    title={article.data.title}
-  />
+  {}
 
-  <Breadcrumbs>
-    <BreadcrumbsItem href="/" label="Home" />
-    <BreadcrumbsItem href="/articles" label="Articles" />
-    <BreadcrumbsItem currentPage={true} label={article.data.title} />
-  </Breadcrumbs>
-  <main class="prose | flow" id="main-content" role="main">
+  <Breadcrumbs section="articles" page={article.data.title} />
+  <main class="prose | flow | article" id="main-content" role="main">
+    <header class="article__header">
+      <div class="article__header--time">
+        {article.data.publishDate.toLocaleDateString("en-GB", dateOptions)}
+      </div>
+      <h1>{article.data.title}</h1>
+      <h2 class="article__header--subheading">
+        An approach to how to break ground on your design system
+      </h2>
+    </header>
+
     <Content />
+
+    <footer class="article__footer">
+      <div class="tags">
+        {article.data.keywords.join(", ")}
+      </div>
+    </footer>
   </main>
 </FrontmatterLayout>

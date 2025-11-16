@@ -6,10 +6,10 @@
   flex-direction: column;
   justify-content: space-between;
   vertical-align: middle;
-  padding: size(3);
-  gap: size(5);
+  padding: $size-3;
+  gap: $size-5;
   width: 100%;
-  padding: 2rem;
+  padding: $size-6;
 
   @include mq(large) {
     display: flex;
@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: size(1);
+  gap: $size-1;
   text-decoration: none;
   color: $text-base;
 
@@ -92,7 +92,7 @@ h1 .logo__link {
   justify-content: center;
   vertical-align: middle;
   overflow: hidden;
-  gap: size(1);
+  gap: $size-1;
   height: 100%;
 
   &:focus-within {
@@ -109,14 +109,14 @@ h1 .logo__link {
 
 .logo__icon {
   display: block;
-  width: size(12);
-  height: size(12);
+  width: $size-12;
+  height: $size-12;
 
 
   @include mq(large) {
     display: inline-block;
-    width: size(9);
-    height: size(9);
+    width: $size-9;
+    height: $size-9;
   }
 }
 
@@ -125,7 +125,7 @@ h1 .logo__link {
   font-size: $fs-xl;
   font-family: $ff-heading;
   justify-content: center;
-  margin: 0.5rem 0;
+  margin: $size-1 $size-0;
 
   @include mq(medium) {
     font-size: $fs-xl;
@@ -139,7 +139,7 @@ h1 .logo__link {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.25rem;
+    gap: $size-px;
 
     @include mq(medium) {
       gap: 2rem;

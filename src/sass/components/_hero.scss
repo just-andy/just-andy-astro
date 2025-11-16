@@ -15,10 +15,14 @@
     &__content {
         @extend %container-width;
         display: grid;
-        gap: 0.5rem;
+        gap: $size-4;
         padding-inline: 1rem;
         text-align: left;
         color: $text-invert-heading;
+
+        &--inner {
+            gap: $size-2;
+        }
     }
 
     &__title {
@@ -41,6 +45,7 @@
 
     &__tags {
         font-size: $fs-md;
+        font-family: $ff-mono;
 
         @include mq(medium) {
             font-size: $fs-xl;

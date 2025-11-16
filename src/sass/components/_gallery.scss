@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; // Allow images to wrap on smaller screens
+    flex-direction: column; // Stack images vertically on mobile
+    align-items: center;
+
+    // Target all images inside the gallery
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    &>* {
+        flex: 1 1 100%;
+    }
+
+
+    // Responsive breakpoints
+    @include mq(medium) {
+        flex-direction: row;
+
+        &>* {
+            flex: 1 1 calc(50% - 0.5rem); // 2 images per row on tablet
+        }
+    }
+
+    @include mq(large) {
+        flex-direction: row;
+
+        // Equal-width images in a row
+        >* {
+            flex: 1 1 calc(33.333% - 1rem); // 3 images per row on desktop
+            min-width: 0; // Prevents flex items from overflowing
+        }
+    }
+}

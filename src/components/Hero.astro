@@ -14,8 +14,10 @@ const { url, title, summary, tags } = Astro.props;
 <div class="hero">
   <Image src={url} alt="" />
   <div class="hero__content">
-    <h1 class="hero__title">{title}</h1>
-    <div class="hero__summary">{summary}</div>
-    <div class="hero__tags">{tags}</div>
+    <div class="hero__content--inner">
+      <h1 class="hero__title">{title}</h1>
+      <div class="hero__summary">{summary}</div>
+    </div>
+    <div class="hero__tags">{tags.join(", ")}</div>
   </div>
 </div>
