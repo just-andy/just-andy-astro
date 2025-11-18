@@ -1,0 +1,41 @@
+---
+import { LinkPreview } from "astro-embed";
+
+export interface Props {
+  title: string;
+  cta?: {
+    destination: string;
+    label: string;
+  };
+}
+
+const { title, cta } = Astro.props;
+---
+
+<div class="home-card">
+  <div class="home-card__image">
+    <slot name="logo" />
+  </div>
+
+  <h2 class="$home-card__title">
+    {
+      cta ? (
+        <a href={cta.destination} title={`Read ${title}`}>
+          {title}
+        </a>
+      ) : (
+        { title }
+      )
+    }
+  </h2>
+  <p>
+    <slot />
+  </p>
+  {
+    cta && (
+      <a href={cta.destination} title={`${title} link`}>
+        {cta.label}
+      </a>
+    )
+  }
+</div>

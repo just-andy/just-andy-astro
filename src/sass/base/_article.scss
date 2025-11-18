@@ -26,3 +26,28 @@
         color: $text-subtle;
     }
 }
+
+.article-latest {
+    display: flex;
+    flex-direction: column;
+    gap: $size-4;
+
+    h2 {
+        font-size: $fs-3xl;
+        margin-bottom: 0;
+    }
+
+    &__header {
+        gap: $size-1
+    }
+
+    &__footer {
+        margin-top: $size-2;
+    }
+
+    &--time {
+        font-family: $ff-base;
+        font-size: $fs-sm;
+        color: $text-subtle;
+    }
+}

@@ -39,6 +39,7 @@ $colors: (
   ),
   border: (base: $neutral-200,
     light: $white,
+    bold: $neutral-200,
     invert: $neutral-400,
     card: $neutral-000,
     focus: $green-500,
@@ -118,7 +119,8 @@ $text-footer-active: var(--text-footer-active);
 
 // border
 $border-base: var(--border-base);
-$border-light: var(--border-base-light);
+$border-light: var(--border-light);
+$border-bold: var(--border-bold);
 $border-invert: var(--border-base-dark);
 $border-card: var(--border-card);
 $border-focus: var(--border-focus);
