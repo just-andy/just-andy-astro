@@ -179,6 +179,10 @@ h1 .logo__link {
         }
       }
 
+      &:focus {
+        outline-offset: 0.75rem;
+      }
+
       &.selected {
         padding: 0.5rem 0.25rem 0.75rem 0.25rem;
         border-bottom: 0.25rem solid $border-selected;

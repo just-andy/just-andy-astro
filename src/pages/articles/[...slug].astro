@@ -33,7 +33,9 @@ const dateOptions: object = {
   <main class="prose | flow | article" id="main-content" role="main">
     <header class="article__header">
       <div class="article__header--time">
-        {article.data.publishDate.toLocaleDateString("en-GB", dateOptions)}
+        <time datetime={article.data.publishDate.toISOString()}>
+          {article.data.publishDate.toLocaleDateString("en-GB", dateOptions)}
+        </time>
       </div>
       <h1>{article.data.title}</h1>
       <h2 class="article__header--subheading">

@@ -29,7 +29,6 @@ const articleCollection = defineCollection({
       summary: z.string(),
       keywords: z.array(z.string()),
       publishDate: z.coerce.date(),
-      featured: z.boolean(),
     }),
 });
 

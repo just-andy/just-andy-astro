@@ -1,8 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import ProjectCard from "../components/ProjectCard.astro";
-const allArticles = await getCollection("projects");
+import HomeCard from "../components/HomeCard.astro";
+import Image from "astro/components/Image.astro";
+
+import StandardLifeLogo from "../assets/standard-life.svg";
+import WoodMac from "../assets/woodmac_logo.svg";
+import LinkedIn from "../assets/linkedin-logo.svg";
+import JustAndy from "../assets/safari-pinned-tab.svg";
+
+const articles = await getCollection("articles");
+const latestArticle = articles.sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+)[0];
+
+const dateOptions: object = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 ---
 
 <Layout
@@ -14,18 +30,90 @@ const allArticles = await getCollection("projects");
       I WORK WITH DESIGN SYSTEMS AND EXPERIMENT WITH CODE...
     </h2>
 
-    <ul class="grid__two-column" id="main-content">
-      {
-        allArticles.map((project) => (
-          <ProjectCard
-            thumbnail={project.data.thumbnail}
-            title={project.data.title}
-            description={project.data.description}
-            strapline={project.data.strapline}
-            slug={project.id}
-          />
-        ))
-      }
-    </ul>
+    <div class="home-grid">
+      <div class="home-grid__tl">
+        <HomeCard
+          title="Compound Design System"
+          cta={{
+            destination: "/projects/compound-design-system",
+            label: "Find out about this system",
+          }}
+        >
+          <Image src={StandardLifeLogo} alt="" slot="logo" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed temporibus
+          illum nihil harum ipsum ex quam voluptates blanditiis neque?
+        </HomeCard>
+      </div>
+      <div class="home-grid__tr">
+        <HomeCard
+          title="Hydrocarbon Design System"
+          cta={{
+            destination: "/projects/hydrocarbon-design-system",
+            label: "Find out about this system",
+          }}
+        >
+          <Image src={WoodMac} alt="" slot="logo" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed temporibus
+          illum nihil harum ipsum ex quam voluptates blanditiis neque?
+        </HomeCard>
+      </div>
+      <div class="home-grid__bl">
+        <HomeCard title="Join my network">
+          <Image src={LinkedIn} alt="" slot="logo" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed temporibus
+          illum nihil harum ipsum ex quam voluptates blanditiis neque?
+          <p>
+            <a
+              href="https://www.linkedin.com/in/andrewcetnarskyj/"
+              target="_blank"
+              rel="external">Join my network</a
+            >
+          </p>
+        </HomeCard>
+      </div>
+      <div class="home-grid__br">
+        <HomeCard
+          title="Hi, I'm Andy"
+          cta={{ destination: "/about", label: "Find out more" }}
+        >
+          <Image src={JustAndy} alt="" slot="logo" />
+
+          I'm a seasoned UX and product designer who has worked in Design
+          Systems for the last eight years
+        </HomeCard>
+      </div>
+    </div>
+    <div class="article__container">
+      <article class="article-latest">
+        <header class="article-latest__header">
+          <time
+            class="article-latest--time"
+            datetime={latestArticle.data.publishDate.toISOString()}
+            >{
+              latestArticle.data.publishDate.toLocaleDateString(
+                "en-GB",
+                dateOptions
+              )
+            }</time
+          >
+          <h2>
+            <a
+              href={`/articles/${latestArticle.id}`}
+              title={latestArticle.data.title}>{latestArticle.data.title}</a
+            >
+          </h2>
+        </header>
+        <!-- Render content if needed -->
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          nisi in tempora, magni voluptatum dolore inventore voluptatem expedita
+          ad omnis, quasi repudiandae maxime! Esse aliquid error quod, impedit
+          distinctio illo.
+        </p>
+        <footer class="article-latest__footer">
+          <div class="tags">{latestArticle.data.keywords.join(", ")}</div>
+        </footer>
+      </article>
+    </div>
   </main>
 </Layout>

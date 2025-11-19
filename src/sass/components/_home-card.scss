@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+.home-card {
+    display: flex;
+    flex-direction: column;
+    gap: $size-2;
+    margin-block: $size-6;
+
+    &__image img {
+        height: 44px;
+        width: auto;
+        margin-bottom: $size-6;
+    }
+
+    h2 {
+        font-size: $fs-5xl;
+
+        @include mq(large) {
+            font-size: $fs-3xl;
+
+        }
+    }
+}

@@ -63,7 +63,7 @@
 
   &:focus {
     outline-offset: 0.75rem;
-    outline: 0.25rem dashed $border-focus;
+    outline: 0.25rem solid $border-focus;
   }
 
   &--circle {
