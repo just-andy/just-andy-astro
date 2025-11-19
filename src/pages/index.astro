@@ -7,6 +7,7 @@ import Image from "astro/components/Image.astro";
 import StandardLifeLogo from "../assets/standard-life.svg";
 import WoodMac from "../assets/woodmac_logo.svg";
 import LinkedIn from "../assets/linkedin-logo.svg";
+import JustAndy from "../assets/safari-pinned-tab.svg";
 
 const articles = await getCollection("articles");
 const latestArticle = articles.sort(
@@ -75,7 +76,7 @@ const dateOptions: object = {
           title="Hi, I'm Andy"
           cta={{ destination: "/about", label: "Find out more" }}
         >
-          <img src="https://placehold.co/44" alt="" slot="logo" />
+          <Image src={JustAndy} alt="" slot="logo" />
 
           I'm a seasoned UX and product designer who has worked in Design
           Systems for the last eight years
