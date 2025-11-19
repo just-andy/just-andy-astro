@@ -27,6 +27,13 @@
     }
 }
 
+.article__container {
+    @include mq(large) {
+        margin-block: $size-8;
+        margin-inline: $size-14;
+    }
+}
+
 .article-latest {
     display: flex;
     flex-direction: column;

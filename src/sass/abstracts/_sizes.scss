@@ -66,7 +66,7 @@ $gap-card: $size-6;
 
 // Padding
 $padding-section: clamp(3rem, 10vh, 7rem);
-$padding-card-body: $size-1;
+$padding-card-body: $size-0 $size-4 $size-4 $size-4;
 $padding-hero: clamp(15rem, 15vh, 20rem);
 
 // Flex

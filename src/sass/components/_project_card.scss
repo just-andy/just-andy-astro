@@ -8,9 +8,10 @@
   position: relative;
 
   &:focus-within {
-    outline: 0.25rem solid $border-focus;
+    background-color: $bg-focus;
+    outline: 0.125rem solid $border-focus;
     outline-offset: 0.125rem;
-    box-shadow: 0 0 0 0.25rem $border-focus;
+    box-shadow: 0 0 0 0.125rem $border-focus;
   }
 
   &__link {
@@ -22,7 +23,8 @@
     height: 100%;
 
     &:hover {
-      box-shadow: 0 0 0 0.25rem $border-focus;
+      box-shadow: 0 0 0 0.125rem $border-focus;
+      background-color: $bg-focus;
 
       h2 {
         color: $text-link-hover;
@@ -34,21 +36,16 @@
     }
 
     &:focus {
-      outline: 0.25rem dashed $border-focus;
+      background-color: $bg-focus;
+      outline: 0.125rem solid $border-focus;
       outline-offset: 0.125rem;
-      box-shadow: 0 0 0 0.25rem #fff,
-        0 0 0 0.5rem $border-focus;
+      box-shadow: 0 0 0 0.125rem #fff,
+        0 0 0 0.25rem $border-focus;
     }
   }
 
-  &__summary {
-    display: flex;
-    flex-direction: column;
-    gap: $size-2;
-  }
-
   &__image {
-    border-radius: $radius-card;
+    border-radius: $radius-card $radius-card 0 0;
   }
 
   &__title {

@@ -17,16 +17,8 @@ const { title, cta } = Astro.props;
     <slot name="logo" />
   </div>
 
-  <h2 class="$home-card__title">
-    {
-      cta ? (
-        <a href={cta.destination} title={`Read ${title}`}>
-          {title}
-        </a>
-      ) : (
-        { title }
-      )
-    }
+  <h2 class="home-card__title">
+    {title}
   </h2>
   <p>
     <slot />

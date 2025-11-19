@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: $size-2;
+    margin-block: $size-6;
 
     &__image img {
         height: 44px;
@@ -11,7 +12,12 @@
         margin-bottom: $size-6;
     }
 
-    &__title {
-        font-size: $fs-2xl;
+    h2 {
+        font-size: $fs-5xl;
+
+        @include mq(large) {
+            font-size: $fs-3xl;
+
+        }
     }
 }

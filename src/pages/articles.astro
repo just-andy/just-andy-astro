@@ -18,10 +18,12 @@ const dateOptions: object = {
           <article class="article-card">
             <header>
               <div class="article-card__time">
-                {article.data.publishDate.toLocaleDateString(
-                  "en-GB",
-                  dateOptions
-                )}
+                <time datetime={article.data.publishDate.toISOString()}>
+                  {article.data.publishDate.toLocaleDateString(
+                    "en-GB",
+                    dateOptions
+                  )}
+                </time>
               </div>
               <h2 class="heading-4">
                 <a href={`/articles/${article.id}`} title={article.data.title}>
