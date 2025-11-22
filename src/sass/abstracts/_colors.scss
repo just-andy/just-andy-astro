@@ -55,6 +55,7 @@ $theme-text-intro: $forest-green-900;
 $theme-text-bold: $forest-green-900;
 $theme-text-heading: $forest-green-800;
 $theme-text-subheading: $forest-green-900;
+$theme-text-highlight: $forest-green-000;
 
 $theme-text-link: $forest-green-500;
 $theme-text-invert: $forest-green-100;
@@ -75,9 +76,10 @@ $theme-text-tertiary-hover: $forest-green-000;
 $theme-text-tertiary-active: $forest-green-100;
 
 // Theme BG
-$theme-bg-base: $forest-green-000;
+$theme-bg-base: hsla(37deg, 23%, 93%, 1);
 $theme-bg-light: $forest-green-000;
 $theme-bg-invert: $forest-green-500;
+$theme-bg-highlight: $forest-green-500;
 
 // Actions
 $theme-bg-primary: $forest-green-500;
@@ -123,7 +125,7 @@ $theme-logo: $forest-green-900;
 
 // Footer
 $theme-text-footer: $forest-green-900;
-$theme-text-footer-hover: $forest-green-500;
+$theme-text-footer-hover: $forest-green-600;
 $theme-text-footer-active: $forest-green-800;
 $theme-bg-footer: $forest-green-000;
 
@@ -138,6 +140,7 @@ $colors: (
     subheading: $theme-text-subheading,
     focus: $theme-text-focus,
     card: $theme-text-card,
+    highlight: $theme-text-highlight,
     menu__narrow: (default: $theme-text-menu__narrow,
       hover: $theme-text-menu__narrow-hover,
       //active: $theme-text-menu__narrow-active,
@@ -166,7 +169,7 @@ $colors: (
     invert: (default: $theme-text-invert,
       heading: $theme-text-invert-heading),
     footer: (default: $theme-text-footer,
-      link: $theme-text-footer-hover,
+      hover: $theme-text-footer-hover,
       active: $theme-text-footer-active )),
   menu__narrow: (default: $theme-text-menu__narrow,
     hover: $theme-text-menu__narrow-hover,
@@ -205,6 +208,7 @@ $colors: (
   bg:(base: $theme-bg-base,
     light: $theme-bg-light,
     invert: $theme-bg-invert,
+    highlight: $theme-bg-highlight,
     card: $theme-bg-card,
     card-hover: $theme-bg-card-hover,
     focus: $theme-bg-focus,
@@ -244,6 +248,7 @@ $text-intro: var(--text-intro);
 $text-bold: var(--text-bold);
 $text-heading: var(--text-heading);
 $text-subheading: var(--text-subheading);
+$text-highlight: var(--text-highlight);
 $text-focus: var(--text-focus);
 $text-card: var(--text-card);
 $text-link: var(--text-link);
@@ -289,6 +294,7 @@ $bg-base: var(--bg-base);
 $bg-menu: var(--bg-menu);
 $bg-light: var(--bg-light);
 $bg-invert: var(--bg-invert);
+$bg-highlight: var(--bg-highlight);
 $bg-card: var(--bg-card);
 $bg-card-hover: var(--bg-card-hover);
 $bg-focus: var(--bg-focus);

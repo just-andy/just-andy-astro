@@ -1,10 +1,10 @@
 @use "../abstracts/" as *;
 
 .tags {
-    background-color: $neutral-100;
+    border: $border-style;
     display: inline;
-    font-size: $fs-xs ;
+    font-size: 0.875rem;
     padding: $size-2;
-    border-radius: $radius;
+    border-radius: $radius-rounded;
     font-family: $ff-mono;
 }

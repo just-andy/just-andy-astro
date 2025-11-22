@@ -8,6 +8,12 @@
   text-align: center;
   color: $text-intro;
 
+  &>span {
+    background-color: $bg-highlight;
+    color: $text-highlight;
+    padding: 0.25rem 0.5rem;
+  }
+
   @include mq(large) {
     font-size: $fs-intro;
     text-align: left;
