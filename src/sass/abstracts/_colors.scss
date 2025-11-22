@@ -1,94 +1,246 @@
 @use "primitives" as *;
+
+
+/*
+* Theme
+**/
+
+// Logo
+$theme-text-logo: $forest-green-900;
+$theme-bg-logo: $forest-green-900;
+$theme-fill-logo: $forest-green-900;
+$theme-text-logo-hover: $forest-green-800;
+$theme-bg-logo-hover: $forest-green-800;
+$theme-fill-logo-hover: $forest-green-800;
+
+// Menu
+$theme-bg-menu: $forest-green-000;
+$theme-text-menu__narrow: $forest-green-900 ;
+$theme-text-menu__narrow-hover: $forest-green-900;
+$theme-border-menu__narrow: transparent;
+$theme-border-menu__narrow-hover: $forest_green-900;
+$theme-bg-menu__narrow: transparent;
+$theme-bg-menu__narrow-hover: $forest-green-100;
+$theme-text-menu__narrow-selected: $forest-green-900;
+$theme-border-menu__narrow-selected: $forest-green-900;
+$theme-bg-menu__narrow-selected: $forest-green-900;
+$theme-text-menu__narrow-selected-hover: $forest-green-800;
+$theme-border-menu__narrow-selected-hover: $forest-green-900;
+$theme-bg-menu__narrow-selected-hover: $forest-green-100;
+$theme-text-menu__narrow-selected-active: $forest-green-800;
+$theme-border-menu__narrow-selected-active: $forest-green-900;
+$theme-bg-menu__narrow-selected-active: $green-800;
+
+
+$theme-text-menu__wide: $forest-green-800;
+$theme-text-menu__wide-hover: $forest-green-000;
+$theme-border-menu__wide: $forest-green-800;
+$theme-border-menu__wide-hover: $forest-green-500;
+$theme-bg-menu__wide: $forest-green-500;
+$theme-bg-menu__wide-hover: $forest-green-500;
+$theme-text-menu__wide-selected: $forest-green-000;
+$theme-border-menu__wide-selected: $forest-green-900;
+$theme-bg-menu__wide-selected: $forest-green-900;
+$theme-text-menu__wide-selected-hover: $forest-green-000;
+$theme-border-menu__wide-selected-hover: $forest-green-900;
+$theme-bg-menu__wide-selected-hover: $forest-green-900;
+$theme-text-menu__wide-selected-active: $forest-green-800;
+$theme-border-menu__wide-selected-active: $forest-green-900;
+$theme-bg-menu__wide-selected-active: $green-800;
+
+// Text
+$theme-text-base: $forest-green-800;
+$theme-text-subtle: $forest-green-500;
+$theme-text-intro: $forest-green-900;
+$theme-text-bold: $forest-green-900;
+$theme-text-heading: $forest-green-800;
+$theme-text-subheading: $forest-green-900;
+
+$theme-text-link: $forest-green-500;
+$theme-text-invert: $forest-green-100;
+$theme-text-invert-heading: $forest-green-100;
+$theme-text-link-hover: $forest-green-600;
+$theme-text-link-active: $forest-green-700;
+$theme-text-link-visited: $forest-green-500;
+
+// Actions
+$theme-text-primary: $forest-green-000;
+$theme-text-primary-hover: $forest-green-000;
+$theme-text-primary-active: $forest-green-000;
+$theme-text-secondary: $forest-green-500;
+$theme-text-secondary-hover: $forest-green-000;
+$theme-text-secondary-active: $forest-green-000;
+$theme-text-tertiary: $forest-green-500;
+$theme-text-tertiary-hover: $forest-green-000;
+$theme-text-tertiary-active: $forest-green-100;
+
+// Theme BG
+$theme-bg-base: $forest-green-000;
+$theme-bg-light: $forest-green-000;
+$theme-bg-invert: $forest-green-500;
+
+// Actions
+$theme-bg-primary: $forest-green-500;
+$theme-bg-primary-hover: $forest-green-800;
+$theme-bg-primary-active: $forest-green-400;
+$theme-bg-secondary: transparent;
+$theme-bg-secondary-hover: $forest-green-900;
+$theme-bg-secondary-active: $forest-green-900;
+$theme-bg-tertiary: transparent;
+$theme-bg-tertiary-hover: $forest-green-900;
+$theme-bg-tertiary-active: $forest-green-800;
+
+// Theme Border
+$theme-border-base: $forest-green-900;
+$theme-border-light: $forest-green-000;
+$theme-border-bold: $forest-green-200;
+$theme-border-invert: $forest-green-400;
+
+// Actions
+$theme-border-primary: $forest-green-500;
+$theme-border-primary-hover: $forest-green-800;
+$theme-border-primary-active: $forest-green-400;
+$theme-border-secondary: $forest-green-500;
+$theme-border-secondary-hover: $forest-green-900;
+$theme-border-secondary-active: $forest-green-900;
+$theme-border-tertiary: $forest-green-800;
+$theme-border-tertiary-hover: $forest-green-800;
+$theme-border-tertiary-active: $forest-green-800;
+
+// Focus
+$theme-text-focus: $green-100;
+$theme-border-focus: $orange-500;
+$theme-bg-focus: $orange-500;
+
+// Cards
+$theme-border-card: $forest-green-000;
+$theme-text-card: $forest-green-900;
+$theme-bg-card: $forest-green-000;
+$theme-bg-card-hover: $theme-bg-card;
+
+// Other
+$theme-logo: $forest-green-900;
+
+// Footer
+$theme-text-footer: $forest-green-900;
+$theme-text-footer-hover: $forest-green-500;
+$theme-text-footer-active: $forest-green-800;
+$theme-bg-footer: $forest-green-000;
+
 // Loop
 $colors: (
-  text: (base: $neutral-800,
-    subtle: $neutral-500,
-    bold: $neutral-900,
-    heading: $neutral-800,
-    subheading: $primary-900,
-    focus: $green-100,
-    card:$neutral-900,
-    link: (default: $primary-500,
-      hover: $primary-600,
-      active: $primary-700,
-      visited: $primary-500 ),
-    selected: (default: $neutral-000,
-      hover: $neutral-800,
-      active: $neutral-800,
-      visited: $neutral-800,
+  theme-logo: $theme-logo,
+  text: (base: $theme-text-base,
+    subtle: $theme-text-subtle,
+    bold: $theme-text-bold,
+    intro: $theme-text-intro,
+    heading: $theme-text-heading,
+    subheading: $theme-text-subheading,
+    focus: $theme-text-focus,
+    card: $theme-text-card,
+    menu__narrow: (default: $theme-text-menu__narrow,
+      hover: $theme-text-menu__narrow-hover,
+      //active: $theme-text-menu__narrow-active,
+      selected: $theme-text-menu__narrow-selected,
+      selected-hover: $theme-text-menu__narrow-selected-hover,
     ),
-    primary:(default: $neutral-000,
-      hover: $neutral-000,
-      active: $neutral-000),
-    secondary:(default: $primary-500,
-      hover: $neutral-000,
-      active: $neutral-000),
-    tertiary:(default: $primary-500,
-      hover: $neutral-000,
-      active: $neutral-100),
-    invert: (default:hsla(60, 9.1%, 97.8%, 1),
-      heading:hsla(60, 4.8%, 95.9%, 1)),
-    footer: (default: $primary-500,
-      link: $neutral-800,
-      active: $neutral-800 )),
-  menu__narrow: (default: $primary-500,
-    hover: $neutral-900,
+    menu__wide: (default: $theme-text-menu__wide,
+      hover: $theme-text-menu__wide-hover,
+      //active: $theme-text-menu__wider-active,
+      selected: $theme-text-menu__wide-selected,
+      selected-hover: $theme-text-menu__wide-selected-hover,
+    ),
+    link: (default: $theme-text-link,
+      hover: $theme-text-link-hover,
+      active: $theme-text-link-active,
+      visited: $theme-text-link-visited ),
+    primary:(default: $theme-text-primary,
+      hover: $theme-text-primary-hover,
+      active: $theme-text-primary-active),
+    secondary:(default: $theme-text-secondary,
+      hover: $theme-text-secondary-hover,
+      active: $theme-text-secondary-active),
+    tertiary:(default: $theme-text-tertiary,
+      hover: $theme-text-tertiary-hover,
+      active: $theme-text-tertiary-active),
+    invert: (default: $theme-text-invert,
+      heading: $theme-text-invert-heading),
+    footer: (default: $theme-text-footer,
+      link: $theme-text-footer-hover,
+      active: $theme-text-footer-active )),
+  menu__narrow: (default: $theme-text-menu__narrow,
+    hover: $theme-text-menu__narrow-hover,
   ),
-  menu__wide: (default: $primary-500,
-    hover: $neutral-500,
+  menu__wide: (default: $theme-text-menu__wide,
+    hover: $theme-text-menu__wide-hover,
   ),
-  border: (base: $neutral-900,
-    light: $white,
-    bold: $neutral-200,
-    invert: $neutral-400,
-    card: $neutral-000,
-    focus: $green-500,
-    primary:(default: $primary-500,
-      hover: $primary-800,
-      active: $primary-400),
-    secondary:(default:$primary-500,
-      hover: $neutral-900,
-      active: $neutral-900),
-    tertiary:(default: $neutral-800,
-      hover: $neutral-800,
-      active: $neutral-800),
-    selected: (default: $neutral-900,
-      hover: $neutral-900,
-      active: $neutral-900,
-      visited: $neutral-900,
+  border: (base: $theme-border-base,
+    light: $theme-border-light,
+    bold: $theme-border-bold,
+    invert: $theme-border-invert,
+    card: $theme-border-card,
+    focus: $theme-border-focus,
+    menu__narrow: (default: $theme-border-menu__narrow,
+      hover: $theme-border-menu__narrow-hover,
+      //active: $theme-border-menu__narrow-active,
+      selected: $theme-border-menu__narrow-selected,
+      selected-hover: $theme-border-menu__narrow-selected-hover,
     ),
+    menu__wide: (default: $theme-border-menu__wide,
+      hover: $theme-border-menu__wide-hover,
+      //active: $theme-border-menu__wider-active,
+      selected: $theme-border-menu__wide-selected,
+      selected-hover: $theme-border-menu__wide-selected-hover,
+    ),
+    primary:(default: $theme-border-primary,
+      hover: $theme-border-primary-hover,
+      active: $theme-border-primary-active),
+    secondary:(default: $theme-border-secondary,
+      hover: $theme-border-secondary-hover,
+      active: $theme-border-secondary-active),
+    tertiary:(default: $theme-border-tertiary,
+      hover: $theme-border-tertiary-hover,
+      active: $theme-border-tertiary-active),
   ),
-  bg:(base: hsl(60, 4.8%, 95.9%),
-    light: $white,
-    invert: $primary-500,
-    card: $white,
-    focus: hsl(60, 4.8%, 85.9%),
-    primary:(default: $primary-500,
-      hover: $primary-800,
-      active: $primary-400),
-    secondary:(default: transparent,
-      hover: $neutral-900,
-      active: $neutral-900 ),
-    tertiary:(default: transparent,
-      hover: $neutral-900,
-      active: $neutral-800),
-    selected: (default: $neutral-900,
-      hover: $neutral-100,
-      active: hsl(144, 61.2%, 20.2%),
-      visited: hsl(142, 76.2%, 36.3%),
+  bg:(base: $theme-bg-base,
+    light: $theme-bg-light,
+    invert: $theme-bg-invert,
+    card: $theme-bg-card,
+    card-hover: $theme-bg-card-hover,
+    focus: $theme-bg-focus,
+    menu: $theme-bg-menu,
+    footer: $theme-bg-footer,
+    menu__narrow: (default: $theme-bg-menu__narrow,
+      hover: $theme-bg-menu__narrow-hover,
+      //active: $theme-bg-menu__narrow-active,
+      selected: $theme-bg-menu__narrow-selected,
+      selected-hover: $theme-bg-menu__narrow-selected-hover,
     ),
-    menu__narrow:(default: transparent,
-      hover: transparent,
+    menu__wide: (default: $theme-bg-menu__wide,
+      hover: $theme-bg-menu__wide-hover,
+      //active: $theme-bg-menu__wider-active,
+      selected: $theme-bg-menu__wide-selected,
+      selected-hover: $theme-bg-menu__wide-selected-hover,
     ),
-    menu__wide:(default: transparent,
-      hover: $neutral-900 ),
+    primary:(default: $theme-bg-primary,
+      hover: $theme-bg-primary-hover,
+      active: $theme-bg-primary-active),
+    secondary:(default: $theme-bg-secondary,
+      hover: $theme-bg-secondary-hover,
+      active: $theme-bg-secondary-active ),
+    tertiary:(default: $theme-bg-tertiary,
+      hover: $theme-bg-tertiary-hover,
+      active: $theme-bg-tertiary-active),
   )
 );
 
+// Global
+$theme-logo: var(--theme-logo);
 
 // text
 $text-base: var(--text-base);
 $text-subtle: var(--text-subtle);
+$text-intro: var(--text-intro);
 $text-bold: var(--text-bold);
 $text-heading: var(--text-heading);
 $text-subheading: var(--text-subheading);
@@ -100,10 +252,6 @@ $text-invert-heading: var(--text-invert-heading);
 $text-link-hover: var(--text-link-hover);
 $text-link-active: var(--text-link-active);
 $text-link-visited: var(--text-link-visited);
-$text-selected: var(--text-selected);
-$text-selected-hover: var(--text-selected-hover);
-$text-selected-active: var(--text-selected-active);
-$text-selected-visited: var(--text-link-visited);
 $text-primary: var(--text-primary);
 $text-primary-hover: var(--text-primary-hover);
 $text-primary-active: var(--text-primary-active);
@@ -135,16 +283,16 @@ $border-tertiary: var(--border-tertiary);
 $border-tertiary-hover: var(--border-tertiary-hover);
 $border-tertiary-active: var(--border-tertiary-active);
 $border-selected: var(--border-selected);
-$border-selected-hover: var(--border-selected-hover);
-$border-selected-active: var(--border-selected-active);
-$border-selected-visited: var(--border-selected-visited);
 
 // surface
 $bg-base: var(--bg-base);
+$bg-menu: var(--bg-menu);
 $bg-light: var(--bg-light);
 $bg-invert: var(--bg-invert);
 $bg-card: var(--bg-card);
+$bg-card-hover: var(--bg-card-hover);
 $bg-focus: var(--bg-focus);
+$bg-footer: var(--bg-footer);
 $bg-primary: var(--bg-primary);
 $bg-primary-hover: var(--bg-primary-hover);
 $bg-primary-active: var(--bg-primary-active);
@@ -154,19 +302,39 @@ $bg-secondary-active: var(--bg-secondary-active);
 $bg-tertiary: var(--bg-tertiary);
 $bg-tertiary-hover: var(--bg-tertiary-hover);
 $bg-tertiary-active: var(--bg-tertiary-active);
-$bg-selected: var(--bg-selected);
-$bg-selected-hover: var(--bg-selected-hover);
-$bg-selected-active: var(--bg-selected-active);
-$bg-selected-visited: var(--bg-selected-visited);
 
-// Menu
+// Menu (non-selected states)
 $text-menu__narrow: var(--text-menu__narrow);
 $text-menu__narrow-hover: var(--text-menu__narrow-hover);
+$border-menu__narrow: var(--border-menu__narrow);
+$border-menu__narrow-hover: var(--border-menu__narrow-hover);
 $bg-menu__narrow: var(--bg-menu__narrow);
 $bg-menu__narrow-hover: var(--bg-menu__narrow-hover);
 
-
 $text-menu__wide: var(--text-menu__wide);
 $text-menu__wide-hover: var(--text-menu__wide-hover);
+$border-menu__wide: var(--border-menu__wide);
+$border-menu__wide-hover: var(--border-menu__wide-hover);
 $bg-menu__wide: var(--bg-menu__wide);
 $bg-menu__wide-hover: var(--bg-menu__wide-hover);
+
+// Menu (selected states)
+$text-menu__wide-selected: var(--text-menu__wide-selected);
+$border-menu__wide-selected: var(--border-menu__wide-selected);
+$bg-menu__wide-selected: var(--bg-menu__wide-selected);
+$text-menu__wide-selected-hover: var(--text-menu__wide-selected-hover);
+$border-menu__wide-selected-hover: var(--border-menu__wide-selected-hover);
+$bg-menu__wide-selected-hover: var(--bg-menu__wide-selected-hover);
+$text-menu__wide-selected-active: var(--text-menu__wide-selected-active);
+$border-menu__wide-selected-active: var(--border-menu__wide-selected-active);
+$bg-menu__wide-selected-active: var(--bg-menu__wide-selected-active);
+
+$text-menu__narrow-selected: var(--text-menu__narrow-selected);
+$border-menu__narrow-selected: var(--border-menu__narrow-selected);
+$bg-menu__narrow-selected: var(--bg-menu__narrow-selected);
+$text-menu__narrow-selected-hover: var(--text-menu__narrow-selected-hover);
+$border-menu__narrow-selected-hover: var(--border-menu__narrow-selected-hover);
+$bg-menu__narrow-selected-hover: var(--bg-menu__narrow-selected-hover);
+$text-menu__narrow-selected-active: var(--text-menu__narrow-selected-active);
+$border-menu__narrow-selected-active: var(--border-menu__narrow-selected-active);
+$bg-menu__narrow-selected-active: var(--bg-menu__narrow-selected-active);
