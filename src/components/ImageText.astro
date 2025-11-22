@@ -1,6 +1,7 @@
 ---
 export interface Props {
   section: string;
+  reverse?: boolean;
 }
 export interface Slots {
   /** Main content area */
@@ -9,11 +10,13 @@ export interface Slots {
   image: any;
 }
 
-const { section } = Astro.props;
+const { section = "", reverse = false } = Astro.props;
+
+const layoutReverse = reverse == true ? "image-text--reverse" : "";
 ---
 
-<section class=`section ${section}`>
-  <div class="image-text container">
+<section class={`section ${section}`}>
+  <div class={`image-text image-text__inner container ${layoutReverse}`}>
     <div class="image-text__image">
       <slot name="image" />
     </div>

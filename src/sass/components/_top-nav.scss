@@ -6,14 +6,14 @@
   flex-direction: column;
   justify-content: space-between;
   vertical-align: middle;
-  padding: $size-3;
+  padding: $size-8 $size-6;
   gap: $size-5;
   width: 100%;
-  padding: $size-6;
 
   @include mq(large) {
     display: flex;
     flex-direction: row;
+    padding-bottom: $size-14;
   }
 }
 
@@ -68,7 +68,7 @@ h1 .logo__link {
   &:focus-visible {
     outline: $focus-style;
     outline-offset: 0.25rem;
-    border-radius: $radius;
+    border-radius: $radius-button;
   }
 }
 
@@ -159,7 +159,7 @@ h1 .logo__link {
 
       @include mq(medium) {
         padding: 0.5rem 1rem;
-        border-radius: $radius;
+        border-radius: $radius-button;
       }
 
 
@@ -177,10 +177,15 @@ h1 .logo__link {
             0 0 0 0.25rem $bg-base,
             0 0 0 0.5rem $border-tertiary-hover;
         }
+
+        &:focus {
+          outline-offset: 0.675rem;
+        }
+
       }
 
       &:focus {
-        outline-offset: 0.75rem;
+        outline-offset: 0.125rem;
       }
 
       &.selected {

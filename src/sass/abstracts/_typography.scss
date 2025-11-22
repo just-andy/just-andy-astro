@@ -51,7 +51,10 @@ $font-sizes: (
   // 48px - 56px
   8xl: clamp(3.5rem, 2.667rem + 2.083vw, 4rem),
   // 56px - 64px
-  9xl: clamp(4rem, 3rem + 3.5vw, 4.5rem) // 56px - 64px
+  9xl: clamp(4rem, 3rem + 3.5vw, 4.5rem),
+  // 56px - 64px
+  intro: clamp(2.5rem, 1rem + 4.5vw, 5.75rem)
+  // 40px - 92px
 );
 
 $fs-xs: var(--fs-xs);
@@ -68,6 +71,7 @@ $fs-6xl: var(--fs-6xl);
 $fs-7xl: var(--fs-7xl);
 $fs-8xl: var(--fs-8xl);
 $fs-9xl: var(--fs-9xl);
+$fs-intro: var(--fs-intro);
 $fs-display-sm: var(--fs-display-sm);
 $fs-display-md: var(--fs-display-md);
 $fs-display-lg: var(--fs-display-lg);
