@@ -3,9 +3,13 @@
 //Transitions
 $transitions: 275ms ease;
 
+// Border
+$border-style: 4px solid $border-base;
+
 //Radius
 $radius: 0.5rem;
-$radius-card: 1rem;
+$radius-card: 0.25rem;
+$radius-button: 0.25rem;
 
 // Focus
 $focus-color: $text-focus;

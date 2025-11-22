@@ -1,14 +1,14 @@
 @use "../abstracts/" as *;
 
 .intro {
-  font-size: $fs-6xl;
+  font-size: $fs-intro;
   line-height: $lh-tight;
   font-family: $ff-heading;
   margin-block: $size-6;
   text-align: center;
 
   @include mq(large) {
-    font-size: $fs-9xl;
+    font-size: $fs-intro;
     text-align: left;
     margin: $size-6 $size-11 $size-11 $size-11;
   }

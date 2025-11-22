@@ -37,7 +37,7 @@
 .home-grid__tl {
 
     grid-area: 1 / 1 / 2 / 2;
-    border-bottom: 4px solid $border-bold;
+    border-bottom: $border-style;
 
     @media (max-width:768px) {
         padding-top: $size-0;
@@ -46,25 +46,25 @@
     @include mq(medium) {
         // padding-top: $size-10;
         grid-area: 1 / 1 / 2 / 2;
-        border-bottom: 4px solid $border-bold;
+        border-bottom: $border-style;
 
     }
 }
 
 .home-grid__tr {
     grid-area: 2 / 1 / 3 / 2;
-    border-bottom: 4px solid $border-bold;
+    border-bottom: $border-style;
 
 
     @include mq(medium) {
         grid-area: 1 / 2 / 2 / 3;
-        border-bottom: 4px solid $border-bold;
+        border-bottom: $border-style;
     }
 }
 
 .home-grid__bl {
     grid-area: 3 / 1 / 4 / 2;
-    border-bottom: 4px solid $border-bold;
+    border-bottom: $border-style;
 
 
     @include mq(medium) {

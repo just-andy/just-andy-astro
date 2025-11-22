@@ -3,20 +3,18 @@
 .image-text {
 
     &__inner {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 1.5rem;
 
-        @include mq(medium) {
-            grid-template-columns: repeat(2, 1fr);
+        @include mq(large) {
+            flex-direction: row;
         }
     }
 
     &__image {
-        display: flex;
-        align-items: center;
-        justify-items: center;
         object-fit: contain;
+        border-radius: $radius;
     }
 
     &__text {
@@ -26,6 +24,8 @@
     }
 
     &--reverse {
-        flex-direction: column-reverse;
+        @include mq(large) {
+            flex-direction: row-reverse;
+        }
     }
 }

@@ -4,14 +4,22 @@
 .project-card {
   border-radius: $radius-card;
   overflow: hidden;
-  background-color: $bg-base;
+  background-color: $bg-card;
   position: relative;
+  box-shadow: 0.75rem 0.75rem 0 0 $neutral-900;
+  transition: all 0.1s linear;
+  border: $border-style;
 
-  &:focus-within {
-    background-color: $bg-focus;
-    outline: 0.125rem solid $border-focus;
-    outline-offset: 0.125rem;
-    box-shadow: 0 0 0 0.125rem $border-focus;
+  &:focus-within,
+  &:focus,
+  &:hover {
+    background-color: $bg-card;
+    box-shadow: 0.25rem 0.25rem 0 0;
+    transform: translate(0.5rem, 0.5rem);
+  }
+
+  &:focus {
+    border: $border-focus;
   }
 
   &__link {
@@ -23,8 +31,6 @@
     height: 100%;
 
     &:hover {
-      box-shadow: 0 0 0 0.125rem $border-focus;
-      background-color: $bg-focus;
 
       h2 {
         color: $text-link-hover;
@@ -34,18 +40,10 @@
         color: $text-base;
       }
     }
-
-    &:focus {
-      background-color: $bg-focus;
-      outline: 0.125rem solid $border-focus;
-      outline-offset: 0.125rem;
-      box-shadow: 0 0 0 0.125rem #fff,
-        0 0 0 0.25rem $border-focus;
-    }
   }
 
   &__image {
-    border-radius: $radius-card $radius-card 0 0;
+    border-radius: 0 0;
   }
 
   &__title {
