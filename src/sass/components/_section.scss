@@ -1,7 +1,9 @@
 @use "../abstracts" as *;
 
 .section {
+    margin-block: $size-4;
     padding-block: $size-6;
+    font-size: $fs-lg;
     width: 100%;
 
     &--light {
