@@ -1,17 +1,14 @@
-$white :hsla(0, 0%, 100%, 1);
-$black: hsla(0, 0%, 0%, 1);
-
 // Primitives
-$primary-000: hsla(13deg, 70%, 97%, 1);
-$primary-100: hsla(13deg, 75%, 92%, 1);
-$primary-200: hsla(13deg, 76%, 82%, 1);
-$primary-300: hsla(13deg, 77%, 72%, 1);
-$primary-400: hsla(13deg, 77%, 62%, 1);
-$primary-500: hsla(13deg, 77%, 53%, 1);
-$primary-600: hsla(13deg, 77%, 45%, 1);
-$primary-700: hsla(13deg, 75%, 37%, 1);
-$primary-800: hsla(13deg, 70%, 28%, 1);
-$primary-900: hsla(13deg, 65%, 20%, 1);
+$orange-000: hsla(13deg, 70%, 97%, 1);
+$orange-100: hsla(13deg, 75%, 92%, 1);
+$orange-200: hsla(13deg, 76%, 82%, 1);
+$orange-300: hsla(13deg, 77%, 72%, 1);
+$orange-400: hsla(13deg, 77%, 62%, 1);
+$orange-500: hsla(13deg, 77%, 53%, 1);
+$orange-600: hsla(13deg, 77%, 45%, 1);
+$orange-700: hsla(13deg, 75%, 37%, 1);
+$orange-800: hsla(13deg, 70%, 28%, 1);
+$orange-900: hsla(13deg, 65%, 20%, 1);
 
 $neutral-000: hsla(24deg, 8%, 96%, 1);
 $neutral-000: hsla(24deg, 8%, 96%, 1);
@@ -35,3 +32,14 @@ $green-600: hsla(150deg, 65%, 37%, 1);
 $green-700: hsla(150deg, 63%, 30%, 1);
 $green-800: hsla(150deg, 60%, 22%, 1);
 $green-900: hsla(150deg, 55%, 15%, 1);
+
+$forest-green-000: hsla(147deg, 10%, 98%, 1);
+$forest-green-100: hsla(147deg, 40%, 88%, 1);
+$forest-green-200: hsla(147deg, 40%, 76%, 1);
+$forest-green-300: hsla(147deg, 40%, 64%, 1);
+$forest-green-400: hsla(147deg, 40%, 52%, 1);
+$forest-green-500: hsla(147deg, 40%, 40%, 1);
+$forest-green-600: hsla(147deg, 40%, 32%, 1);
+$forest-green-700: hsla(147deg, 40%, 24%, 1);
+$forest-green-800: hsla(147deg, 40%, 8%, 1);
+$forest-green-900: hsla(147deg, 40%, 5%, 1);

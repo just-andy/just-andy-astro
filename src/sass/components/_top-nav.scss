@@ -34,7 +34,7 @@
 // Logo
 .logo__wrapper {
   height: 6rem;
-  color: $text-heading;
+  color: $theme-text-logo;
 
   @include mq(large) {
     height: 3rem;
@@ -52,13 +52,13 @@
   align-items: center;
   gap: $size-1;
   text-decoration: none;
-  color: $text-base;
+  color: $theme-text-logo;
 
   &:focus,
   &:focus-visible {
     outline: $focus-style;
     outline-offset: 0.25rem;
-    border-radius: $radius;
+    border-radius: $radius-focus;
   }
 }
 
@@ -68,14 +68,14 @@ h1 .logo__link {
   &:focus-visible {
     outline: $focus-style;
     outline-offset: 0.25rem;
-    border-radius: $radius-button;
+    border-radius: $radius-focus;
   }
 }
 
 .logo__text {
   display: none;
   justify-content: center;
-  color: $text-base;
+  color: $theme-text-logo;
   font-size: $fs-xl;
   font-family: $ff-heading;
 
@@ -98,11 +98,11 @@ h1 .logo__link {
   &:focus-within {
     outline: $focus-style;
     outline-offset: 0.25rem;
-    border-radius: $radius;
+    border-radius: $radius-focus;
   }
 
   h1 {
-    color: $primary-500;
+    color: $theme-logo;
     line-height: 1rem;
   }
 }
@@ -139,10 +139,10 @@ h1 .logo__link {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: $size-px;
+    gap: $size-1;
 
     @include mq(medium) {
-      gap: 2rem;
+      gap: $size-6;
     }
 
     @include mq(large) {
@@ -154,28 +154,31 @@ h1 .logo__link {
       text-transform: uppercase;
       text-decoration: none;
       transition: $transitions;
-      color: $text-tertiary;
+      color: $text-menu__narrow;
 
 
       @include mq(medium) {
         padding: 0.5rem 1rem;
         border-radius: $radius-button;
+
       }
 
 
       &:hover {
         padding: 0.5rem 0.25rem 0.75rem 0.25rem;
-        color: $neutral-900;
-        border-bottom: 0.25rem solid $border-tertiary-hover;
+        color: $text-menu__narrow-hover;
+        background-color: $bg-menu__narrow-hover;
+        border-bottom: 0.25rem solid $border-menu__narrow-hover;
         border-radius: none;
 
         @include mq(medium) {
           padding: 0.5rem 1rem;
-          background-color: $bg-tertiary-hover;
-          color: $text-tertiary-hover;
+          background-color: $bg-menu__wide-hover;
+          color: $text-menu__wide-hover;
+          border: none;
           box-shadow:
-            0 0 0 0.25rem $bg-base,
-            0 0 0 0.5rem $border-tertiary-hover;
+            0 0 0 0.25rem $bg-menu,
+            0 0 0 0.5rem $border-menu__wide-hover;
         }
 
         &:focus {
@@ -190,26 +193,26 @@ h1 .logo__link {
 
       &.selected {
         padding: 0.5rem 0.25rem 0.75rem 0.25rem;
-        border-bottom: 0.25rem solid $border-selected;
-        color: $neutral-900;
+        border-bottom: 0.25rem solid $border-menu__narrow-selected;
+        color: $text-menu__narrow-selected;
 
         @include mq(medium) {
           padding: 0.5rem 1rem;
-          background-color: $bg-selected;
-          color: $text-selected;
+          background-color: $bg-menu__wide-selected;
+          color: $text-menu__wide-selected;
+          ;
           border-bottom: none;
         }
 
         &:hover {
-          background-color: $bg-selected-hover;
+          background-color: $bg-menu__narrow-selected-hover;
 
           @include mq(medium) {
-            background-color: $neutral-900;
-            color: $neutral-000;
-            border-bottom: none;
+            background-color: $bg-menu__wide-selected-hover;
+            color: $text-menu__wide-selected-hover;
             box-shadow:
-              0 0 0 5px $bg-base,
-              0 0 0 10px $border-selected-hover;
+              0 0 0 0.25rem $bg-menu,
+              0 0 0 0.5rem $border-menu__wide-selected-hover;
           }
 
           &:focus {
