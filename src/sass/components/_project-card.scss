@@ -2,19 +2,18 @@
 @use "../utilities/shadows" as *;
 
 .project-card {
-  border-radius: $radius-card;
+  border-radius: 1rem;
   overflow: hidden;
   background-color: $bg-card;
   position: relative;
-  // box-shadow: 0.75rem 0.75rem 0 0 $neutral-900;
-  // transition: all 0.1s linear;
-
+  border: $border-style;
 
   &:focus-within,
   &:focus,
   &:hover {
-    border: $border-style;
+    //border-color: $border-card;
     background-color: $bg-card-hover;
+    box-shadow: $box-focus-shadow;
   }
 
   &:focus {

@@ -16,4 +16,5 @@ $radius-focus: $radius-button;
 // Focus
 $focus-color: $text-focus;
 $focus-style: 0.25rem solid $border-focus;
-$box-focus-shadow: 10px 10px 5px $border-focus inset, 10px 10px 5px #fafafa, 10px 10px 5px #000000;
+$box-focus-shadow: 0 0 0 0.25rem $bg-base, 0 0 0 0.5rem $border-focus;
+;
