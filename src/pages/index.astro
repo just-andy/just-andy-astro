@@ -68,50 +68,50 @@ const dateOptions: object = {
           >
         </HomeCard>
       </div>
-    </div>
-    <div class="home-grid__br">
-      <HomeCard
-        title="Hi, I'm Andy"
-        cta={{ destination: "/about", label: "Find out more" }}
-      >
-        <Image src={JustAndy} alt="" slot="logo" />
+      <div class="home-grid__br">
+        <HomeCard
+          title="Hi, I'm Andy"
+          cta={{ destination: "/about", label: "Find out more" }}
+        >
+          <Image src={JustAndy} alt="" slot="logo" />
 
-        I'm a seasoned UX and product designer who has worked in Design Systems
-        for the last eight years. This is some of my sample of some of my work
-        and experiments.
-      </HomeCard>
+          I'm a seasoned UX and product designer who has worked in Design
+          Systems for the last eight years. This is some of my sample of some of
+          my work and experiments.
+        </HomeCard>
+      </div>
+    </div>
+    <div class="article__container">
+      <article class="article-latest">
+        <header class="article-latest__header">
+          <time
+            class="article-latest--time"
+            datetime={latestArticle.data.publishDate.toISOString()}
+            >{
+              latestArticle.data.publishDate.toLocaleDateString(
+                "en-GB",
+                dateOptions
+              )
+            }</time
+          >
+          <h2>
+            <a
+              href={`/articles/${latestArticle.id}`}
+              title={latestArticle.data.title}>{latestArticle.data.title}</a
+            >
+          </h2>
+        </header>
+        <!-- Render content if needed -->
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          nisi in tempora, magni voluptatum dolore inventore voluptatem expedita
+          ad omnis, quasi repudiandae maxime! Esse aliquid error quod, impedit
+          distinctio illo.
+        </p>
+        <footer class="article-latest__footer">
+          <div class="tags">{latestArticle.data.keywords.join(", ")}</div>
+        </footer>
+      </article>
     </div>
   </main>
-  <div class="article__container">
-    <article class="article-latest">
-      <header class="article-latest__header">
-        <time
-          class="article-latest--time"
-          datetime={latestArticle.data.publishDate.toISOString()}
-          >{
-            latestArticle.data.publishDate.toLocaleDateString(
-              "en-GB",
-              dateOptions
-            )
-          }</time
-        >
-        <h2>
-          <a
-            href={`/articles/${latestArticle.id}`}
-            title={latestArticle.data.title}>{latestArticle.data.title}</a
-          >
-        </h2>
-      </header>
-      <!-- Render content if needed -->
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
-        nisi in tempora, magni voluptatum dolore inventore voluptatem expedita
-        ad omnis, quasi repudiandae maxime! Esse aliquid error quod, impedit
-        distinctio illo.
-      </p>
-      <footer class="article-latest__footer">
-        <div class="tags">{latestArticle.data.keywords.join(", ")}</div>
-      </footer>
-    </article>
-  </div>
 </Layout>

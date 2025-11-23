@@ -4,13 +4,14 @@
 $transitions: 275ms ease;
 
 // Border
-$border-style: 4px solid $border-base;
+$border-style-light: 4px solid $border-light;
+$border-style: 8px solid $border-base;
 
 //Radius
 $radius: 0.5rem;
 $radius-rounded: 9999px;
-$radius-card: 0.25rem;
-$radius-button: 0.25rem;
+$radius-card: 0rem;
+$radius-button: 0rem;
 $radius-focus: $radius-button;
 
 // Focus

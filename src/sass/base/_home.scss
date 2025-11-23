@@ -11,7 +11,8 @@
   &>span {
     background-color: $bg-highlight;
     color: $text-highlight;
-    padding: 0.25rem 0.5rem;
+    padding: 0.125rem 0.5rem;
+    line-height: 1.125;
   }
 
   @include mq(large) {
