@@ -27,25 +27,33 @@
             }
         }
 
-        // Typography
-        @each $scale, $size in $font-sizes {
-            --fs-#{$scale}: #{$size};
-        }
+    }
 
-        @each $scale, $size in $display-sizes {
-            --fs-display-#{$scale}: #{$size};
-        }
+    // Typography
+    @each $scale, $size in $font-sizes {
+        --fs-#{$scale}: #{$size};
+    }
 
-        // Space
-        @each $scale, $size in $sizes {
-            --size-#{$scale}: #{$size}
-        }
+    @each $scale, $size in $display-sizes {
+        --fs-display-#{$scale}: #{$size};
+    }
 
+    // Space
+    @each $scale, $size in $sizes {
+        --size-#{$scale}: #{$size};
+    }
+
+    // Text Style
+    @each $semantic-name, $style in $text-styles {
+        --style-#{$semantic-name,}: #{$style};
     }
 
     // Single values
     --radius: #{$radius};
     --radius-card: #{$radius-card};
+    --radius-rounded: #{$radius-rounded};
+    --radius-button: #{$radius-button};
+    --radius-focus: #{$radius-focus};
     --ff-heading:#{$ff-heading};
     --ff-base:#{$ff-base};
     --ff-accent:#{$ff-accent};

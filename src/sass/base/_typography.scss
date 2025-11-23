@@ -1,5 +1,6 @@
 @use "../abstracts/" as *;
 
+
 a {
   color: $text-link;
   text-decoration: underline;
@@ -18,20 +19,39 @@ a {
   }*/
 }
 
+
+// Text Styles
+.text {
+
+  &--subtle {
+    color: $text-subtle;
+  }
+
+  &--bold {
+    color: $text-bold;
+  }
+
+  &--light {
+    color: $text-section-light;
+  }
+
+  &--invert {
+    color: $text-section-invert;
+  }
+}
+
 // Headings
 // Loops out headings/class
 // Probably not the best way
 
 h1 {
   font-size: $fs-8xl;
-  color: $text-heading;
   font-family: $ff-heading;
   font-weight: $fw-heading;
 }
 
 h2 {
   font-size: $fs-5xl;
-  color: $text-heading;
   font-family: $ff-heading;
   font-weight: $fw-heading;
   margin-bottom: $size-5;
@@ -39,7 +59,6 @@ h2 {
 
 h3 {
   font-size: $fs-4xl;
-  color: $text-subheading;
   font-family: $ff-heading;
   font-weight: $fw-heading;
   margin-bottom: $size-4;
@@ -47,7 +66,6 @@ h3 {
 
 h4 {
   font-size: $fs-3xl;
-  color: $text-subheading;
   font-family: $ff-heading;
   font-weight: $fw-heading;
   margin-bottom: $size-4;
@@ -55,7 +73,6 @@ h4 {
 
 h5 {
   font-size: $fs-2xl;
-  color: $text-subheading;
   font-family: $ff-sans;
   font-weight: $fw-heading;
   margin-bottom: $size-4;
@@ -63,11 +80,9 @@ h5 {
 
 h6 {
   font-size: $fs-xl;
-  color: $text-subheading;
   font-family: $ff-sans;
   font-weight: $fw-heading;
   margin-bottom: $size-4;
-
 }
 
 // Display

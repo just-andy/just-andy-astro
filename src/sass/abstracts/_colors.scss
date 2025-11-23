@@ -120,6 +120,14 @@ $theme-text-card: $forest-green-900;
 $theme-bg-card: $forest-green-000;
 $theme-bg-card-hover: $theme-bg-card;
 
+// Section
+$theme-bg-section-light: $neutral-000;
+$theme-border-section-light: $neutral-000;
+$theme-text-section-light: $neutral-900;
+$theme-bg-section-invert: $neutral-900;
+$theme-border-section-invert: $forest-green-000;
+$theme-text-section-invert: $forest-green-000;
+
 // Other
 $theme-logo: $forest-green-900;
 
@@ -128,6 +136,7 @@ $theme-text-footer: $forest-green-900;
 $theme-text-footer-hover: $forest-green-600;
 $theme-text-footer-active: $forest-green-800;
 $theme-bg-footer: $forest-green-000;
+
 
 // Loop
 $colors: (
@@ -141,6 +150,8 @@ $colors: (
     focus: $theme-text-focus,
     card: $theme-text-card,
     highlight: $theme-text-highlight,
+    section: (light: $theme-text-section-light,
+      invert: $theme-text-section-invert ),
     menu__narrow: (default: $theme-text-menu__narrow,
       hover: $theme-text-menu__narrow-hover,
       //active: $theme-text-menu__narrow-active,
@@ -183,6 +194,8 @@ $colors: (
     invert: $theme-border-invert,
     card: $theme-border-card,
     focus: $theme-border-focus,
+    section: (light: $theme-border-section-light,
+      invert: $theme-border-section-invert ),
     menu__narrow: (default: $theme-border-menu__narrow,
       hover: $theme-border-menu__narrow-hover,
       //active: $theme-border-menu__narrow-active,
@@ -214,6 +227,8 @@ $colors: (
     focus: $theme-bg-focus,
     menu: $theme-bg-menu,
     footer: $theme-bg-footer,
+    section: (light: $theme-bg-section-light,
+      invert: $theme-bg-section-invert ),
     menu__narrow: (default: $theme-bg-menu__narrow,
       hover: $theme-bg-menu__narrow-hover,
       //active: $theme-bg-menu__narrow-active,
@@ -252,6 +267,8 @@ $text-highlight: var(--text-highlight);
 $text-focus: var(--text-focus);
 $text-card: var(--text-card);
 $text-link: var(--text-link);
+$text-section-light: var(--text-section-light);
+$text-section-invert: var(--text-section-invert);
 $text-invert: var(--text-invert);
 $text-invert-heading: var(--text-invert-heading);
 $text-link-hover: var(--text-link-hover);
@@ -278,6 +295,8 @@ $border-bold: var(--border-bold);
 $border-invert: var(--border-base-dark);
 $border-card: var(--border-card);
 $border-focus: var(--border-focus);
+$border-section-light: var(--border-section-light);
+$border-section-invert: var(--border-section-invert);
 $border-primary: var(--border-primary);
 $border-primary-hover: var(--border-primary-hover);
 $border-primary-active: var(--border-primary-active);
@@ -294,6 +313,8 @@ $bg-base: var(--bg-base);
 $bg-menu: var(--bg-menu);
 $bg-light: var(--bg-light);
 $bg-invert: var(--bg-invert);
+$bg-section-light: var(--bg-section-light);
+$bg-section-invert: var(--bg-section-invert);
 $bg-highlight: var(--bg-highlight);
 $bg-card: var(--bg-card);
 $bg-card-hover: var(--bg-card-hover);

@@ -7,13 +7,15 @@
     width: 100%;
 
     &--light {
-        background-color: $bg-light;
-        border-top: $border-style;
-        border-bottom: $border-style;
+        color: $text-section-light;
+        background-color: $bg-section-light;
+        border-top: $border-section-light;
     }
 
     &--invert {
-        background-color: $bg-invert;
+        color: $text-section-invert;
+        background-color: $bg-section-invert;
+        border-top: $border-section-invert;
     }
 }
 
