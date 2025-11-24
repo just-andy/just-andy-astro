@@ -30,7 +30,11 @@ const dateOptions: object = {
   {}
 
   <Breadcrumbs section="articles" page={article.data.title} />
-  <main class="prose | flow | article" id="main-content" role="main">
+  <main
+    class="prose | flow | article | content-grid"
+    id="main-content"
+    role="main"
+  >
     <header class="article__header">
       <div class="article__header--time">
         <time datetime={article.data.publishDate.toISOString()}>

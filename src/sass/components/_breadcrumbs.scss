@@ -6,7 +6,9 @@
     width: min(100% - 2rem, 60rem);
     margin-inline: auto;
     padding-block: $size-4;
+    margin-bottom: $size-11;
     text-transform: capitalize;
+    border-bottom: $border-style;
 
     & ol {
         list-style: none;

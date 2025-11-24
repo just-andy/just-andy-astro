@@ -78,7 +78,7 @@ $theme-text-tertiary-active: $neutral-100;
 // Theme BG
 $theme-bg-base: hsla(37deg, 23%, 93%, 1);
 $theme-bg-light: $neutral-000;
-$theme-bg-invert: $neutral-500;
+$theme-bg-invert: hsl(247, 7%, 26%);
 $theme-bg-highlight: $neutral-500;
 
 // Actions
@@ -124,7 +124,7 @@ $theme-bg-card-hover: $neutral-100;
 $theme-bg-section-light: $neutral-000;
 $theme-border-section-light: $neutral-000;
 $theme-text-section-light: $neutral-900;
-$theme-bg-section-invert: $neutral-900;
+$theme-bg-section-invert: $theme-bg-invert;
 $theme-border-section-invert: $neutral-000;
 $theme-text-section-invert: $neutral-000;
 

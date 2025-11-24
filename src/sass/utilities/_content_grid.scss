@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.content-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns:
+        [full-width-start] 6rem [breakout-start] 6rem [content-start] minmax(0, 768px) [content-end] 6rem [breakout-end] 6rem [full-width-end];
+
+    &>* {
+        grid-column: content;
+    }
+
+    &>.breakout {
+        grid-column: breakout;
+    }
+
+    &>.full-width {
+        grid-column: full-width;
+    }
+
+}
