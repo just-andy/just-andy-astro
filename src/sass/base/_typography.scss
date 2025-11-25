@@ -4,9 +4,14 @@
 a {
   color: $text-link;
   text-decoration: underline;
+  text-decoration-thickness: 0.25rem;
+  text-underline-offset: 0.375rem;
+  transition: color .2s, text-underline-offset .2s, text-decoration-color .2s;
 
   &:hover {
     color: $text-link-hover;
+    text-underline-offset: .4em;
+    transition: color .2s, text-underline-offset .2s, text-decoration-color .2s;
   }
 
   &:active {
@@ -19,26 +24,6 @@ a {
   }*/
 }
 
-
-// Text Styles
-.text {
-
-  &--subtle {
-    color: $text-subtle;
-  }
-
-  &--bold {
-    color: $text-bold;
-  }
-
-  &--light {
-    color: $text-section-light;
-  }
-
-  &--invert {
-    color: $text-section-invert;
-  }
-}
 
 // Headings
 // Loops out headings/class

@@ -34,7 +34,7 @@ input[type=submit]:focus {
   outline: $focus-style;
 }
 
-a:focus {
+a:focus-visible {
   outline: $focus-style;
 }
 
