@@ -7,6 +7,7 @@
   margin-block: $size-6;
   text-align: center;
   color: $text-intro;
+  line-height: 1.25;
 
   &>span {
     background-color: $bg-highlight;
@@ -18,6 +19,7 @@
   @include mq(large) {
     font-size: $fs-intro;
     text-align: left;
+    line-height: 1;
     margin: $size-6 $size-11 $size-11 $size-11;
   }
 }
