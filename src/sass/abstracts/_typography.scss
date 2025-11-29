@@ -1,3 +1,6 @@
+@use "colors" as *;
+
+
 $ff-sans: "Arial", sans-serif;
 $ff-heading: "Cartridge", sans-serif;
 $ff-mono: monospace, monospace;
@@ -16,6 +19,13 @@ $fw-500: 500;
 $fw-700: 700;
 $fw-heading: $fw-500;
 $fw-subheading: $fw-400;
+
+$text-styles: (
+  subtle: $text-subtle,
+  bold: $text-bold,
+  light: $text-section-light,
+  invert: $text-section-invert,
+);
 
 $display-sizes: (
   lg: clamp(5rem, calc(3.333rem + 4.167vw), 6rem),
@@ -53,8 +63,7 @@ $font-sizes: (
   // 56px - 64px
   9xl: clamp(4rem, 3rem + 3.5vw, 4.5rem),
   // 56px - 64px
-  intro: clamp(2.5rem, 1rem + 4.5vw, 5.75rem)
-  // 40px - 92px
+  intro: clamp(2.5rem, 1rem + 4.5vw, 5.75rem) // 40px - 92px
 );
 
 $fs-xs: var(--fs-xs);

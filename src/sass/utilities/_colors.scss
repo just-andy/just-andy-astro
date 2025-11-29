@@ -1,30 +1,66 @@
+@use 'sass:meta';
 @use "../abstracts" as *;
 
 @each $color, $shade-map in $colors {
   @each $shade, $value in $shade-map {
     @if $color =="text" {
-      .text-#{$color}-#{$shade} {
-        color: $value;
+      @if meta.type-of($value)=="map" {
+
+        // Handle nested map
+        @each $nested-shade, $nested-value in $value {
+
+          @if $nested-shade =="default" {
+            .text-#{$shade} {
+              color: $nested-value;
+            }
+          }
+
+          @else {
+            .text-#{$shade}-#{$nested-shade} {
+              color: $nested-value;
+            }
+          }
+        }
       }
     }
 
-    @else if $color =="bg" {
-      .bg-#{$color}-#{$shade} {
-        background-color: $value;
+    @if $color =="border" {
+      @if meta.type-of($value)=="map" {
+
+        // Handle nested map
+        @each $nested-shade, $nested-value in $value {
+          @if $nested-shade =="default" {
+            .border-#{$shade} {
+              border-color: $nested-value;
+            }
+          }
+
+          @else {
+            .border-#{$shade}-#{$nested-shade} {
+              border-color: $nested-value;
+            }
+          }
+        }
       }
     }
 
-    @else if $color =="border" {
-      .border-#{$color}-#{$shade} {
-        border-color: $value;
-      }
-    }
+    @if $color =="bg" {
+      @if meta.type-of($value)=="map" {
 
-    @else {
+        // Handle nested map
+        @each $nested-shade, $nested-value in $value {
+          @if $nested-shade =="default" {
+            .bg-#{$shade} {
+              background-color: $nested-value;
+            }
+          }
 
-      // Default case for any other color types
-      .#{$color}-#{$shade} {
-        color: $value;
+          @else {
+            .bg-#{$shade}-#{$nested-shade} {
+              background-color: $nested-value;
+            }
+          }
+        }
       }
     }
   }

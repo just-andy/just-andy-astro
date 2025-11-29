@@ -44,6 +44,8 @@
 .logo__wrapper svg {
   height: 100%;
   width: auto;
+  fill: currentColor;
+  transition: fill .2s;
 }
 
 .logo__link {
@@ -53,18 +55,12 @@
   gap: $size-1;
   text-decoration: none;
   color: $theme-text-logo;
+  transition: color .2s;
 
-  &:focus,
-  &:focus-visible {
-    outline: $focus-style;
-    outline-offset: 0.25rem;
-    border-radius: $radius-focus;
+  &:hover {
+    color: $text-link-hover;
   }
-}
 
-h1 .logo__link {
-
-  &:focus,
   &:focus-visible {
     outline: $focus-style;
     outline-offset: 0.25rem;
@@ -91,15 +87,8 @@ h1 .logo__link {
   flex-direction: row;
   justify-content: center;
   vertical-align: middle;
-  overflow: hidden;
   gap: $size-1;
   height: 100%;
-
-  &:focus-within {
-    outline: $focus-style;
-    outline-offset: 0.25rem;
-    border-radius: $radius-focus;
-  }
 
   h1 {
     color: $theme-logo;

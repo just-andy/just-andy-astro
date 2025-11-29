@@ -4,35 +4,6 @@
   font-size: $fs-xl;
   line-height: $lh-loose;
 
-  p,
-  ul,
-  ol,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  blockquote,
-  figure,
-  footer,
-  img {
-    max-width: $prose-max-width;
-    @extend %container-width;
-    padding-inline: 1rem;
-    //padding-right: 1rem;
-
-    @include mq(large) {
-      margin-inline: auto;
-      padding-inline: 0;
-      //padding-right: 0;
-    }
-  }
-
-  strong {
-    font-weight: 700;
-  }
-
   // List Styles
   & li {
     list-style: disc;
@@ -40,18 +11,11 @@
     padding-left: 0.25rem;
   }
 
-  // Flow
-  >* {
-    margin-bottom: var(--flow-top-spacer, 1.5rem);
-  }
-
   // Prose Image
   &__image {
-    padding-block: 2rem;
-    margin-block: 2rem;
-    background-color: $bg-light;
-    border-top: 2px solid $border-base;
-    border-bottom: 2px solid $border-base;
+    background-color: $bg-section-light;
+    background-color: $bg-card-hover;
+    box-shadow: 0 0 0 0.25rem $bg-base, 0 0 0 0.75rem $border-focus;
   }
 
 }

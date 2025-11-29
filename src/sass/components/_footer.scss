@@ -39,11 +39,17 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  line-height: 1;
+  line-height: 1.25;
+
+  a {
+    text-decoration-thickness: 0.125rem;
+  }
+
 
   @include mq(large) {
     flex-direction: row;
     text-align: left;
+    line-height: 1;
   }
 }
 

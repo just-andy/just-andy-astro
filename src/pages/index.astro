@@ -27,7 +27,7 @@ const dateOptions: object = {
 >
   <main id="main-content" class="container container--wide" role="main">
     <h2 class="intro">
-      I WORK WITH DESIGN SYSTEMS AND EXPERIMENT WITH CODE...
+      I WORK WITH <span>DESIGN SYSTEMS</span> AND EXPERIMENT WITH CODE...
     </h2>
 
     <div class="home-grid">
@@ -40,8 +40,9 @@ const dateOptions: object = {
           }}
         >
           <Image src={StandardLifeLogo} alt="" slot="logo" />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed temporibus
-          illum nihil harum ipsum ex quam voluptates blanditiis neque?
+          The design system for Standard Life, which is my current project, includes
+          a React Native and HTML/CSS component library. Documentation is handled
+          via Figma and Supernova, ensuring comprehensive coverage across all platforms.
         </HomeCard>
       </div>
       <div class="home-grid__tr">
@@ -53,22 +54,25 @@ const dateOptions: object = {
           }}
         >
           <Image src={WoodMac} alt="" slot="logo" />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed temporibus
-          illum nihil harum ipsum ex quam voluptates blanditiis neque?
+          In my previous role, I helped build and deliver Hydrocarbon, the React-based
+          design system for Wood Mackenzie. This project involved creating scalable
+          components and establishing design standards across the organisation.
         </HomeCard>
       </div>
       <div class="home-grid__bl">
         <HomeCard title="Join my network">
           <Image src={LinkedIn} alt="" slot="logo" />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed temporibus
-          illum nihil harum ipsum ex quam voluptates blanditiis neque?
           <p>
-            <a
-              href="https://www.linkedin.com/in/andrewcetnarskyj/"
-              target="_blank"
-              rel="external">Join my network</a
-            >
+            I'm an active member of the **Design Systems Slack Group** and
+            always looking to grow my network and share knowledge and
+            experience. Collaboration and continuous learning are central to my
+            approach.
           </p>
+          <a
+            href="https://www.linkedin.com/in/andrewcetnarskyj/"
+            target="_blank"
+            rel="external">Join my network</a
+          >
         </HomeCard>
       </div>
       <div class="home-grid__br">
@@ -78,8 +82,12 @@ const dateOptions: object = {
         >
           <Image src={JustAndy} alt="" slot="logo" />
 
-          I'm a seasoned UX and product designer who has worked in Design
-          Systems for the last eight years
+          <p>
+            I'm a seasoned UX and product designer who has worked in design
+            systems for the last eight years. This portfolio showcases a
+            selection of my work and experiments across various projects and
+            initiatives.
+          </p>
         </HomeCard>
       </div>
     </div>
@@ -105,10 +113,7 @@ const dateOptions: object = {
         </header>
         <!-- Render content if needed -->
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
-          nisi in tempora, magni voluptatum dolore inventore voluptatem expedita
-          ad omnis, quasi repudiandae maxime! Esse aliquid error quod, impedit
-          distinctio illo.
+          {latestArticle.data.summary}
         </p>
         <footer class="article-latest__footer">
           <div class="tags">{latestArticle.data.keywords.join(", ")}</div>

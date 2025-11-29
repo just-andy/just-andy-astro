@@ -30,17 +30,23 @@ const dateOptions: object = {
   {}
 
   <Breadcrumbs section="articles" page={article.data.title} />
-  <main class="prose | flow | article" id="main-content" role="main">
-    <header class="article__header">
+  <main
+    class="prose | flow | article | content-grid"
+    id="main-content"
+    role="main"
+  >
+    <header class="article__header breakout">
       <div class="article__header--time">
         <time datetime={article.data.publishDate.toISOString()}>
           {article.data.publishDate.toLocaleDateString("en-GB", dateOptions)}
         </time>
       </div>
       <h1>{article.data.title}</h1>
-      <h2 class="article__header--subheading">
-        An approach to how to break ground on your design system
-      </h2>
+      {
+        article.data.summary && (
+          <p class="article__header--subheading">{article.data.summary}</p>
+        )
+      }
     </header>
 
     <Content />
