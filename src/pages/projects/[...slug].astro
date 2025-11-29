@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import FrontmatterLayout from "../../layouts/FrontmatterLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Hero from "../../components/Hero.astro";
+import { Debug } from "astro:components";
 
 export async function getStaticPaths() {
   const projectDetails = await getCollection("projects");

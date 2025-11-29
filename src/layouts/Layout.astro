@@ -9,6 +9,7 @@ export interface Props {
 const { title, description } = Astro.props;
 import { SEOMetadata } from "astro-seo-metadata";
 import { ClientRouter } from "astro:transitions";
+
 import "../sass/style.scss";
 ---
 
@@ -25,7 +26,7 @@ import "../sass/style.scss";
       siteName={"Andrew Cetnarskyj Portfolio"}
       title={"Andrew Cetnarskyj Portfolio"}
       description={description}
-      image={"http://example.com/banner.jpg"}
+      image={"/open-graph-banner.jpg"}
       favicon={"/favicon.svg"}
       author="Andrew Cetnarskyj"
       copyright="ISC"

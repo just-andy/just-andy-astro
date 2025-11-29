@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import ProjectCard from "../components/ProjectCard.astro";
 
 const allArticles = await getCollection("projects");
+const sortedArticles = allArticles.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout
@@ -13,7 +14,7 @@ const allArticles = await getCollection("projects");
   <main id="main-content" class="container" role="main">
     <ul class="grid__two-column" id="main-content">
       {
-        allArticles.map((project) => (
+        sortedArticles.map((project) => (
           <ProjectCard
             thumbnail={project.data.thumbnail}
             title={project.data.title}
