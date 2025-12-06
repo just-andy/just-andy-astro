@@ -120,6 +120,9 @@ $theme-text-card: $neutral-900;
 $theme-bg-card: $neutral-000;
 $theme-bg-card-hover: $neutral-100;
 
+// Elements
+$theme-list-marker: $orange-500;
+
 // Section
 $theme-bg-section-light: $neutral-000;
 $theme-border-section-light: $neutral-000;
@@ -128,13 +131,18 @@ $theme-bg-section-invert: $theme-bg-invert;
 $theme-border-section-invert: $neutral-000;
 $theme-text-section-invert: $neutral-000;
 
+// Blockquote
+$theme-blockquote-border: $theme-border-invert;
+$theme-blockquote-bg: $theme-bg-invert;
+$theme-blockquote-text: $theme-text-invert-heading;
+
 // Other
 $theme-logo: $neutral-900;
 
 // Footer
 $theme-text-footer: $neutral-900;
-$theme-text-footer-hover: $neutral-600;
-$theme-text-footer-active: $neutral-800;
+$theme-text-footer-hover: $orange-500;
+$theme-text-footer-active: $orange-500;
 $theme-bg-footer: $neutral-000;
 
 

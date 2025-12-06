@@ -6,6 +6,7 @@
     //flex-wrap: wrap; // Allow images to wrap on smaller screens
     flex-direction: column; // Stack images vertically on mobile
     align-items: center;
+    margin-block: $section-spacer;
 
     // Target all images inside the gallery
     img {

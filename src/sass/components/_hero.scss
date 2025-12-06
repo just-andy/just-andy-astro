@@ -16,12 +16,15 @@
         //@extend %container-width;
         display: grid;
         gap: $size-4;
-        padding-inline: 1rem;
-        //text-align: left;
+        padding-inline: $size-6;
         color: $text-invert-heading;
 
         &--inner {
             gap: $size-2;
+        }
+
+        @include mq(large) {
+            padding-inline: $size-0;
         }
     }
 
@@ -50,6 +53,7 @@
     &__tags {
         font-size: $fs-xs;
         font-family: $ff-mono;
+        margin-top: 1rem;
 
         @include mq(medium) {
             font-size: $fs-sm;

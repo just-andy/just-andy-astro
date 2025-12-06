@@ -9,6 +9,10 @@
     list-style: disc;
     margin-left: 2rem;
     padding-left: 0.25rem;
+
+    &::marker {
+      color: $theme-list-marker;
+    }
   }
 
   // Prose Image

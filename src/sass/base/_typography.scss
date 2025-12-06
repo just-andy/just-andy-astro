@@ -17,11 +17,6 @@ a {
   &:active {
     color: $text-link-active;
   }
-
-  /*
-  &:visited {
-    color: $text-link;
-  }*/
 }
 
 
@@ -55,7 +50,7 @@ h4 {
 
 h5 {
   font-size: $fs-2xl;
-  font-family: $ff-sans;
+  font-family: $ff-heading;
   font-weight: $fw-heading;
 }
 
