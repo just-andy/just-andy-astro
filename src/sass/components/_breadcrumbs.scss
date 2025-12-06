@@ -1,13 +1,17 @@
 @use "../abstracts/" as *;
 
 .breadcrumbs {
-    font-size: $fs-md;
+    font-size: $fs-sm;
     //max-width: $prose-max-width;
     //width: min(100% - 2rem, 60rem);
     margin-inline: auto;
     padding-block: $size-4;
-    margin-bottom: $size-11;
+    margin-bottom: $size-6;
     text-transform: capitalize;
+
+    @include mq(medium) {
+        font-size: $fs-md;
+    }
 
     & ol {
         list-style: none;

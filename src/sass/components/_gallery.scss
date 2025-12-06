@@ -3,20 +3,24 @@
 .gallery {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap; // Allow images to wrap on smaller screens
+    //flex-wrap: wrap; // Allow images to wrap on smaller screens
     flex-direction: column; // Stack images vertically on mobile
     align-items: center;
+    margin-block: $section-spacer;
 
     // Target all images inside the gallery
     img {
+        width: 100%;
         max-width: 100%;
         height: auto;
         display: block;
+        object-fit: cover;
     }
 
 
     &>* {
         flex: 1 1 100%;
+        min-width: 0; // Prevents flex items from overflowing
     }
 
 

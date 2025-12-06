@@ -1,8 +1,8 @@
 @use "../abstracts" as *;
 
 .section {
-    margin-block: $size-4;
-    padding-block: $size-6;
+    margin-block: $section-spacer;
+    padding-block: 2rem;
     font-size: $fs-lg;
     width: 100%;
 
@@ -16,6 +16,13 @@
         color: $text-section-invert;
         background-color: $bg-section-invert;
         border-top: $border-section-invert;
+    }
+
+    figcaption {
+        font-size: $fs-sm;
+        display: block;
+        padding-block: $size-4;
+        color: $text-subtle;
     }
 }
 

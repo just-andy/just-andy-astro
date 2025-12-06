@@ -11,6 +11,11 @@ featured: true
 private: false
 ---
 
+import {Image} from "astro:assets";
+import HcLensUpstream from "../../images/projects/hydrocarbon/hc-lens-upstream.png";
+import HcFigmaLibrary from "../../images/projects/hydrocarbon/figma-library.png";
+import DesignSitePreview from "../../images/projects/hydrocarbon/design-site-preview.jpg";
+
 ## Fast and Consistent
 
 Design systems are more than just UI components that build interfaces, they are a centralised approach to creating user experiences.
@@ -19,13 +24,10 @@ Working on [Wood Mackenzie's](https://www.woodmac.com "Wood Mackenzie Website") 
 
 Our goal is to allow teams to iterate and build their projects fast and consistently. To achieve this, a solid set of UI components also require centralised documentation, adoption by the production team and the creation of a design language.
 
-<div class="section section--light">
-
-![Screenshot of Lens Upstream](../../images/projects/hydrocarbon/hc-lens-upstream.png)
-
+<figure class="section full-width  section--light">
+<Image src={HcLensUpstream} alt="Wood Mac's Lens product screenshot" />
 <figcaption>Screenshot of Wood Mac's Lens product</figcaption>
-
-</div>
+</figure>
 
 ## Our Design System
 
@@ -61,12 +63,9 @@ Aside from building the library a part of my duties are to educate and give the 
 - Regular Figma clinics tackling and demoing problems from the team
 - Supporting documentation on our internal website
 
-<div class="section section--light">
-
-![Figma Library snapshop](../../images/projects/hydrocarbon/figma-library.png)
-
+<div class="section section--light full-width">
+<Image src={HcFigmaLibrary} alt="Hydrocarbon Figma Library screenshot" />
 <figcaption>Snapshot of our Figma library</figcaption>
-
 </div>
 
 ## Storybook
@@ -97,12 +96,9 @@ As stated above design systems are more than just components. I build a [Gatsby]
 
 This serves as a one-stop-shop for team members to find access points to the library, design patterns, research approaches our Figma guidelines and much more.
 
-<div class="section section--light">
-
-![Sample of static design site](../../images/projects/hydrocarbon/design-site-preview.jpg)
-
+<div class="section section--light full-width">
+<Image src={DesignSitePreview} alt="Hydrocarbon Design Site screenshot" />
 <figcaption>Screenshot of our static design hub</figcaption>
-
 </div>
 
 ## Advocation

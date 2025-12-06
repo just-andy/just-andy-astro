@@ -3,12 +3,14 @@
 .grid__one-column {
     display: grid;
     grid-template-columns: 1fr;
+    padding-inline: $size-4;
     gap: var(--grid-gap, $gap-grid);
 }
 
 .grid__two-column {
     display: grid;
     grid-template-columns: 1fr;
+    padding-inline: $size-4;
     gap: var(--grid-gap, $gap-grid-two-column);
 
     @include mq (medium) {
