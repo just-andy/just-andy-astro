@@ -1,7 +1,7 @@
 @use "colors" as *;
 
 
-$ff-sans: "Arial", sans-serif;
+$ff-sans: "Open Sans", arial, sans-serif;
 $ff-heading: "Cartridge", sans-serif;
 $ff-mono: monospace, monospace;
 
@@ -10,7 +10,16 @@ $ff-accent: $ff-heading;
 
 // Line Height
 $lh-tight: 1;
-$lh-loose: 1.5;
+$lh-base: clamp(1.5rem, 1.5rem + 1.36vw, 2.1rem);
+$lh-loose: 2.25;
+
+// Heading line heights
+$lh-heading-1: 1.1;
+$lh-heading-2: 1.2;
+$lh-heading-3: 1.25;
+$lh-heading-4: 1.3;
+$lh-heading-5: 1.4;
+$lh-heading-6: 1.5;
 
 // Font Weight
 $fw-300: 300;
@@ -41,8 +50,6 @@ $font-sizes: (
   // 14px - 16px
   sm: clamp(1rem, 0.792rem + 0.521vw, 1.125rem),
   // 16px - 18px
-  base: clamp(1.188rem, 1.083rem + 0.26vw, 1.25rem),
-  // 16px - 18px
   md: clamp(1.188rem, 1.083rem + 0.26vw, 1.25rem),
   // 18px - 20px
   lg: clamp(1.25rem, 0.833rem + 1.042vw, 1.5rem),
@@ -62,13 +69,15 @@ $font-sizes: (
   8xl: clamp(3.5rem, 2.667rem + 2.083vw, 4rem),
   // 56px - 64px
   9xl: clamp(4rem, 3rem + 3.5vw, 4.5rem),
+
+  // 16px - px
+  base: clamp(1rem, 1.083rem + 0.26vw, 1.25rem),
   // 56px - 64px
   intro: clamp(2.5rem, 1rem + 4.5vw, 5.75rem) // 40px - 92px
 );
 
 $fs-xs: var(--fs-xs);
 $fs-sm: var(--fs-sm);
-$fs-base: var(--fs-base);
 $fs-md: var(--fs-md);
 $fs-lg: var(--fs-lg);
 $fs-xl: var(--fs-xl);
@@ -80,7 +89,43 @@ $fs-6xl: var(--fs-6xl);
 $fs-7xl: var(--fs-7xl);
 $fs-8xl: var(--fs-8xl);
 $fs-9xl: var(--fs-9xl);
+$fs-base: var(--fs-base);
 $fs-intro: var(--fs-intro);
 $fs-display-sm: var(--fs-display-sm);
 $fs-display-md: var(--fs-display-md);
 $fs-display-lg: var(--fs-display-lg);
+
+// Heading configuration map
+// Centralizes all heading styles for easy maintenance
+$heading-styles: (
+  h1: (
+    font-size: $fs-8xl,
+    line-height: $lh-heading-1,
+    margin-block: var(--size-8) var(--size-4),
+  ),
+  h2: (
+    font-size: $fs-6xl,
+    line-height: $lh-heading-2,
+    margin-block: var(--size-6) var(--size-3),
+  ),
+  h3: (
+    font-size: $fs-4xl,
+    line-height: $lh-heading-3,
+    margin-block: var(--size-5) var(--size-3),
+  ),
+  h4: (
+    font-size: $fs-3xl,
+    line-height: $lh-heading-4,
+    margin-block: var(--size-4) var(--size-2),
+  ),
+  h5: (
+    font-size: $fs-2xl,
+    line-height: $lh-heading-5,
+    margin-block: var(--size-4) var(--size-2),
+  ),
+  h6: (
+    font-size: $fs-xl,
+    line-height: $lh-heading-6,
+    margin-block: var(--size-3) var(--size-2),
+  ),
+);

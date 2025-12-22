@@ -16,4 +16,8 @@
     @include mq (medium) {
         grid-template-columns: 1fr 1fr;
     }
+
+    &--cards {
+        margin-top: $size-4;
+    }
 }

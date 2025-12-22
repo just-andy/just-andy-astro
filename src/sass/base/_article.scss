@@ -27,21 +27,29 @@
     }
 }
 
-.article__container {
-    @include mq(large) {
-        margin-block: $size-8;
-        margin-inline: $size-14;
-    }
-}
-
 .article-latest {
     display: flex;
     flex-direction: column;
     gap: $size-4;
+    position: relative;
+    padding-top: $size-8;
+
+    @include mq(medium) {
+        padding-top: $size-10;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 33%;
+        width: 34%;
+        border-bottom: 4px solid $border-light;
+    }
 
     h2 {
         font-size: $fs-3xl;
-        margin-bottom: 0;
+        margin-top: 0;
     }
 
     &__header {

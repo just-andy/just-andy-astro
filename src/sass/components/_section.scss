@@ -3,7 +3,6 @@
 .section {
     margin-block: $section-spacer;
     padding-block: 2rem;
-    font-size: $fs-lg;
     width: 100%;
 
     &--light {
@@ -20,6 +19,7 @@
 
     figcaption {
         font-size: $fs-sm;
+        font-family: $ff-mono;
         display: block;
         padding-block: $size-4;
         color: $text-subtle;
