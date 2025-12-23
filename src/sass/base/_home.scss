@@ -14,6 +14,9 @@
     color: $text-highlight;
     padding: 0.125rem 0.5rem;
     line-height: 1.125;
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 
   @include mq(large) {

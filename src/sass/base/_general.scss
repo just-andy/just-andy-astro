@@ -12,7 +12,8 @@
 }
 
 body {
-  font-size: $fs-lg;
+  font-size: $fs-base;
+  line-height: $lh-base;
   font-weight: $fw-400;
   font-family: $ff-sans;
   color: $text-base;
@@ -49,18 +50,3 @@ a:focus-visible {
   padding: 2rem 0;
   justify-content: center;
 }
-
-// Unordered List
-
-/*
-.prose ul li,
-.retro ul li {
-  list-style-type: none;
-  background-image: url("/src/assets/invader.gif");
-  background-repeat: no-repeat;
-  background-position: 0 0.25em;
-  background-size: 1em;
-  padding-left: 1.5em;
-  margin: 1rem 0;
-}
-  */

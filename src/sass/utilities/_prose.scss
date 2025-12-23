@@ -1,14 +1,15 @@
 @use "../abstracts/" as *;
 
 .prose {
-  font-size: $fs-xl;
-  line-height: $lh-loose;
+  //font-size: $fs-xl;
+  //line-height: $lh-loose;
 
   // List Styles
   & li {
     list-style: disc;
-    margin-left: 2rem;
-    padding-left: 0.25rem;
+    margin-left: $size-6;
+    margin-block: $size-4;
+    padding-left: $size-1;
 
     &::marker {
       color: $theme-list-marker;

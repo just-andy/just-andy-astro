@@ -4,6 +4,7 @@
   color: $bg-light;
   display: flex;
   flex-direction: column;
+  font-size: $fs-lg;
   justify-content: space-between;
   vertical-align: middle;
   padding: $size-8 $size-6;
@@ -93,6 +94,7 @@
   h1 {
     color: $theme-logo;
     line-height: 1rem;
+    margin-block: 0;
   }
 }
 

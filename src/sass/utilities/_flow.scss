@@ -1,3 +1,3 @@
-.flow>*:where(:not(:first-child)) {
+.flow>*:where(:not(:first-child):not(.section)) {
   margin-bottom: var(--flow-top-spacer, 1rem);
 }

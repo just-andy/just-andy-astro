@@ -52,13 +52,14 @@ $prose-max-width: 48rem; //768px
 
 // Container
 $container-inline-padding: $size-4;
+$container-max-width-narrow: 48rem; //768px
 $container-max-width: 60rem; //900px
 $container-max-width-wide: 64rem; //1024
 
 
 
 // Spacing
-$section-spacer: $size-11;
+$section-spacer: clamp(var(--size-5), 0.8864rem + 2.7273vw, var(--size-9));
 
 
 // Gaps
@@ -73,3 +74,7 @@ $padding-hero: clamp(15rem, 15vh, 20rem);
 
 // Flex
 $flex-group-gap: $size-1;
+
+// Headings
+$margin-large-headings: 1rem 0;
+$margin-medium-headings: 0.5rem 0;
