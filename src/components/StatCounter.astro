@@ -16,10 +16,10 @@ const { stats } = Astro.props;
     <div class="stat-counter breakout">
       {
         stats.map((stat) => (
-          <div>
-            <div class="stat-counter__number">{stat.number}</div>
-            <div class="stat-counter__label">{stat.label}</div>
-          </div>
+          <dl>
+            <dt class="stat-counter__number">{stat.number}</dt>
+            <dd class="stat-counter__label">{stat.label}</dd>
+          </dl>
         ))
       }
     </div>

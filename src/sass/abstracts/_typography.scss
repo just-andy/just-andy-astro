@@ -1,11 +1,11 @@
 @use "colors" as *;
 
 
-$ff-sans: "Open Sans", arial, sans-serif;
+$ff-body: "Open Sans", arial, sans-serif;
 $ff-heading: "Cartridge", sans-serif;
 $ff-mono: monospace, monospace;
 
-$ff-base: $ff-sans;
+$ff-base: $ff-body;
 $ff-accent: $ff-heading;
 
 // Line Height
@@ -98,33 +98,27 @@ $fs-display-lg: var(--fs-display-lg);
 // Heading configuration map
 // Centralizes all heading styles for easy maintenance
 $heading-styles: (
-  h1: (
-    font-size: $fs-8xl,
+  h1: (font-size: $fs-8xl,
     line-height: $lh-heading-1,
     margin-block: var(--size-8) var(--size-4),
   ),
-  h2: (
-    font-size: $fs-6xl,
+  h2: (font-size: $fs-6xl,
     line-height: $lh-heading-2,
     margin-block: var(--size-6) var(--size-3),
   ),
-  h3: (
-    font-size: $fs-4xl,
+  h3: (font-size: $fs-4xl,
     line-height: $lh-heading-3,
     margin-block: var(--size-5) var(--size-3),
   ),
-  h4: (
-    font-size: $fs-3xl,
+  h4: (font-size: $fs-3xl,
     line-height: $lh-heading-4,
     margin-block: var(--size-4) var(--size-2),
   ),
-  h5: (
-    font-size: $fs-2xl,
+  h5: (font-size: $fs-2xl,
     line-height: $lh-heading-5,
     margin-block: var(--size-4) var(--size-2),
   ),
-  h6: (
-    font-size: $fs-xl,
+  h6: (font-size: $fs-xl,
     line-height: $lh-heading-6,
     margin-block: var(--size-3) var(--size-2),
   ),

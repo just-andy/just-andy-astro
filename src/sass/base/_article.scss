@@ -4,12 +4,13 @@
 .article__header {
     display: flex;
     flex-direction: column;
-    gap: $size-2;
+    gap: $size-0;
     margin-bottom: $size-10;
 
     h1 {
         font-size: $fs-display-sm;
         line-height: $lh-tight;
+        margin-top: 0;
     }
 
     &--subheading {

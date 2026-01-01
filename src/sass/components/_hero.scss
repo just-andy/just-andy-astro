@@ -21,11 +21,13 @@
     &__content {
         display: grid;
         gap: $size-4;
-        max-width: $container-max-width-narrow;
+        // max-width: $container-max-width-narrow;
         color: $text-invert-heading;
+        padding-inline: $size-4;
 
         &--inner {
             gap: $size-2;
+
         }
 
         @include mq(large) {

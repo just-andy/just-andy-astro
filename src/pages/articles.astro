@@ -12,7 +12,7 @@ const dateOptions: object = {
 
 <Layout title="Articles" description="All my articles">
   <main id="main-content" class="container" role="main">
-    <div class="grid__one-column" id="main-content">
+    <div class="grid__one-column" role="list">
       {
         allarticles.map((article) => (
           <article class="article-card">
@@ -25,7 +25,7 @@ const dateOptions: object = {
                   )}
                 </time>
               </div>
-              <h2 class="heading-4">
+              <h2 class="article-card__title">
                 <a href={`/articles/${article.id}`} title={article.data.title}>
                   {article.data.title}
                 </a>

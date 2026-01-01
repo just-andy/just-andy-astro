@@ -2,4 +2,8 @@
 const { label, url, target, disable } = Astro.props;
 ---
 
-<a href={url} class="button button--primary" {target === true &&}>{label}</a>
+{target ? (
+  <a href={url} class="button button--primary" target="_blank" rel="noopener noreferrer">{label}</a>
+) : (
+  <a href={url} class="button button--primary">{label}</a>
+)}

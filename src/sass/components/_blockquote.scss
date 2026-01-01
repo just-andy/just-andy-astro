@@ -6,6 +6,7 @@
     color: $theme-blockquote-text;
     padding-block: $size-6;
     line-height: 1.25;
+    font-family: $ff-heading;
 
     @include mq(medium) {
         padding-block: $size-8;
@@ -29,6 +30,6 @@
         padding-block: $size-4;
         color: $theme-text-invert;
         font-size: $fs-md;
-        font-family: $ff-heading;
+        font-family: $ff-body;
     }
 }
