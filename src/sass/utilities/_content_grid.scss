@@ -26,7 +26,12 @@
     grid-column: full-width;
     display: grid;
     grid-template-columns: inherit;
+
+    &>.image-text {
+        grid-column: breakout;
+    }
 }
+
 
 img.full-width {
     width: 100%;
