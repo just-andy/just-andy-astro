@@ -17,10 +17,8 @@
   }
 
   // Prose Image
-  &__image {
-    background-color: $bg-section-light;
-    background-color: $bg-card-hover;
-    box-shadow: 0 0 0 0.25rem $bg-base, 0 0 0 0.75rem $border-focus;
+  &>img {
+    margin-block: $section-spacer;
   }
 
 }

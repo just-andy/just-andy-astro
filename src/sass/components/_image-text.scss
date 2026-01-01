@@ -5,7 +5,7 @@
     &__inner {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: $size-8;
 
         @include mq(large) {
             flex-direction: row;
@@ -13,8 +13,19 @@
     }
 
     &__image {
+        flex: 1;
         object-fit: contain;
         border-radius: $radius;
+    }
+
+    &__content {
+        flex: 1;
+
+        &>h2,
+        h3,
+        h4 {
+            margin-top: 0;
+        }
     }
 
     &__text {
