@@ -11,34 +11,40 @@ const dateOptions: object = {
 ---
 
 <Layout title="Articles" description="All my articles">
-  <main id="main-content" class="container" role="main">
-    <div class="grid__one-column" role="list">
+  <main id="main-content" class="container container--narrow">
+    <h1>Articles</h1>
+    <ul class="grid__one-column article__list" role="list">
       {
         allarticles.map((article) => (
-          <article class="article-card">
-            <header>
-              <div class="article-card__time">
-                <time datetime={article.data.publishDate.toISOString()}>
-                  {article.data.publishDate.toLocaleDateString(
-                    "en-GB",
-                    dateOptions
-                  )}
-                </time>
-              </div>
-              <h2 class="article-card__title">
-                <a href={`/articles/${article.id}`} title={article.data.title}>
-                  {article.data.title}
-                </a>
-              </h2>
-            </header>
+          <li>
+            <article class="article-card">
+              <header>
+                <div class="article-card__time">
+                  <time datetime={article.data.publishDate.toISOString()}>
+                    {article.data.publishDate.toLocaleDateString(
+                      "en-GB",
+                      dateOptions
+                    )}
+                  </time>
+                </div>
+                <h2 class="article-card__title">
+                  <a
+                    href={`/articles/${article.id}`}
+                    title={article.data.title}
+                  >
+                    {article.data.title}
+                  </a>
+                </h2>
+              </header>
 
-            <p>{article.data.description}</p>
-            <footer class="article-card__footer">
-              <div class="tags">{article.data.keywords.join(", ")}</div>
-            </footer>
-          </article>
+              <p>{article.data.description}</p>
+              <footer class="article-card__footer">
+                <div class="tags">{article.data.keywords.join(", ")}</div>
+              </footer>
+            </article>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </main>
 </Layout>

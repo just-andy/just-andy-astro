@@ -11,7 +11,8 @@ const sortedArticles = allArticles.sort((a, b) => a.data.order - b.data.order);
   title="Projects and Case Studies"
   description="Previous projects and case studies"
 >
-  <main id="main-content" class="container" role="main">
+  <main id="main-content" class="container">
+    <h1>Projects and Case Studies</h1>
     <ul class="grid__two-column grid__two-column--cards" role="list">
       {
         sortedArticles.map((project) => (

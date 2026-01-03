@@ -23,7 +23,7 @@ const projectTags = tags.map((tag, index) => {
 ---
 
 <FrontmatterLayout frontmatter={entry.data}>
-  <div>
+  <main id="main-content">
     <Hero
       url={entry.data.banner}
       title={entry.data.title}
@@ -31,9 +31,10 @@ const projectTags = tags.map((tag, index) => {
       summary={entry.data.summary}
     />
     <Breadcrumbs section="projects" page={entry.data.title} />
+
     <div class="prose | flow | content-grid">
       <Content />
       <div class="tags">{projectTags}</div>
     </div>
-  </div>
+  </main>
 </FrontmatterLayout>

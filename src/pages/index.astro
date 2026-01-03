@@ -25,7 +25,7 @@ const dateOptions: object = {
   title="Welcome"
   description="Portfolio of Edinburgh based digital designer Andrew Cetnarskyj"
 >
-  <main id="main-content" class="container container--wide" role="main">
+  <main id="main-content" class="container container--wide">
     <h2 class="intro">
       I WORK WITH <span>DESIGN SYSTEMS</span> AND EXPERIMENT WITH CODE...
     </h2>
@@ -93,9 +93,9 @@ const dateOptions: object = {
     </div>
     <section class="container container--wide">
       <article class="article-latest">
-        <header class="article-latest__header">
+        <header class="article-card__header">
           <time
-            class="article-latest--time"
+            class="article-card--time"
             datetime={latestArticle.data.publishDate.toISOString()}
             >{
               latestArticle.data.publishDate.toLocaleDateString(
@@ -104,7 +104,7 @@ const dateOptions: object = {
               )
             }</time
           >
-          <h2>
+          <h2 class="article-card__title">
             <a
               href={`/articles/${latestArticle.id}`}
               title={latestArticle.data.title}>{latestArticle.data.title}</a
@@ -115,7 +115,7 @@ const dateOptions: object = {
         <p>
           {latestArticle.data.summary}
         </p>
-        <footer class="article-latest__footer">
+        <footer class="article-card__footer">
           <div class="tags">{latestArticle.data.keywords.join(", ")}</div>
         </footer>
       </article>
