@@ -1,13 +1,14 @@
 ---
 import { Image } from "astro:assets";
 const { title, thumbnail, description, strapline, slug } = Astro.props;
+const descriptionId = `project-desc-${slug}`;
 ---
 
 <li class="project-card retro-card">
   <a
     href={`/projects/${slug}`}
     class="project-card__link"
-    aria-label={strapline}
+    aria-describedby={descriptionId}
   >
     <div class="project__media">
       <Image
@@ -19,7 +20,7 @@ const { title, thumbnail, description, strapline, slug } = Astro.props;
     </div>
     <div class="project-card__summary">
       <h2 class="project-card__title">{title}</h2>
-      <p>{description}</p>
+      <p id={descriptionId}>{description}</p>
     </div>
   </a>
 </li>

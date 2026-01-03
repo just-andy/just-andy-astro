@@ -11,13 +11,23 @@ const dateOptions: object = {
 ---
 
 <Layout title="Articles" description="All my articles">
-  <main id="main-content" class="container container--narrow">
-    <h1>Articles</h1>
-    <ul class="grid__one-column article__list" role="list">
+  <main
+    id="main-content"
+    class="container container--narrow"
+    aria-describedby="articles-description"
+  >
+    <div class="page-intro">
+      <h1 id="page-title">Articles</h1>
+      <p id="articles-description">
+        A collection of {allarticles.length} articles about design systems, front-end
+        development, and accessibility.
+      </p>
+    </div>
+    <ul class="grid__one-column article__list" role="list" aria-labelledby="page-title">
       {
         allarticles.map((article) => (
           <li>
-            <article class="article-card">
+            <article class="article-card" id={`article-${article.id}`}>
               <header>
                 <div class="article-card__time">
                   <time datetime={article.data.publishDate.toISOString()}>
@@ -27,7 +37,7 @@ const dateOptions: object = {
                     )}
                   </time>
                 </div>
-                <h2 class="article-card__title">
+                <h2 class="article-card__title" id={`article-title-${article.id}`}>
                   <a
                     href={`/articles/${article.id}`}
                     title={article.data.title}
@@ -39,7 +49,7 @@ const dateOptions: object = {
 
               <p>{article.data.description}</p>
               <footer class="article-card__footer">
-                <div class="tags">{article.data.keywords.join(", ")}</div>
+                <div class="tags" aria-label="Article topics">{article.data.keywords.join(", ")}</div>
               </footer>
             </article>
           </li>

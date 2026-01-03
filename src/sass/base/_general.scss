@@ -22,6 +22,12 @@ body {
   background-color: $bg-base;
 }
 
+.noise {
+  background-color: #f0e5d1;
+  background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -49,4 +55,13 @@ a:focus-visible {
   display: flex;
   padding: 2rem 0;
   justify-content: center;
+}
+
+// Page intro {
+.page-intro {
+  padding-inline: $size-4;
+
+  @include mq(medium) {
+    padding-inline: $size-0;
+  }
 }

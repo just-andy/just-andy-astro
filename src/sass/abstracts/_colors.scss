@@ -77,6 +77,7 @@ $theme-text-tertiary-active: $neutral-100;
 
 // Theme BG
 $theme-bg-base: hsla(37deg, 23%, 93%, 1);
+$theme-bg-noise: hsla(37deg, 23%, 93%, 0.8);
 $theme-bg-light: $neutral-000;
 $theme-bg-invert: hsl(247, 7%, 26%);
 $theme-bg-highlight: $neutral-500;
@@ -227,6 +228,7 @@ $colors: (
       active: $theme-border-tertiary-active),
   ),
   bg:(base: $theme-bg-base,
+    noise: $theme-bg-noise,
     light: $theme-bg-light,
     invert: $theme-bg-invert,
     highlight: $theme-bg-highlight,
@@ -318,6 +320,7 @@ $border-selected: var(--border-selected);
 
 // surface
 $bg-base: var(--bg-base);
+$bg-noise: var(--bg-noise);
 $bg-menu: var(--bg-menu);
 $bg-light: var(--bg-light);
 $bg-invert: var(--bg-invert);

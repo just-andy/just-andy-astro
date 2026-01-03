@@ -1,11 +1,14 @@
 @use "../abstracts/" as *;
 
+
+
 // Article page
 .article__header {
     display: flex;
     flex-direction: column;
     gap: $size-0;
     margin-bottom: $size-10;
+
 
     h1 {
         font-size: $fs-display-sm;
@@ -30,6 +33,12 @@
 
 .article__list {
     list-style: none;
+    margin-top: $size-11;
+    padding-inline: $size-4;
+
+    @include mq(large) {
+        padding-inline: $size-0;
+    }
 }
 
 .article-latest {

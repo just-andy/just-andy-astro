@@ -3,17 +3,17 @@
 .grid__one-column {
     display: grid;
     grid-template-columns: 1fr;
-    padding-inline: $size-4;
     gap: var(--grid-gap, $gap-grid);
 }
 
 .grid__two-column {
     display: grid;
     grid-template-columns: 1fr;
-    padding-inline: $size-4;
+    padding-inline: $size-6;
     gap: var(--grid-gap, $gap-grid-two-column);
 
     @include mq (medium) {
+        padding-inline: $size-4;
         grid-template-columns: 1fr 1fr;
     }
 
