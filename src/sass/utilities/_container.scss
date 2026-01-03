@@ -12,4 +12,8 @@
     --max-width: #{$container-max-width-wide};
   }
 
+  &--narrow {
+    --max-width: #{$container-max-width-narrow};
+  }
+
 }

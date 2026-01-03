@@ -12,7 +12,7 @@ const { url, title, summary, tags } = Astro.props;
 ---
 
 <div class="hero">
-  <Image src={url} alt="" />
+  <Image src={url} alt={`${title} banner`} />
   <div class="hero__content">
     <div class="hero__content--inner">
       <h1 class="hero__title">{title}</h1>

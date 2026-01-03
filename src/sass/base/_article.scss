@@ -1,15 +1,19 @@
 @use "../abstracts/" as *;
 
+
+
 // Article page
 .article__header {
     display: flex;
     flex-direction: column;
-    gap: $size-2;
+    gap: $size-0;
     margin-bottom: $size-10;
+
 
     h1 {
         font-size: $fs-display-sm;
         line-height: $lh-tight;
+        margin-top: 0;
     }
 
     &--subheading {
@@ -27,15 +31,26 @@
     }
 }
 
+.article__list {
+    list-style: none;
+    margin-top: $size-11;
+    padding-inline: $size-4;
+
+    @include mq(large) {
+        padding-inline: $size-0;
+    }
+}
+
 .article-latest {
-    display: flex;
-    flex-direction: column;
-    gap: $size-4;
     position: relative;
-    padding-top: $size-8;
+
 
     @include mq(medium) {
         padding-top: $size-10;
+    }
+
+    &::after {
+        content: none;
     }
 
     &::before {
@@ -47,22 +62,4 @@
         border-bottom: 4px solid $border-light;
     }
 
-    h2 {
-        font-size: $fs-3xl;
-        margin-top: 0;
-    }
-
-    &__header {
-        gap: $size-2;
-    }
-
-    &__footer {
-        margin-top: $size-2;
-    }
-
-    &--time {
-        font-family: $ff-base;
-        font-size: $fs-sm;
-        color: $text-subtle;
-    }
 }

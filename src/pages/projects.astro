@@ -11,8 +11,18 @@ const sortedArticles = allArticles.sort((a, b) => a.data.order - b.data.order);
   title="Projects and Case Studies"
   description="Previous projects and case studies"
 >
-  <main id="main-content" class="container" role="main">
-    <ul class="grid__two-column grid__two-column--cards" id="main-content">
+  <main
+    id="main-content"
+    class="container"
+    aria-describedby="projects-description"
+  >
+    <div class="page-intro">
+      <h1 id="page-title">Projects and Case Studies</h1>
+      <p id="projects-description">
+        A showcase of {sortedArticles.length} selected projects and case studies.
+      </p>
+    </div>
+    <ul class="grid__two-column grid__two-column--cards" role="list" aria-labelledby="page-title">
       {
         sortedArticles.map((project) => (
           <ProjectCard

@@ -11,34 +11,50 @@ const dateOptions: object = {
 ---
 
 <Layout title="Articles" description="All my articles">
-  <main id="main-content" class="container" role="main">
-    <div class="grid__one-column" id="main-content">
+  <main
+    id="main-content"
+    class="container container--narrow"
+    aria-describedby="articles-description"
+  >
+    <div class="page-intro">
+      <h1 id="page-title">Articles</h1>
+      <p id="articles-description">
+        A collection of {allarticles.length} articles about design systems, front-end
+        development, and accessibility.
+      </p>
+    </div>
+    <ul class="grid__one-column article__list" role="list" aria-labelledby="page-title">
       {
         allarticles.map((article) => (
-          <article class="article-card">
-            <header>
-              <div class="article-card__time">
-                <time datetime={article.data.publishDate.toISOString()}>
-                  {article.data.publishDate.toLocaleDateString(
-                    "en-GB",
-                    dateOptions
-                  )}
-                </time>
-              </div>
-              <h2 class="heading-4">
-                <a href={`/articles/${article.id}`} title={article.data.title}>
-                  {article.data.title}
-                </a>
-              </h2>
-            </header>
+          <li>
+            <article class="article-card" id={`article-${article.id}`}>
+              <header>
+                <div class="article-card__time">
+                  <time datetime={article.data.publishDate.toISOString()}>
+                    {article.data.publishDate.toLocaleDateString(
+                      "en-GB",
+                      dateOptions
+                    )}
+                  </time>
+                </div>
+                <h2 class="article-card__title" id={`article-title-${article.id}`}>
+                  <a
+                    href={`/articles/${article.id}`}
+                    title={article.data.title}
+                  >
+                    {article.data.title}
+                  </a>
+                </h2>
+              </header>
 
-            <p>{article.data.description}</p>
-            <footer class="article-card__footer">
-              <div class="tags">{article.data.keywords.join(", ")}</div>
-            </footer>
-          </article>
+              <p>{article.data.description}</p>
+              <footer class="article-card__footer">
+                <div class="tags" aria-label="Article topics">{article.data.keywords.join(", ")}</div>
+              </footer>
+            </article>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </main>
 </Layout>
