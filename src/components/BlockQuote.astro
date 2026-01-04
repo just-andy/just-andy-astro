@@ -10,6 +10,6 @@ const { caption } = Astro.props;
 <blockquote class="blockquote full-width">
   <div class="blockquote__inner">
     <slot />
-    <cite>~ {caption}</cite>
+    {caption && <cite>~ {caption}</cite>}
   </div>
 </blockquote>
