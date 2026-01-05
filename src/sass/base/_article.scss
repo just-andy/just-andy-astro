@@ -7,20 +7,19 @@
     display: flex;
     flex-direction: column;
     gap: $size-0;
-    margin-bottom: $size-10;
+    margin-bottom: $size-6;
 
 
     h1 {
-        font-size: $fs-display-sm;
+        font-size: $fs-7xl;
         line-height: $lh-tight;
         margin-top: 0;
     }
 
     &--subheading {
-        font-size: $fs-3xl;
+        font-size: $fs-2xl;
         font-family: $ff-base;
         font-weight: $fw-subheading;
-        line-height: $lh-tight;
         color: $text-subtle;
     }
 

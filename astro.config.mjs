@@ -5,6 +5,6 @@ import mdx from '@astrojs/mdx';
 
 
 export default defineConfig({
-   site: 'https://just-andy.uk',
+   site: 'https://www.just-andy.uk',
    integrations: [icon(), mdx(), sitemap()]
   });

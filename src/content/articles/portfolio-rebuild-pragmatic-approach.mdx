@@ -1,0 +1,88 @@
+---
+title: Portfolio Rebuild Mk3 - A Pragmatic Approach to Embracing the Mess
+description: A four-year journey rebuilding a portfolio site with Astro and SCSS. Learn a pragmatic, content-first approach to shipping your own portfolio incrementally.
+summary: After four years, my portfolio is live on Astro with SCSS. I rebuilt it three times, moving from UXfolio to Next.js to now. Built incrementally—an hour at a time—using a content-first approach. Perfect is the enemy of shipped. Pragmatic gets you online.
+keywords: ["Portfolio", "Astro", "Design Systems", "Web Development"]
+publishDate: 2026-01-10 15:14:39.004
+---
+
+import {Image} from "astro:assets";
+import BlockQuote from '../../components/BlockQuote.astro';
+import BeyondCSS from '../../images/articles/portfolio-rebuild-pragmatic-approach/kevin-powell-beyond-css.png';
+
+## Another portfolio rebuild
+
+After four years of iteration, I've finally relaunched version three of my portfolio. This isn't a story about building the perfect site in a weekend—it's about the messy, pragmatic reality of making something that works while learning along the way.
+
+The site is by no means finished, but like all designers, nothing is ever perfect. I tried to take the approach of getting a solid starting point, moving the system first, and then improving the visuals in iterations. 
+
+## The Evolution: From Platform to Code
+
+My portfolio has lived three distinct lives. It started on [UXfolio](https://uxfolio.com), a dedicated portfolio platform that got me online quickly. When I wanted more control and to stop paying annual subscription fees, I rebuilt it in [Next.js](https://nextjs.org) and [Tailwind](https://tailwindcss.com). 
+
+The move to [Astro](https://astro.build) wasn't about chasing the latest framework—it was about simplification. After working with Next.js, I wanted something lighter that matched how I actually think about building sites. 
+
+I planned to go back to basics on plain, modern CSS. However, I recently completed the [Beyond CSS course by Kevin Powell](https://www.kevinpowell.co/courses/beyond-css/) and saw that mixing SCSS and PostCSS yielded better results. 
+
+<Image src={BeyondCSS} alt="Beyond CSS Course Screenshot" class="breakout"/>
+
+My portfolio was intended to be my live training ground for improving my CSS fundamentals without the safety net of a utility framework.
+
+### Why Build Your Own?
+
+I built my own site to prove I could write code. Simple as that. When you're a design systems specialist working across design and development, having a portfolio that you've coded yourself is a good demonstration of your capabilities.
+
+But there's more to it than credibility. I wanted a place to write about everything I've learned over 15+ years in the industry. A space where I could experiment, break things, and document the process. You can't do that on a portfolio platform with templates and constraints.
+
+## The Content-First Approach
+
+When someone on my team mentioned that building case studies was overwhelming, I shared my approach: start in Notion with a simple template.
+
+* Project Name
+* Problem
+* Wins/Achievements
+* My Role
+* What I did
+* What I learned
+
+I filled it in a few paragraphs at a time. On the bus. During lunch breaks. Wherever I had ten minutes, it happened in small chunks over time.
+
+<BlockQuote>
+Build it incrementally—an hour here, an hour there.
+</BlockQuote>
+
+I wrote most of the content before AI tools were commonplace, but I've recently used [Grammarly](https://www.grammarly.com) and [Claude](https://claude.ai) to refine my language and tone. The substance was mine; the polish and editing came from useful tools.
+
+Here's the thing: my two design system case studies would be the main focus. I have more projects from previous traffic and experiments. 
+
+__Content first. Platform second.__
+
+This sequence matters more than people realise.
+
+## Design Decisions: Borrowing Inspiration
+
+As a designer, picking a colour scheme and typography feels like it should be easy. It never is. For my initial theme, I borrowed inspiration from SimpleBits and Aaron Draplin—that retro aesthetic with bold colour appeals to me as an 80s kid.
+
+This is my version one theme, not my forever theme. I've built the CSS architecture so I can swap themes easily in the future. Right now, it's about getting something live that represents my taste, not achieving perfection.
+
+## The Reality of Building: An Hour a Month
+
+This latest build? I've chipped away at it roughly an hour a month. Sometimes more, often less. Between a full-time role as the sole person maintaining a design system and Dad life, that's what I could manage.
+
+Recently, I started using Claude Code as a teaching aid. It significantly accelerated my workflow—not by doing the work for me, but by helping me understand patterns, debug issues, and learn as I built. When you're learning and building simultaneously, having an AI pair programmer is transformative.
+
+## What's Live Now
+
+The site focuses heavily on my design systems work at Standard Life, but I've included other projects to show the breadth of my UX background. I've added an articles section because I want to write more about design systems, development, the messy overlap between the two, and everything I've learned in my career.
+
+It's live, but it's not finished. It probably never will be. I plan to keep adjusting it, improving my CSS, and experimenting with new ideas. That's the beauty of owning your own site—it grows with you.
+
+## The Pragmatic Takeaway
+
+Each version of my folio so far has served its purpose. Each version taught me something. None of them was perfect, and that's completely fine.
+
+If you're thinking about building your own portfolio, start with content in whatever tool makes it easy for you to write. Get a few solid case studies. Borrow design inspiration shamelessly for your first version or start with a default template.
+
+Build it incrementally—an hour here, an hour there.
+
+Perfect is the enemy of shipped. Pragmatic gets you online.
