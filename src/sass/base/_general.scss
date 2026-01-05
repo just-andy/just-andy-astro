@@ -22,6 +22,11 @@ body {
   background-color: $bg-base;
 }
 
+b,
+strong {
+  font-weight: bold;
+}
+
 .noise {
   background-color: #f0e5d1;
   background-image: url("https://www.transparenttextures.com/patterns/dust.png");
